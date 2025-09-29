@@ -1,0 +1,1548 @@
+{
+  "movies": [
+    {
+      "title": "Citizen Kane",
+      "year": "1941",
+      "director": "Orson Welles",
+      "genre_tags": [
+        "Mystery",
+        "Drama"
+      ],
+      "plot_summary": "Newspaper magnate Charles Foster Kane is taken from his mother as a boy and made the ward of a rich industrialist. As a result, every well-meaning, tyrannical or self-destructive move he makes for the rest of his life appears in some way to be a reaction to that deeply wounding event.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0033467",
+      "tmdb_id": 15
+    },
+    {
+      "title": "The Godfather",
+      "year": "1972",
+      "director": "Francis Ford Coppola",
+      "genre_tags": [
+        "Drama",
+        "Crime"
+      ],
+      "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0068646",
+      "tmdb_id": 238
+    },
+    {
+      "title": "Casablanca",
+      "year": "1943",
+      "director": "Michael Curtiz",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "In Casablanca, Morocco in December 1941, a cynical American expatriate meets a former lover, with unforeseen complications.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0034583",
+      "tmdb_id": 289
+    },
+    {
+      "title": "Raging Bull",
+      "year": "1980",
+      "director": "Martin Scorsese",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "The life of boxer Jake LaMotta, whose violence and temper that led him to the top in the ring destroyed his life outside of it.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0081398",
+      "tmdb_id": 1578
+    },
+    {
+      "title": "Singin' in the Rain",
+      "year": "1952",
+      "director": "Gene Kelly",
+      "genre_tags": [
+        "Comedy",
+        "Romance"
+      ],
+      "plot_summary": "In 1927 Hollywood, a silent film star falls for a chorus girl just as he and his paranoid screen partner struggle to make the difficult transition to talking pictures.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0045152",
+      "tmdb_id": 872
+    },
+    {
+      "title": "Gone with the Wind",
+      "year": "1939",
+      "director": "Victor Fleming",
+      "genre_tags": [
+        "Drama",
+        "War",
+        "Romance"
+      ],
+      "plot_summary": "The spoiled daughter of a Georgia plantation owner conducts a tumultuous romance with a cynical profiteer during the American Civil War and Reconstruction Era.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0031381",
+      "tmdb_id": 770
+    },
+    {
+      "title": "Lawrence of Arabia",
+      "year": "1962",
+      "director": "David Lean",
+      "genre_tags": [
+        "Adventure",
+        "History",
+        "War"
+      ],
+      "plot_summary": "The story of British officer T.E. Lawrence's mission to aid the Arab tribes in their revolt against the Ottoman Empire during the First World War. Lawrence becomes a flamboyant, messianic figure in the cause of Arab unity but his psychological instability threatens to undermine his achievements.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0056172",
+      "tmdb_id": 947
+    },
+    {
+      "title": "Schindler's List",
+      "year": "1993",
+      "director": "Steven Spielberg",
+      "genre_tags": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "plot_summary": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0108052",
+      "tmdb_id": 424
+    },
+    {
+      "title": "Vertigo",
+      "year": "1958",
+      "director": "Alfred Hitchcock",
+      "genre_tags": [
+        "Mystery",
+        "Romance",
+        "Thriller"
+      ],
+      "plot_summary": "A retired San Francisco detective suffering from acrophobia investigates the strange activities of an old friend's wife, all the while becoming dangerously obsessed with her.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0052357",
+      "tmdb_id": 426
+    },
+    {
+      "title": "The Wizard of Oz",
+      "year": "1939",
+      "director": "Victor Fleming",
+      "genre_tags": [
+        "Adventure",
+        "Fantasy",
+        "Family"
+      ],
+      "plot_summary": "Young Dorothy finds herself in a magical world where she makes friends with a lion, a scarecrow and a tin man as they make their way along the yellow brick road to talk with the Wizard and ask for the things they miss most in their lives. The Wicked Witch of the West is the only thing that could stop them.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0032138",
+      "tmdb_id": 630
+    },
+    {
+      "title": "City Lights",
+      "year": "1931",
+      "director": "Charlie Chaplin",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A tramp falls in love with a beautiful blind flower girl. His on-and-off friendship with a wealthy man allows him to be the girl's benefactor and suitor.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0021749",
+      "tmdb_id": 901
+    },
+    {
+      "title": "The Searchers",
+      "year": "1956",
+      "director": "John Ford",
+      "genre_tags": [
+        "Western"
+      ],
+      "plot_summary": "As a Civil War veteran spends years searching for a young niece captured by Indians, his motivation becomes increasingly questionable.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0049730",
+      "tmdb_id": 3114
+    },
+    {
+      "title": "Star Wars",
+      "year": "1977",
+      "director": "George Lucas",
+      "genre_tags": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "plot_summary": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0076759",
+      "tmdb_id": 11
+    },
+    {
+      "title": "Psycho",
+      "year": "1960",
+      "director": "Alfred Hitchcock",
+      "genre_tags": [
+        "Horror",
+        "Thriller",
+        "Mystery"
+      ],
+      "plot_summary": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0054215",
+      "tmdb_id": 539
+    },
+    {
+      "title": "2001: A Space Odyssey",
+      "year": "1968",
+      "director": "Stanley Kubrick",
+      "genre_tags": [
+        "Science Fiction",
+        "Mystery",
+        "Adventure"
+      ],
+      "plot_summary": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0062622",
+      "tmdb_id": 62
+    },
+    {
+      "title": "Sunset Boulevard",
+      "year": "1950",
+      "director": "Billy Wilder",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A hack screenwriter writes a screenplay for a former silent film star who has faded into Hollywood obscurity.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0043014",
+      "tmdb_id": 599
+    },
+    {
+      "title": "The Graduate",
+      "year": "1967",
+      "director": "Mike Nichols",
+      "genre_tags": [
+        "Drama",
+        "Romance",
+        "Comedy"
+      ],
+      "plot_summary": "A disillusioned college graduate finds himself torn between his older lover and her daughter.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0061722",
+      "tmdb_id": 37247
+    },
+    {
+      "title": "The General",
+      "year": "1926",
+      "director": "Clyde Bruckman",
+      "genre_tags": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "War",
+        "Romance"
+      ],
+      "plot_summary": "During America’s Civil War, Union spies steal engineer Johnny Gray's beloved locomotive, 'The General'—with Johnnie's lady love aboard an attached boxcar—and he single-handedly must do all in his power to both get The General back and to rescue Annabelle.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0017925",
+      "tmdb_id": 961
+    },
+    {
+      "title": "On the Waterfront",
+      "year": "1954",
+      "director": "Elia Kazan",
+      "genre_tags": [
+        "Crime",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A prizefighter-turned-longshoreman with a conscience goes up against labor leaders to expose corruption, extortion, and murder among the union ranks.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0047296",
+      "tmdb_id": 654
+    },
+    {
+      "title": "It's a Wonderful Life",
+      "year": "1946",
+      "director": "Frank Capra",
+      "genre_tags": [
+        "Drama",
+        "Family",
+        "Fantasy"
+      ],
+      "plot_summary": "A holiday favourite for generations...  George Bailey has spent his entire life giving to the people of Bedford Falls.  All that prevents rich skinflint Mr. Potter from taking over the entire town is George's modest building and loan company.  But on Christmas Eve the business's $8,000 is lost and George's troubles begin.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0038650",
+      "tmdb_id": 1585
+    },
+    {
+      "title": "Chinatown",
+      "year": "1974",
+      "director": "Roman Polanski",
+      "genre_tags": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "Private eye Jake Gittes lives off of the murky moral climate of sunbaked, pre-World War II Southern California. Hired by a beautiful socialite to investigate her husband's extra-marital affair, Gittes is swept into a maelstrom of double dealings and deadly deceits, uncovering a web of personal and political scandals that come crashing together.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0071315",
+      "tmdb_id": 829
+    },
+    {
+      "title": "Some Like It Hot",
+      "year": "1959",
+      "director": "Billy Wilder",
+      "genre_tags": [
+        "Comedy",
+        "Romance",
+        "Crime"
+      ],
+      "plot_summary": "Two musicians witness a mob hit and struggle to find a way out of the city. Their only opportunity comes in the form of joining an all-girl band as they prepare to leave on a tour. The two disguise themselves as women and struggle to keep their identities secret as they deal with the problems this brings.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0053291",
+      "tmdb_id": 239
+    },
+    {
+      "title": "The Grapes of Wrath",
+      "year": "1940",
+      "director": "John Ford",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Tom Joad returns to his home after a jail sentence to find his family kicked out of their farm due to foreclosure. He catches up with them on his Uncle’s farm, and joins them the next day as they head for California and a new life... Hopefully.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0032551",
+      "tmdb_id": 596
+    },
+    {
+      "title": "E.T. the Extra-Terrestrial",
+      "year": "1982",
+      "director": "Steven Spielberg",
+      "genre_tags": [
+        "Science Fiction",
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "plot_summary": "An alien is left behind on Earth and saved by the 10-year-old Elliot who decides to keep him hidden in his home. While a task force hunts for the extra-terrestrial, Elliot, his brother, and his little sister Gertie form an emotional bond with their new friend, and try to help him find his way home.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0083866",
+      "tmdb_id": 601
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "year": "1962",
+      "director": "Robert Mulligan",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Scout Finch, 6, and her older brother Jem live in sleepy Maycomb, Alabama, spending much of their time with their friend Dill and spying on their reclusive and mysterious neighbor, Boo Radley. When Atticus, their widowed father and a respected lawyer, defends a black man named Tom Robinson against fabricated rape charges, the trial and tangent events expose the children to evils of racism and stereotyping.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0056592",
+      "tmdb_id": 595
+    },
+    {
+      "title": "Mr. Smith Goes to Washington",
+      "year": "1939",
+      "director": "Frank Capra",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "After the death of a United States Senator, idealistic Jefferson Smith is appointed as his replacement in Washington. Soon, the naive and earnest new senator has to battle political corruption.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0031679",
+      "tmdb_id": 3083
+    },
+    {
+      "title": "High Noon",
+      "year": "1952",
+      "director": "Fred Zinnemann",
+      "genre_tags": [
+        "Western",
+        "Drama"
+      ],
+      "plot_summary": "Will Kane, the sheriff of a small town in New Mexico, learns a notorious outlaw he put in jail has been freed, and will be arriving on the noon train. Knowing the outlaw and his gang are coming to kill him, Kane is determined to stand his ground, so he attempts to gather a posse from among the local townspeople.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0044706",
+      "tmdb_id": 288
+    },
+    {
+      "title": "All About Eve",
+      "year": "1950",
+      "director": "Joseph L. Mankiewicz",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "From the moment she glimpses her idol at the stage door, Eve Harrington is determined to take the reins of power away from the great actress Margo Channing. Eve maneuvers her way into Margo's Broadway role, becomes a sensation and even causes turmoil in the lives of Margo's director boyfriend, her playwright and his wife. Only the cynical drama critic sees through Eve, admiring her audacity and perfect pattern of deceit.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0042192",
+      "tmdb_id": 705
+    },
+    {
+      "title": "Double Indemnity",
+      "year": "1944",
+      "director": "Billy Wilder",
+      "genre_tags": [
+        "Crime",
+        "Thriller"
+      ],
+      "plot_summary": "A seductive housewife draws an insurance salesman into a plot of adultery and crime to collect on her husband's life insurance.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0036775",
+      "tmdb_id": 996
+    },
+    {
+      "title": "Apocalypse Now",
+      "year": "1979",
+      "director": "Francis Ford Coppola",
+      "genre_tags": [
+        "Drama",
+        "War"
+      ],
+      "plot_summary": "At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, \"does not exist, nor will it ever exist.\" His goal is to locate - and eliminate - a mysterious Green Beret Colonel named Walter Kurtz, who has been leading his personal army on illegal guerrilla missions into enemy territory.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0078788",
+      "tmdb_id": 28
+    },
+    {
+      "title": "The Maltese Falcon",
+      "year": "1941",
+      "director": "John Huston",
+      "genre_tags": [
+        "Mystery",
+        "Crime",
+        "Thriller"
+      ],
+      "plot_summary": "A private detective takes on a case that involves him with three eccentric criminals, a beautiful liar, and their quest for a priceless statuette.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0033870",
+      "tmdb_id": 963
+    },
+    {
+      "title": "The Godfather Part II",
+      "year": "1974",
+      "director": "Francis Ford Coppola",
+      "genre_tags": [
+        "Drama",
+        "Crime"
+      ],
+      "plot_summary": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0071562",
+      "tmdb_id": 240
+    },
+    {
+      "title": "One Flew Over the Cuckoo's Nest",
+      "year": "1975",
+      "director": "Miloš Forman",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A petty criminal fakes insanity to serve his sentence in a mental ward rather than prison. He soon finds himself as a leader to the other patients—and an enemy to the cruel, domineering nurse who runs the ward.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0073486",
+      "tmdb_id": 510
+    },
+    {
+      "title": "Snow White and the Seven Dwarfs",
+      "year": "1938",
+      "director": "David Hand",
+      "genre_tags": [
+        "Fantasy",
+        "Animation",
+        "Family"
+      ],
+      "plot_summary": "A beautiful girl, Snow White, takes refuge in the forest in the house of seven dwarfs to hide from her stepmother, the wicked Queen. The Queen is jealous because she wants to be known as \"the fairest in the land,\" and Snow White's beauty surpasses her own.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0029583",
+      "tmdb_id": 408
+    },
+    {
+      "title": "Annie Hall",
+      "year": "1977",
+      "director": "Woody Allen",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "New York comedian Alvy Singer falls in love with the ditsy Annie Hall.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0075686",
+      "tmdb_id": 703
+    },
+    {
+      "title": "The Bridge on the River Kwai",
+      "year": "1957",
+      "director": "David Lean",
+      "genre_tags": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "plot_summary": "The classic story of English POWs in Burma forced to build a bridge to aid the war effort of their Japanese captors. British and American intelligence officers conspire to blow up the structure, but Col. Nicholson, the commander who supervised the bridge's construction, has acquired a sense of pride in his creation and tries to foil their plans.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0050212",
+      "tmdb_id": 826
+    },
+    {
+      "title": "The Best Years of Our Lives",
+      "year": "1946",
+      "director": "William Wyler",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "It's the hope that sustains the spirit of every GI: the dream of the day when he will finally return home. For three WWII veterans, the day has arrived. But for each man, the dream is about to become a nightmare.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0036868",
+      "tmdb_id": 887
+    },
+    {
+      "title": "The Treasure of the Sierra Madre",
+      "year": "1948",
+      "director": "John Huston",
+      "genre_tags": [
+        "Adventure",
+        "Drama",
+        "Western"
+      ],
+      "plot_summary": "Two jobless Americans convince a prospector to travel to the mountains of Mexico with them in search of gold. But the hostile wilderness, local bandits, and greed all get in the way of their journey.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0040897",
+      "tmdb_id": 3090
+    },
+    {
+      "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "year": "1964",
+      "director": "Stanley Kubrick",
+      "genre_tags": [
+        "Comedy",
+        "War"
+      ],
+      "plot_summary": "After the insane General Jack D. Ripper initiates a nuclear strike on the Soviet Union, a war room full of politicians, generals and a Russian diplomat all frantically try to stop it.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0057012",
+      "tmdb_id": 935
+    },
+    {
+      "title": "The Sound of Music",
+      "year": "1965",
+      "director": "Robert Wise",
+      "genre_tags": [
+        "Drama",
+        "Family",
+        "Music",
+        "Romance"
+      ],
+      "plot_summary": "In the years before the Second World War, a tomboyish postulant at an Austrian abbey is hired as a governess in the home of a widowed naval captain with seven children, and brings a new love of life and music into the home.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0059742",
+      "tmdb_id": 15121
+    },
+    {
+      "title": "King Kong",
+      "year": "1933",
+      "director": "Merian C. Cooper",
+      "genre_tags": [
+        "Adventure",
+        "Fantasy",
+        "Horror"
+      ],
+      "plot_summary": "Adventurous filmmaker Carl Denham sets out to produce a motion picture unlike anything the world has seen before. Alongside his leading lady Ann Darrow and his first mate Jack Driscoll, they arrive on an island and discover a legendary creature said to be neither beast nor man. Denham captures the monster to be displayed on Broadway as King Kong, the eighth wonder of the world.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0024216",
+      "tmdb_id": 244
+    },
+    {
+      "title": "Bonnie and Clyde",
+      "year": "1967",
+      "director": "Arthur Penn",
+      "genre_tags": [
+        "Crime",
+        "Drama"
+      ],
+      "plot_summary": "In the 1930s, bored waitress Bonnie Parker falls in love with an ex-con named Clyde Barrow and together they start a violent crime spree through the country, stealing cars and robbing banks.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0061418",
+      "tmdb_id": 475
+    },
+    {
+      "title": "Midnight Cowboy",
+      "year": "1969",
+      "director": "John Schlesinger",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Joe Buck is a wide-eyed hustler from Texas hoping to score big with wealthy New York City women; he finds a companion in Enrico \"Ratso\" Rizzo, an ailing swindler with a bum leg and a quixotic fantasy of escaping to Florida.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0064665",
+      "tmdb_id": 3116
+    },
+    {
+      "title": "The Philadelphia Story",
+      "year": "1940",
+      "director": "George Cukor",
+      "genre_tags": [
+        "Comedy",
+        "Romance"
+      ],
+      "plot_summary": "When a rich woman's ex-husband and a tabloid-type reporter turn up just before her planned remarriage, she begins to learn the truth about herself.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0032904",
+      "tmdb_id": 981
+    },
+    {
+      "title": "Shane",
+      "year": "1953",
+      "director": "George Stevens",
+      "genre_tags": [
+        "Drama",
+        "Western"
+      ],
+      "plot_summary": "A weary gunfighter attempts to settle down with a homestead family, but a smouldering settler and rancher conflict forces him to act.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0046303",
+      "tmdb_id": 3110
+    },
+    {
+      "title": "It Happened One Night",
+      "year": "1934",
+      "director": "Frank Capra",
+      "genre_tags": [
+        "Comedy",
+        "Romance"
+      ],
+      "plot_summary": "A runaway heiress makes a deal with the rogue reporter trailing her but the mismatched pair end up stuck with each other when their bus leaves them behind.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0025316",
+      "tmdb_id": 3078
+    },
+    {
+      "title": "A Streetcar Named Desire",
+      "year": "1951",
+      "director": "Elia Kazan",
+      "genre_tags": [
+        "Drama",
+        "Thriller"
+      ],
+      "plot_summary": "A disturbed, aging Southern belle moves in with her sister for solace — but being face-to-face with her brutish brother-in-law accelerates her downward spiral.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0044081",
+      "tmdb_id": 702
+    },
+    {
+      "title": "Rear Window",
+      "year": "1954",
+      "director": "Alfred Hitchcock",
+      "genre_tags": [
+        "Thriller",
+        "Mystery"
+      ],
+      "plot_summary": "A wheelchair-bound photographer spies on his neighbors from his apartment window and becomes convinced one of them has committed murder.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0047396",
+      "tmdb_id": 567
+    },
+    {
+      "title": "Intolerance: Love's Struggle Throughout the Ages",
+      "year": "1916",
+      "director": "D.W. Griffith",
+      "genre_tags": [
+        "Drama",
+        "History"
+      ],
+      "plot_summary": "The story of a poor young woman, separated by prejudice from her husband and baby, is interwoven with tales of intolerance from throughout history.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0006864",
+      "tmdb_id": 3059
+    },
+    {
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": "2001",
+      "director": "Peter Jackson",
+      "genre_tags": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "plot_summary": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0120737",
+      "tmdb_id": 120
+    },
+    {
+      "title": "West Side Story",
+      "year": "1961",
+      "director": "Jerome Robbins",
+      "genre_tags": [
+        "Crime",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "In the slums of the upper West Side of Manhattan, tensions are high as a gang of Polish-Americans compete against a gang of recently immigrated Puerto Ricans, but this doesn't stop two romantics from each gang falling in love.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0055614",
+      "tmdb_id": 1725
+    },
+    {
+      "title": "Taxi Driver",
+      "year": "1976",
+      "director": "Martin Scorsese",
+      "genre_tags": [
+        "Crime",
+        "Drama"
+      ],
+      "plot_summary": "Suffering from insomnia, disturbed loner Travis Bickle takes a job as a New York City cabbie, haunting the streets nightly, growing increasingly detached from reality as he dreams of cleaning up the filthy city.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0075314",
+      "tmdb_id": 103
+    },
+    {
+      "title": "The Deer Hunter",
+      "year": "1978",
+      "director": "Michael Cimino",
+      "genre_tags": [
+        "Drama",
+        "War"
+      ],
+      "plot_summary": "A group of working-class friends decide to enlist in the Army during the Vietnam War and finds it to be hellish chaos -- not the noble venture they imagined. Before they left, Steven married his pregnant girlfriend -- and Michael and Nick were in love with the same woman. But all three are different men upon their return.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0077416",
+      "tmdb_id": 11778
+    },
+    {
+      "title": "M*A*S*H",
+      "year": "1970",
+      "director": "Robert Altman",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "War"
+      ],
+      "plot_summary": "The staff of a Korean War field hospital use humor and hijinks to keep their sanity in the face of the horror of war.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0066026",
+      "tmdb_id": 651
+    },
+    {
+      "title": "North by Northwest",
+      "year": "1959",
+      "director": "Alfred Hitchcock",
+      "genre_tags": [
+        "Thriller",
+        "Adventure"
+      ],
+      "plot_summary": "Advertising man Roger Thornhill is mistaken for a spy, triggering a deadly cross-country chase.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0053125",
+      "tmdb_id": 213
+    },
+    {
+      "title": "Jaws",
+      "year": "1975",
+      "director": "Steven Spielberg",
+      "genre_tags": [
+        "Horror",
+        "Thriller",
+        "Adventure"
+      ],
+      "plot_summary": "When the seaside community of Amity finds itself under attack by a dangerous great white shark, the town's chief of police, a young marine biologist, and a grizzled hunter embark on a desperate quest to destroy the beast before it strikes again.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0073195",
+      "tmdb_id": 578
+    },
+    {
+      "title": "Rocky",
+      "year": "1976",
+      "director": "John G. Avildsen",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Rocky Balboa is a Philadelphia club fighter who seems to be going nowhere. But when a stroke of fate puts him in the ring with a world heavyweight champion, Rocky knows that it's his one shot at the big time — a once-in-a-lifetime opportunity to go the distance and come out a winner!",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0075148",
+      "tmdb_id": 1366
+    },
+    {
+      "title": "The Gold Rush",
+      "year": "1925",
+      "director": "Charlie Chaplin",
+      "genre_tags": [
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "A gold prospector in Alaska struggles to survive the elements and win the heart of a dance hall girl.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0015864",
+      "tmdb_id": 962
+    },
+    {
+      "title": "Nashville",
+      "year": "1975",
+      "director": "Robert Altman",
+      "genre_tags": [
+        "Drama",
+        "Comedy"
+      ],
+      "plot_summary": "The intersecting stories of twenty-four characters—from country star to wannabe to reporter to waitress—connect to the music business in Nashville, Tennessee.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0073440",
+      "tmdb_id": 3121
+    },
+    {
+      "title": "Duck Soup",
+      "year": "1933",
+      "director": "Leo McCarey",
+      "genre_tags": [
+        "Comedy",
+        "War"
+      ],
+      "plot_summary": "Rufus T. Firefly is named president/dictator of bankrupt Freedonia and declares war on neighboring Sylvania over the love of wealthy Mrs. Teasdale.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0023969",
+      "tmdb_id": 3063
+    },
+    {
+      "title": "Sullivan's Travels",
+      "year": "1941",
+      "director": "Preston Sturges",
+      "genre_tags": [
+        "Comedy",
+        "Romance",
+        "Adventure"
+      ],
+      "plot_summary": "Successful movie director John L. Sullivan, convinced he won't be able to film his ambitious masterpiece until he has suffered, dons a hobo disguise and sets off on a journey, aiming to \"know trouble\" first-hand. When all he finds is a train ride back to Hollywood and a beautiful blonde companion, he redoubles his efforts, managing to land himself in more trouble than he bargained for when he loses his memory and ends up a prisoner on a chain gang.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0034240",
+      "tmdb_id": 16305
+    },
+    {
+      "title": "American Graffiti",
+      "year": "1973",
+      "director": "George Lucas",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "A couple of high school graduates spend one final night cruising the strip with their buddies before they go off to college.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0069704",
+      "tmdb_id": 838
+    },
+    {
+      "title": "Cabaret",
+      "year": "1972",
+      "director": "Bob Fosse",
+      "genre_tags": [
+        "Music",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "Inside the Kit Kat Club of 1931 Berlin, starry-eyed singer Sally Bowles and an impish emcee sound the clarion call to decadent fun, while outside a certain political party grows into a brutal force.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0068327",
+      "tmdb_id": 10784
+    },
+    {
+      "title": "Network",
+      "year": "1976",
+      "director": "Sidney Lumet",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "When veteran anchorman Howard Beale is forced to retire his 25-year post because of his age, he announces to viewers that he will kill himself during his farewell broadcast. Network executives rethink their decision when his fanatical tirade results in a spike in ratings.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0074958",
+      "tmdb_id": 10774
+    },
+    {
+      "title": "The African Queen",
+      "year": "1952",
+      "director": "John Huston",
+      "genre_tags": [
+        "Romance",
+        "Adventure",
+        "Drama"
+      ],
+      "plot_summary": "At the start of the First World War, in the middle of Africa’s nowhere, a gin soaked riverboat captain is persuaded by a strong-willed missionary to go down river and face-off a German warship.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0043265",
+      "tmdb_id": 488
+    },
+    {
+      "title": "Raiders of the Lost Ark",
+      "year": "1981",
+      "director": "Steven Spielberg",
+      "genre_tags": [
+        "Adventure",
+        "Action"
+      ],
+      "plot_summary": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0082971",
+      "tmdb_id": 85
+    },
+    {
+      "title": "Who's Afraid of Virginia Woolf?",
+      "year": "1966",
+      "director": "Mike Nichols",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A history professor and his wife entertain a young couple who are new to the university's faculty. As the drinks flow, secrets come to light, and the middle-aged couple unload onto their guests the full force of the bitterness, dysfunction, and animosity that defines their marriage.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0061184",
+      "tmdb_id": 396
+    },
+    {
+      "title": "Unforgiven",
+      "year": "1992",
+      "director": "Clint Eastwood",
+      "genre_tags": [
+        "Western"
+      ],
+      "plot_summary": "William Munny is a retired, once-ruthless killer turned gentle widower and hog farmer. To help support his two motherless children, he accepts one last bounty-hunter mission to find the men who brutalized a prostitute. Joined by his former partner and a cocky greenhorn, he takes on a corrupt sheriff.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0105695",
+      "tmdb_id": 33
+    },
+    {
+      "title": "Tootsie",
+      "year": "1982",
+      "director": "Sydney Pollack",
+      "genre_tags": [
+        "Comedy",
+        "Romance"
+      ],
+      "plot_summary": "When struggling, out of work actor Michael Dorsey secretly adopts a female alter ego – Dorothy Michaels – in order to land a part in a daytime drama, he unwittingly becomes a feminist icon and ends up in a romantic pickle.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0084805",
+      "tmdb_id": 9576
+    },
+    {
+      "title": "A Clockwork Orange",
+      "year": "1971",
+      "director": "Stanley Kubrick",
+      "genre_tags": [
+        "Science Fiction",
+        "Crime"
+      ],
+      "plot_summary": "In a near-future Britain, young Alexander DeLarge and his pals get their kicks beating and raping anyone they please. When not destroying the lives of others, Alex swoons to the music of Beethoven. The state, eager to crack down on juvenile crime, gives an incarcerated Alex the option to undergo an invasive procedure that'll rob him of all personal agency. In a time when conscience is a commodity, can Alex change his tune?",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0066921",
+      "tmdb_id": 185
+    },
+    {
+      "title": "Saving Private Ryan",
+      "year": "1998",
+      "director": "Steven Spielberg",
+      "genre_tags": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "plot_summary": "As U.S. troops storm the beaches of Normandy, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and seven men are tasked with penetrating German-held territory and bringing the boy home.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0120815",
+      "tmdb_id": 857
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "year": "1994",
+      "director": "Frank Darabont",
+      "genre_tags": [
+        "Drama",
+        "Crime"
+      ],
+      "plot_summary": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0111161",
+      "tmdb_id": 278
+    },
+    {
+      "title": "Butch Cassidy and the Sundance Kid",
+      "year": "1969",
+      "director": "George Roy Hill",
+      "genre_tags": [
+        "Western",
+        "Adventure",
+        "Crime",
+        "Drama",
+        "History"
+      ],
+      "plot_summary": "As the west rapidly becomes civilized, a pair of outlaws in 1890s Wyoming find themselves pursued by a posse and decide to flee to South America in hopes of evading the law.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0064115",
+      "tmdb_id": 642
+    },
+    {
+      "title": "The Silence of the Lambs",
+      "year": "1991",
+      "director": "Jonathan Demme",
+      "genre_tags": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "plot_summary": "Clarice Starling is a top student at the FBI's training academy.  Jack Crawford wants Clarice to interview Dr. Hannibal Lecter, a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism.  Crawford believes that Lecter may have insight into a case and that Starling, as an attractive young woman, may be just the bait to draw him out.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0102926",
+      "tmdb_id": 274
+    },
+    {
+      "title": "In the Heat of the Night",
+      "year": "1967",
+      "director": "Norman Jewison",
+      "genre_tags": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "African-American Philadelphia police detective Virgil Tibbs is arrested on suspicion of murder by Bill Gillespie, the racist police chief of tiny Sparta, Mississippi. After Tibbs proves not only his own innocence but that of another man, he joins forces with Gillespie to track down the real killer. Their investigation takes them through every social level of the town, with Tibbs making enemies as well as unlikely friends as he hunts for the truth.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0061811",
+      "tmdb_id": 10633
+    },
+    {
+      "title": "Forrest Gump",
+      "year": "1994",
+      "director": "Robert Zemeckis",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0109830",
+      "tmdb_id": 13
+    },
+    {
+      "title": "All the President's Men",
+      "year": "1976",
+      "director": "Alan J. Pakula",
+      "genre_tags": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "During the 1972 elections, two reporters' investigation sheds light on the controversial Watergate scandal that compels President Nixon to resign from his post.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0074119",
+      "tmdb_id": 891
+    },
+    {
+      "title": "Modern Times",
+      "year": "1936",
+      "director": "Charlie Chaplin",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A bumbling tramp desires to build a home with a young woman, yet is thwarted time and time again by his lack of experience and habit of being in the wrong place at the wrong time..",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0027977",
+      "tmdb_id": 3082
+    },
+    {
+      "title": "The Wild Bunch",
+      "year": "1969",
+      "director": "Sam Peckinpah",
+      "genre_tags": [
+        "Western"
+      ],
+      "plot_summary": "An aging group of outlaws look for one last big score as the \"traditional\" American West is disappearing around them.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0065214",
+      "tmdb_id": 576
+    },
+    {
+      "title": "The Apartment",
+      "year": "1960",
+      "director": "Billy Wilder",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "Bud Baxter is a minor clerk in a huge New York insurance company, until he discovers a quick way to climb the corporate ladder. He lends out his apartment to the executives as a place to take their mistresses. Although he often has to deal with the aftermath of their visits, one night he's left with a major problem to solve.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0053604",
+      "tmdb_id": 284
+    },
+    {
+      "title": "Spartacus",
+      "year": "1960",
+      "director": "Stanley Kubrick",
+      "genre_tags": [
+        "History",
+        "War",
+        "Drama",
+        "Adventure"
+      ],
+      "plot_summary": "The rebellious Thracian Spartacus, born and raised a slave, is sold to Gladiator trainer Batiatus. After weeks of being trained to kill for the arena, Spartacus turns on his owners and leads the other slaves in rebellion. As the rebels move from town to town, their numbers swell as escaped slaves join their ranks. Under the leadership of Spartacus, they make their way to southern Italy, where they will cross the sea and return to their homes.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0054331",
+      "tmdb_id": 967
+    },
+    {
+      "title": "Sunrise: A Song of Two Humans",
+      "year": "1927",
+      "director": "F. W. Murnau",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A married farmer falls under the spell of a slatternly woman from the city, who tries to convince him to drown his wife.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0018455",
+      "tmdb_id": 631
+    },
+    {
+      "title": "Titanic",
+      "year": "1997",
+      "director": "James Cameron",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé. Meanwhile, Jack Dawson and Fabrizio De Rossi win third-class tickets aboard the ship. Rose tells the whole story from Titanic's departure through to its death—on its first and last voyage—on April 15, 1912.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0120338",
+      "tmdb_id": 597
+    },
+    {
+      "title": "Easy Rider",
+      "year": "1969",
+      "director": "Dennis Hopper",
+      "genre_tags": [
+        "Adventure",
+        "Drama"
+      ],
+      "plot_summary": "Wyatt and Billy, two Harley-riding hippies, complete a drug deal in Southern California and decide to travel cross-country in search of spiritual truth.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0064276",
+      "tmdb_id": 624
+    },
+    {
+      "title": "A Night at the Opera",
+      "year": "1935",
+      "director": "Sam Wood",
+      "genre_tags": [
+        "Comedy",
+        "Music"
+      ],
+      "plot_summary": "The Marx Brothers take on high society and the opera world to bring two lovers together. A sly business manager and two wacky friends of two opera singers help them achieve success while humiliating their stuffy and snobbish enemies.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0026778",
+      "tmdb_id": 37719
+    },
+    {
+      "title": "Platoon",
+      "year": "1986",
+      "director": "Oliver Stone",
+      "genre_tags": [
+        "Drama",
+        "War",
+        "Action"
+      ],
+      "plot_summary": "As a young and naive recruit in Vietnam, Chris Taylor faces a moral crisis when confronted with the horrors of war and the duality of man.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0091763",
+      "tmdb_id": 792
+    },
+    {
+      "title": "12 Angry Men",
+      "year": "1957",
+      "director": "Sidney Lumet",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and shut case soon becomes a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the accused, and each other.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0050083",
+      "tmdb_id": 389
+    },
+    {
+      "title": "Bringing Up Baby",
+      "year": "1938",
+      "director": "Howard Hawks",
+      "genre_tags": [
+        "Comedy",
+        "Romance"
+      ],
+      "plot_summary": "David Huxley is waiting to get a bone he needs for his museum collection. Through a series of strange circumstances, he meets Susan Vance, and the duo have a series of misadventures which include a leopard called Baby.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0029947",
+      "tmdb_id": 900
+    },
+    {
+      "title": "The Sixth Sense",
+      "year": "1999",
+      "director": "M. Night Shyamalan",
+      "genre_tags": [
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "plot_summary": "Following an unexpected tragedy, child psychologist Malcolm Crowe meets a nine year old boy named Cole Sear, who is hiding a dark secret.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0167404",
+      "tmdb_id": 745
+    },
+    {
+      "title": "Swing Time",
+      "year": "1936",
+      "director": "George Stevens",
+      "genre_tags": [
+        "Romance",
+        "Comedy"
+      ],
+      "plot_summary": "Lucky is tricked into missing his own wedding to Margaret and has to make $25,000 so her father will allow him to marry her. He and business partner Pop go to New York where they run into dancing instructor Penny. She and Lucky form a successful dance partnership, but romance is blighted by his old attachment to Margaret and hers for Ricky.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0028333",
+      "tmdb_id": 20325
+    },
+    {
+      "title": "Sophie's Choice",
+      "year": "1982",
+      "director": "Alan J. Pakula",
+      "genre_tags": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "plot_summary": "Stingo, a young writer, moves to Brooklyn in 1947 to begin work on his first novel. As he becomes friendly with Sophie and her lover Nathan, he learns that she is a Holocaust survivor. Flashbacks reveal her harrowing story, from pre-war prosperity to Auschwitz. In the present, Sophie and Nathan's relationship increasingly unravels as Stingo grows closer to Sophie and Nathan's fragile mental state becomes ever more apparent.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0084707",
+      "tmdb_id": 15764
+    },
+    {
+      "title": "GoodFellas",
+      "year": "1990",
+      "director": "Martin Scorsese",
+      "genre_tags": [
+        "Drama",
+        "Crime"
+      ],
+      "plot_summary": "The true story of Henry Hill, a half-Irish, half-Sicilian Brooklyn kid who is adopted by neighbourhood gangsters at an early age and climbs the ranks of a Mafia family under the guidance of Jimmy Conway.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0099685",
+      "tmdb_id": 769
+    },
+    {
+      "title": "The French Connection",
+      "year": "1971",
+      "director": "William Friedkin",
+      "genre_tags": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "plot_summary": "Tough narcotics detective 'Popeye' Doyle is in hot pursuit of a suave French drug dealer who may be the key to a huge heroin-smuggling operation.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0067116",
+      "tmdb_id": 1051
+    },
+    {
+      "title": "Pulp Fiction",
+      "year": "1994",
+      "director": "Quentin Tarantino",
+      "genre_tags": [
+        "Thriller",
+        "Crime",
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0110912",
+      "tmdb_id": 680
+    },
+    {
+      "title": "The Last Picture Show",
+      "year": "1971",
+      "director": "Peter Bogdanovich",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "High school seniors and best friends, Sonny and Duane, live in a dying Texas town. The handsome Duane is dating a local beauty, while Sonny is having an affair with the coach's wife. As graduation nears and both boys contemplate their futures, Duane eyes the army and Sonny takes over a local business. Each struggles to figure out if he can escape this dead-end town and build a better life somewhere else.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0067328",
+      "tmdb_id": 25188
+    },
+    {
+      "title": "Do the Right Thing",
+      "year": "1989",
+      "director": "Spike Lee",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Salvatore \"Sal\" Fragione is the Italian owner of a pizzeria in Brooklyn. A neighborhood local, Buggin' Out, becomes upset when he sees that the pizzeria's Wall of Fame exhibits only Italian actors. Buggin' Out believes a pizzeria in a black neighborhood should showcase black actors, but Sal disagrees. The wall becomes a symbol of racism and hate to Buggin' Out and to other people in the neighborhood, and tensions rise.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0097216",
+      "tmdb_id": 925
+    },
+    {
+      "title": "Blade Runner",
+      "year": "1982",
+      "director": "Ridley Scott",
+      "genre_tags": [
+        "Science Fiction",
+        "Drama",
+        "Thriller"
+      ],
+      "plot_summary": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0083658",
+      "tmdb_id": 78
+    },
+    {
+      "title": "Yankee Doodle Dandy",
+      "year": "1942",
+      "director": "Michael Curtiz",
+      "genre_tags": [
+        "Drama",
+        "Music"
+      ],
+      "plot_summary": "A film of the life of the renowned musical composer, playwright, actor, dancer and singer George M. Cohan.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0035575",
+      "tmdb_id": 3087
+    },
+    {
+      "title": "Toy Story",
+      "year": "1995",
+      "director": "John Lasseter",
+      "genre_tags": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Comedy"
+      ],
+      "plot_summary": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0114709",
+      "tmdb_id": 862
+    },
+    {
+      "title": "Ben-Hur",
+      "year": "1959",
+      "director": "William Wyler",
+      "genre_tags": [
+        "History",
+        "Drama",
+        "Adventure"
+      ],
+      "plot_summary": "In 25 AD, Judah Ben-Hur, a Jew in ancient Judea, opposes the occupying Roman empire.  Falsely accused by a Roman childhood friend-turned-overlord of trying to kill the Roman governor, he is put into slavery and his mother and sister are taken away as prisoners.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0052618",
+      "tmdb_id": 665
+    }
+  ]
+}

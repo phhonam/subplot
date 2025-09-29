@@ -1,0 +1,14 @@
+# YouTube Trailer Scraper Requirements
+
+# Core dependencies
+requests>=2.25.0
+beautifulsoup4>=4.9.0
+
+# YouTube Data API (recommended method)
+google-api-python-client>=2.0.0
+
+# Rate limiting (optional but recommended)
+ratelimit>=2.2.0
+
+# Additional utilities
+lxml>=4.6.0  # Faster HTML parsing for BeautifulSoup

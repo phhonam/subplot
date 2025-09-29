@@ -1,0 +1,67 @@
+{
+  "total_movies": 1212,
+  "deduplication_stats": {
+    "total_processed": 2009,
+    "unique_imdb": 1211,
+    "unique_title_year": 0,
+    "duplicates_found": 797,
+    "merges_performed": 797
+  },
+  "year_distribution": {
+    "2023": 60,
+    "2024": 59,
+    "2019": 57,
+    "2021": 52,
+    "2022": 50,
+    "2020": 41,
+    "2016": 36,
+    "2017": 35,
+    "2018": 34,
+    "2014": 29
+  },
+  "top_genres": {
+    "Drama": 775,
+    "Comedy": 299,
+    "Romance": 227,
+    "Thriller": 198,
+    "Animation": 194,
+    "Adventure": 177,
+    "Action": 164,
+    "Fantasy": 162,
+    "Crime": 159,
+    "Family": 129,
+    "Science Fiction": 113,
+    "Horror": 95,
+    "History": 94,
+    "Mystery": 88,
+    "War": 76
+  },
+  "top_directors": {
+    "Akira Kurosawa": 13,
+    "Hayao Miyazaki": 10,
+    "Ingmar Bergman": 10,
+    "Steven Spielberg": 9,
+    "Alfred Hitchcock": 9,
+    "Stanley Kubrick": 9,
+    "Martin Scorsese": 8,
+    "Charlie Chaplin": 8,
+    "Billy Wilder": 8,
+    "Quentin Tarantino": 8
+  },
+  "source_distribution": {
+    "afi100_2007": 100,
+    "diverse_2000s": 143,
+    "french_films": 4,
+    "international_cinema": 16,
+    "scraped_movie_data": 29,
+    "top_rated_global_1000": 917,
+    "top_rated_us": 1,
+    "top_rated_us_500": 2
+  },
+  "data_quality": {
+    "imdb_coverage": 99.91749174917491,
+    "tmdb_coverage": 100.0,
+    "has_plot": 99.75247524752476,
+    "has_director": 100.0
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "movies": [
+    {
+      "title": "Our Little Sister",
+      "year": "2015",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "After the death of their estranged father, 3 adult sisters invite their teenaged half-sister to live with them.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt3756788",
+      "tmdb_id": 315846,
+      "poster_url": "https://image.tmdb.org/t/p/w500/x9A0AtEg5EEYbDGfP8NqH3C9w8M.jpg"
+    },
+    {
+      "title": "Broker",
+      "year": "2022",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama",
+        "Comedy",
+        "Crime"
+      ],
+      "plot_summary": "Sang-hyun is always struggling from debt, and Dong-soo works at a baby box facility. On a rainy night, they steal the baby Woo-sung, who was left in the baby box, to sell him at a good price. Meanwhile, detectives were watching, and they quietly track them down to capture the crucial evidence.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt13056052",
+      "tmdb_id": 736732,
+      "poster_url": "https://image.tmdb.org/t/p/w500/x86xaUnxU31JYiwlO35corDEV1i.jpg"
+    },
+    {
+      "title": "After the Storm",
+      "year": "2016",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Ryota is an unpopular writer although he won a literary award 15 years ago. Now, Ryota works as a private detective. He is divorced from his ex-wife Kyoko and he has an 11-year-old son Shingo. His mother Yoshiko lives alone at her apartment. One day, Ryota, his ex-wife Kyoko, and son Shingo gather at Yoshiko's apartment. A typhoon passes and the family must stay there all night long.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt5294966",
+      "tmdb_id": 374671,
+      "poster_url": "https://image.tmdb.org/t/p/w500/oScZQ3ZVvnVtgZpuFW75msSVmHC.jpg"
+    },
+    {
+      "title": "The Third Murder",
+      "year": "2017",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama",
+        "Mystery",
+        "Crime"
+      ],
+      "plot_summary": "A lawyer tasked with defending a robbery-and-murder suspect begins developing doubts about what truly happened.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt6410564",
+      "tmdb_id": 434775,
+      "poster_url": "https://image.tmdb.org/t/p/w500/xENc6UYviC3JfFqKA6kReHfT2Zt.jpg"
+    },
+    {
+      "title": "Air Doll",
+      "year": "2009",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama",
+        "Fantasy"
+      ],
+      "plot_summary": "A life-size, inflatable sex doll suddenly comes to life one day. Without her owner knowing, she goes for a walk around town and falls in love with Junichi. She starts to date Junichi and gets a job at the same store where he works. Everything seems to be going perfectly for her until something unexpected happens.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1371630",
+      "tmdb_id": 25053,
+      "poster_url": "https://image.tmdb.org/t/p/w500/kLTNYdKFkH5kANF8QnVvLZNeWeN.jpg"
+    },
+    {
+      "title": "The Truth",
+      "year": "2019",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Fabienne is a star; a star of French cinema. She reigns amongst men who love and admire her. When she publishes her memoirs, her daughter Lumir returns from New York to Paris with her husband and young child. The reunion between mother and daughter will quickly turn to confrontation: truths will be told, accounts settled, loves and resentments confessed.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt8323120",
+      "tmdb_id": 517468,
+      "poster_url": "https://image.tmdb.org/t/p/w500/uU2GVQ2dkltwtwTi5uHkmKAnCcU.jpg"
+    },
+    {
+      "title": "After Life",
+      "year": "1999",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Fantasy",
+        "Drama"
+      ],
+      "plot_summary": "On a cold Monday morning, a group of counselors clock in at an old-fashioned social services office. Their task is to interview the recently deceased, record their personal details, then, over the course of the week, assist them in choosing a single memory to keep for eternity.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0165078",
+      "tmdb_id": 17962,
+      "poster_url": "https://image.tmdb.org/t/p/w500/bs2M1hqAQl5LeAOPPRV4drwouZS.jpg"
+    },
+    {
+      "title": "Maborosi",
+      "year": "1995",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A tragedy strikes a young woman's life without warning or reason. She continues living while searching for meaning in a lonely world.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0113725",
+      "tmdb_id": 18872,
+      "poster_url": "https://image.tmdb.org/t/p/w500/9MEmy7xQUm2dcnCStT2sLcN4d59.jpg"
+    },
+    {
+      "title": "I Wish",
+      "year": "2011",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Twelve-year-old Koichi, who has been separated from his brother Ryunosuke due to his parents' divorce, hears a rumor that the new bullet trains will precipitate a wish-granting miracle when they pass each other at top speed.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1650453",
+      "tmdb_id": 79382,
+      "poster_url": "https://image.tmdb.org/t/p/w500/jLsUvhEgovME7dI283nnjqArmwI.jpg"
+    },
+    {
+      "title": "Hana",
+      "year": "2006",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Action",
+        "Drama",
+        "History",
+        "Comedy"
+      ],
+      "plot_summary": "In a poor district of Edo lives a young samurai named Soza. He has been sent by his clan to avenge the death of his father. He isn't an accomplished swordsman however, and he prefers sharing the life of the residents, teaching the kids how to write etc. When he finally finds the man he is looking for, he will have to decide whether he follows the way of the samurai or chooses peace and reconciliation.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0464038",
+      "tmdb_id": 20525,
+      "poster_url": "https://image.tmdb.org/t/p/w500/u3Fu1z2BvdjBsD2byyN7g2vp3BF.jpg"
+    },
+    {
+      "title": "Distance",
+      "year": "2001",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "On the third anniversary of a cult's failed chemical attack on Tokyo and their subsequent mass suicide, family members of those affected gather at the cult's former base on the shores of a lake to observe the anniversary of their loved ones' deaths.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0278413",
+      "tmdb_id": 25051,
+      "poster_url": "https://image.tmdb.org/t/p/w500/wyAwtWVlHvrZkCkPEzMa0s5puXg.jpg"
+    },
+    {
+      "title": "Without Memory",
+      "year": "1996",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "A father loses his short-term memory as the result of a botched medical procedure which causes him to develop Wernicke's Encephalopathy. Koreeda chronicles his family’s fight to receive proper treatment and benefits from this devastating malpractice.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0145579",
+      "tmdb_id": 92691,
+      "poster_url": "https://image.tmdb.org/t/p/w500/xKie9MZYVT5ExCRR11tpU8VGAGd.jpg"
+    },
+    {
+      "title": "August Without Him",
+      "year": "1994",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "Hirata Yukata became the first man in Japan to publicly acknowledge that he had contracted HIV through gay sex. Filmed over a series of months, the documentary contrasts his public life as an outspoken figure on the lecture circuit with his personal descent into illness and death.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0236374",
+      "tmdb_id": 247739,
+      "poster_url": "https://image.tmdb.org/t/p/w500/wUEZTeLNejBqLPMnRAAfpGRse1e.jpg"
+    },
+    {
+      "title": "So I Can Be Alright: Cocco's Endless Journey",
+      "year": "2008",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary",
+        "Music"
+      ],
+      "plot_summary": "A documentary about the J-pop / folk rock singer Cocco.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1287896",
+      "tmdb_id": 383044,
+      "poster_url": "https://image.tmdb.org/t/p/w500/qgqbuu6WHQ3zLLzz7c181yU2nOX.jpg"
+    },
+    {
+      "title": "Ishibumi",
+      "year": "2016",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "A memorial to the atomic annihilation of 321 students at Hiroshima Middle School.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt5874410",
+      "tmdb_id": 516543,
+      "poster_url": "https://image.tmdb.org/t/p/w500/1k34fmcBw0kUxcj2ZBtabT9VnW1.jpg"
+    },
+    {
+      "title": "Lessons from a Calf",
+      "year": "1991",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary",
+        "Family"
+      ],
+      "plot_summary": "An elementary school in Japan begins an experimental program that frames the students' curriculum around one single project: the raising of a calf from adolescence to adulthood. Through their work with the calf, the students learn about math, biology, nutrition and numerous other subjects. But after multiple years of investing energy and emotion into their beloved pet, the students begin to realize that the final days of their project may provide them with the hardest and most important lesson of all.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0236515",
+      "tmdb_id": 247569,
+      "poster_url": "https://image.tmdb.org/t/p/w500/fpfrkckkm2qrSpRUurHPXuIxYsb.jpg"
+    },
+    {
+      "title": "However...",
+      "year": "1991",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "Kore-eda started as a documentary maker with this beautiful portrait about the life and work of the head of Japanese social work. Yamanouchi Yoyomori devoted himself to the victims of the Minamata disease, caused by methyl mercury poisoning.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt0236736",
+      "tmdb_id": 247571,
+      "poster_url": "https://image.tmdb.org/t/p/w500/jsmHFe8KnKLa8ZgE6djgOOSpHXQ.jpg"
+    },
+    {
+      "title": "Last Scene",
+      "year": "2025",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Drama",
+        "Fantasy",
+        "Family"
+      ],
+      "plot_summary": "Screenwriter Kurata meets his granddaughter Yui, who has traveled 50 years into the past to warn him that if he doesn’t rewrite his TV drama script, the entire genre of television drama will vanish in the future. As they fight to preserve the future of the medium, they are forced to reckon with the consequences of their actions—at the cost of Yui’s very existence.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 1478081,
+      "poster_url": "https://image.tmdb.org/t/p/w500/tsTK60diJtUdz0iEBp3sysdPUrM.jpg"
+    },
+    {
+      "title": "I Wish I Could Be Japanese",
+      "year": "1992",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "The film deals with the rights of Japanese-Koreans -born in Japan but without Japanese passport or nationality- and the social rejection that they face if they don’t integrate completely, abandoning their Korean identity. The film’s main thread is the story of a Korean man, who in the times of the Japanese occupation of the Korean peninsula, is sent to Japan to fight along with the Japanese in the Philippines, but after the war and fearing discrimination, creates a Japanese identity for himself and manages to get married and have children without his family ever knowing about his origins for 50 years until he is arrested in 1985 for forging official documents and in suspicion of being a spy from North Korea.  (…)  © timegoesbyin.wordpress.com/tag/i-wanted-to-be-japanese",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt36162456",
+      "tmdb_id": 247914,
+      "poster_url": "https://image.tmdb.org/t/p/w500/pdkRDO2i566htS4CTINTlJz7ksv.jpg"
+    },
+    {
+      "title": "When Cinema Reflects the Times: Hou Hsiao-Hsien and Edward Yang",
+      "year": "1993",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "From the 1980s to the 1990s, New Taiwanese Cinema gained international attention for adopting a completely different approach to that of the commercial films which had preceded it. This piece contrasts Hou Hsiao-hsien and Edward Yang, two rivals who were the driving force behind New Taiwanese Cinema. The closing of a cinema invites us to reflect on society and the passage of history.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt30454565",
+      "tmdb_id": 765324,
+      "poster_url": "https://image.tmdb.org/t/p/w500/t7tGBu8uIttZ2ZjohdA9wQiERWD.jpg"
+    },
+    {
+      "title": "The Center Lane",
+      "year": "2021",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary",
+        "Animation"
+      ],
+      "plot_summary": "Diagnosed with leukemia in February 2019, Japanese competitive swimmer Rikako Ikee returns to her destiny: the center lane, in Hirokazu Kore-eda's short film for skincare brand SK-II.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 812567,
+      "poster_url": "https://image.tmdb.org/t/p/w500/jOD4d8k8ogf27xVpUARgiINayRL.jpg"
+    },
+    {
+      "title": "Kaidan Horror Classics",
+      "year": "2010",
+      "director": "Masayuki Ochiai",
+      "genre_tags": [
+        "Horror",
+        "Drama"
+      ],
+      "plot_summary": "Four short films based on ghost stories written by award winning modern Japanese writers.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1685398",
+      "tmdb_id": 228103,
+      "poster_url": "https://image.tmdb.org/t/p/w500/kG3ThBWcNowBIf4hBZxZxlD1FhR.jpg"
+    },
+    {
+      "title": "This World (A Correspondence Between Naomi Kawase and Hirokazu Koreeda)",
+      "year": "1996",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "The film takes shape through the form of a video exchange between Hirokazu Kore-eda and Naomi Kawase. Each films the world around them and intimately reflects on their individual struggles with making films. Kore-eda self-consciously reflects on his process, “What does a camera shoot? What does a film capture? The emptiness in my life reflects in my work.” Kawase concentrates on her everyday life and candid moments with her friends, who say, “Hang in there Naomi we are all on your side,” and, “You never keep the promises you make, but I love you anyway.”",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 404258,
+      "poster_url": null
+    },
+    {
+      "title": "Birthplace",
+      "year": "2003",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "Makiko Esumi and Hirokazu Kore-eda revisit Wajima, the setting of 'Maborosi'",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 943507,
+      "poster_url": "https://image.tmdb.org/t/p/w500/w9KuaHJvDsuIYirFoCz9fVMsdW2.jpg"
+    },
+    {
+      "title": "Series Constitution. Article 9: War Renunciation \"Oblivion\"",
+      "year": "2006",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "Part of the documentary project that each company competed on the theme of the Constitution of Japan.With the keyword \"oblivion,\" Koreeda explores how \"Article 9 of the Constitution renounces war\" has been involved in people's inner world, turning the camera around in various places, including his father's hometown, Taiwan.It is a unique work that reflects the personal history deeply.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 964143,
+      "poster_url": null
+    },
+    {
+      "title": "Soul Sketches - Every Person's Kenji Miyazawa",
+      "year": "1993",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 964158,
+      "poster_url": null
+    },
+    {
+      "title": "Where Has All the Pollution Gone?",
+      "year": "1991",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "Where Has All The Pollution Gone? exposes air pollution caused by Japan’s largest Kawasaki Steel Corp. on a scale of ten times the size of Disneyland. Since the steelworks started running, almost every local resident has been suffering from severe asthma which resulted in a 17-year long court battle with the company. Filmmaker KORE-EDA Hirokazu traces one civil servant’s involvement in the growth of pollution administration that took place during the height of Japan’s economic surge in the 60s and discloses the connection between air pollution and state policy.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 964157,
+      "poster_url": "https://image.tmdb.org/t/p/w500/3NbJIAKpHV8FbIReGsGgU7u4QBG.jpg"
+    },
+    {
+      "title": "Yottsu no shibu jikoku",
+      "year": "1993",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 964159,
+      "poster_url": null
+    },
+    {
+      "title": "Kaettekita! Deka Matsuri",
+      "year": "2003",
+      "director": "Noboru Iguchi",
+      "genre_tags": [
+        "Comedy",
+        "Action",
+        "Crime"
+      ],
+      "plot_summary": "Second installment of omnibus series Deka Matsuri. 10 films made under the conditions \"The main character must be a female detective\" \"the film must be less than 10 minutes long\" \"at least five gags must be included\"",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 1103130,
+      "poster_url": "https://image.tmdb.org/t/p/w500/lRKPFiJYFPfza7HsKQuAW7dMD2I.jpg"
+    },
+    {
+      "title": "The Message from Fukushima",
+      "year": "2012",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Documentary"
+      ],
+      "plot_summary": "Short documentary about the aftermath of the Fukushima nuclear disaster.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2918980",
+      "tmdb_id": 593416,
+      "poster_url": "https://image.tmdb.org/t/p/w500/mZ8kXpqRO3NJwLvzWCTjlnGPBOe.jpg"
+    },
+    {
+      "title": "Dead Son",
+      "year": "2010",
+      "director": "Hirokazu Kore-eda",
+      "genre_tags": [
+        "Horror"
+      ],
+      "plot_summary": "A child appears before a young couple who lost their beloved son at an early age. Is he the reincarnation of their son, or a ghost? The couple grows closer to the child, but before long, he suddenly disappears. The Days After is the contribution of Japanese director Hirokazu Kore-eda to the fantasy TV series Kaidan-Horror Classics, produced by NHK and NHK Enterprises.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1700501",
+      "tmdb_id": 964076,
+      "poster_url": "https://image.tmdb.org/t/p/w500/qlQhTDbS8bBUGoMup59Ck596hBN.jpg"
+    }
+  ],
+  "metadata": {
+    "collection_date": "2025-09-21T10:20:57.142549",
+    "total_movies": 31,
+    "source": "director_collection"
+  }
+}

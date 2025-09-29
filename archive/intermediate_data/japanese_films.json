@@ -1,0 +1,33 @@
+{
+  "movies": [
+    {
+      "title": "1",
+      "year": "2021",
+      "director": "KAIBASHIRA",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 1078760
+    },
+    {
+      "title": "Starting Over",
+      "year": "2014",
+      "director": "Takashi Nishihara",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "Nana is 19 and lives in a corner of Tokyo. Her birth mother and Marin, a girl the same age who she loves, were the only people she could trust. Nana confronts them in her yearning for love, but the world does not give it to her. With her whole life ahead of her, Nana struggles, suffers, and begins a search for the true meaning of love.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4132736",
+      "tmdb_id": 314608
+    }
+  ]
+}

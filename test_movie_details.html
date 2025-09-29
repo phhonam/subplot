@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Movie Details Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        .test-button {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #4f46e5;
+        }
+        .carousel-card {
+            display: inline-block;
+            width: 200px;
+            height: 300px;
+            background: #333;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-card-poster {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .carousel-card-content {
+            padding: 10px;
+        }
+        .carousel-card-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+        }
+        .carousel-card-subtitle {
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Details Panel Test</h1>
+    
+    <div class="test-section">
+        <h2>Test Movie Data</h2>
+        <p>This page tests the movie details panel functionality with sample data.</p>
+        
+        <div class="test-section">
+            <h3>Sample Carousel Cards (Click to test)</h3>
+            <div id="testCarousel">
+                <!-- Cards will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Test Functions</h3>
+            <button class="test-button" onclick="testMovieDetailsPanel()">Test Movie Details Panel</button>
+            <button class="test-button" onclick="hideMovieDetailsPanel()">Hide Movie Details Panel</button>
+        </div>
+    </div>
+
+    <!-- Movie Details Panel (right-side sliding panel) -->
+    <section id="movieDetailsPanel" class="movie-details-panel hidden" aria-live="polite" style="position: fixed; top: 0; right: 0; width: 400px; height: 100vh; background: #1a1a1a; border-left: 1px solid #333; box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1); z-index: 1000; overflow-y: auto; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block;">
+        <header class="panel-hd" style="position: sticky; top: 0; background: #1a1a1a; border-bottom: 1px solid #333; z-index: 1; padding: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <h3 id="movieDetailsTitle" style="margin: 0;">Movie Details</h3>
+            <button id="closeMovieDetailsBtn" aria-label="Close" style="background: none; border: none; color: white; font-size: 18px; cursor: pointer;">✕</button>
+        </header>
+        <div class="panel-body" style="padding: 20px;">
+            <div id="movieDetailsContent">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Sample movie data for testing
+        const sampleMovies = [
+            {
+                title: "Citizen Kane",
+                director: "Orson Welles",
+                year: 1941,
+                poster_url: "https://image.tmdb.org/t/p/w500/sav0jxhqiH0bPr2xXYtlXxhT2nW.jpg",
+                backdrop_url: "https://image.tmdb.org/t/p/w1280/4cDFJ4LgHj3m0k4XgL7k8QZ2Y9A.jpg",
+                backdrop_urls: [
+                    "https://image.tmdb.org/t/p/w1280/4cDFJ4LgHj3m0k4XgL7k8QZ2Y9A.jpg",
+                    "https://image.tmdb.org/t/p/w1280/5cDFJ4LgHj3m0k4XgL7k8QZ2Y9B.jpg"
+                ],
+                themes: ["Power", "Corruption", "Media"],
+                emotional_tone: ["Dramatic", "Melancholic"],
+                profile_text: "A groundbreaking masterpiece that explores the rise and fall of a media mogul through innovative cinematography and narrative structure.",
+                why: "Revolutionary filmmaking techniques and timeless themes about power and corruption.",
+                narrative_structure: "Non-linear narrative told through flashbacks and multiple perspectives.",
+                cultural_context: ["Golden Age of Hollywood", "Media influence on society"],
+                discussion_topics: ["Power and corruption", "Media manipulation", "American dream"]
+            },
+            {
+                title: "The Godfather",
+                director: "Francis Ford Coppola",
+                year: 1972,
+                poster_url: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+                backdrop_url: "https://image.tmdb.org/t/p/w1280/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+                backdrop_urls: [
+                    "https://image.tmdb.org/t/p/w1280/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+                ],
+                themes: ["Family", "Power", "Crime"],
+                emotional_tone: ["Dramatic", "Intense"],
+                profile_text: "An epic crime drama that follows the Corleone family's rise to power in organized crime.",
+                why: "Masterful storytelling and iconic performances that define the gangster genre.",
+                narrative_structure: "Epic family saga spanning decades with complex character development.",
+                cultural_context: ["Italian-American culture", "Organized crime"],
+                discussion_topics: ["Family loyalty", "Power dynamics", "Moral ambiguity"]
+            }
+        ];
+
+        // Create test carousel cards
+        function createTestCarousel() {
+            const carousel = document.getElementById('testCarousel');
+            carousel.innerHTML = sampleMovies.map(movie => `
+                <div class="carousel-card" data-movie-title="${movie.title}">
+                    <div class="carousel-card-poster" style="background-image: url('${movie.poster_url}')"></div>
+                    <div class="carousel-card-content">
+                        <h4 class="carousel-card-title">${movie.title}</h4>
+                        <div class="carousel-card-subtitle">${movie.director} • ${movie.year}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Add click handlers
+            carousel.querySelectorAll('.carousel-card').forEach((card, index) => {
+                const movie = sampleMovies[index];
+                card.addEventListener('click', () => {
+                    showMovieDetailsPanel(movie);
+                });
+            });
+        }
+
+        // Movie Details Panel functions
+        function showMovieDetailsPanel(movie) {
+            console.log('🎬 showMovieDetailsPanel called for:', movie.title);
+            
+            const panel = document.getElementById('movieDetailsPanel');
+            const title = document.getElementById('movieDetailsTitle');
+            const content = document.getElementById('movieDetailsContent');
+            
+            if (!panel || !content) {
+                console.error('🎬 Movie details panel elements not found!');
+                return;
+            }
+            
+            // Update panel title
+            if (title) {
+                title.textContent = movie.title;
+            }
+            
+            // Render movie details content
+            renderMovieDetails(movie);
+            
+            // Show the panel
+            panel.classList.remove('hidden');
+            console.log('🎬 Movie details panel shown');
+        }
+
+        function hideMovieDetailsPanel() {
+            const panel = document.getElementById('movieDetailsPanel');
+            if (panel) {
+                panel.classList.add('hidden');
+            }
+        }
+
+        function renderMovieDetails(movie) {
+            const content = document.getElementById('movieDetailsContent');
+            if (!content) {
+                console.error('🎬 Movie details content element not found!');
+                return;
+            }
+            
+            // Get backdrop images (all background shots)
+            const backdrops = movie.backdrop_urls || [];
+            if (movie.backdrop_url && !backdrops.includes(movie.backdrop_url)) {
+                backdrops.unshift(movie.backdrop_url);
+            }
+            
+            // Get themes and emotional tones
+            const themes = movie.themes || [];
+            const emotionalTones = movie.emotional_tone || [];
+            
+            // Create the HTML content
+            const html = `
+                <div class="movie-details-hero" style="margin-bottom: 24px;">
+                    <h2 class="movie-details-title" style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: white;">${movie.title}</h2>
+                    <div class="movie-details-subtitle" style="color: #ccc; margin-bottom: 16px; font-size: 14px;">
+                        ${movie.director || ''}${movie.year ? ` • ${movie.year}` : ''}
+                    </div>
+                </div>
+                
+                ${backdrops.length > 0 ? `
+                <div class="movie-details-backdrops" style="margin-bottom: 24px;">
+                    <div class="movie-details-backdrop-full" style="display: flex; flex-direction: column; gap: 8px;">
+                        ${backdrops.map(backdrop => `
+                            <div class="movie-details-backdrop-item" style="width: 100%; height: 200px; background-size: cover; background-position: center; border-radius: 8px; transition: transform 0.2s ease; background-image: url('${backdrop}')"></div>
+                        `).join('')}
+                    </div>
+                </div>
+                ` : ''}
+                
+                <div class="movie-details-info" style="margin-bottom: 24px;">
+                    <div class="movie-details-profile" style="margin-bottom: 16px; line-height: 1.6; font-size: 14px; color: #ccc;">
+                        ${movie.profile_text || 'No profile available.'}
+                    </div>
+                    
+                    <div class="movie-details-meta" style="display: grid; gap: 12px;">
+                        ${themes.length > 0 ? `
+                        <div class="movie-details-divider" style="height: 1px; background: #333; margin: 8px 0;"></div>
+                        <div class="movie-details-meta-item" style="display: flex; flex-direction: column; gap: 4px;">
+                            <div class="movie-details-meta-label" style="font-weight: 600; color: white; font-size: 14px;">Key Themes</div>
+                            <ul class="movie-details-bullets" style="margin: 8px 0 0 0; padding-left: 16px; list-style-type: disc;">
+                                ${themes.map(theme => `<li style="margin-bottom: 4px; color: #ccc; font-size: 14px;">${theme.charAt(0).toUpperCase() + theme.slice(1).toLowerCase()}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="movie-details-divider" style="height: 1px; background: #333; margin: 8px 0;"></div>
+                        ` : ''}
+                        
+                        ${emotionalTones.length > 0 ? `
+                        <div class="movie-details-meta-item" style="display: flex; flex-direction: column; gap: 4px;">
+                            <div class="movie-details-meta-label" style="font-weight: 600; color: white; font-size: 14px;">Emotional Tone</div>
+                            <ul class="movie-details-bullets" style="margin: 8px 0 0 0; padding-left: 16px; list-style-type: disc;">
+                                ${emotionalTones.map(tone => `<li style="margin-bottom: 4px; color: #ccc; font-size: 14px;">${tone.charAt(0).toUpperCase() + tone.slice(1).toLowerCase()}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="movie-details-divider" style="height: 1px; background: #333; margin: 8px 0;"></div>
+                        ` : ''}
+                        
+                        ${movie.why ? `
+                        <div class="movie-details-meta-item" style="display: flex; flex-direction: column; gap: 4px;">
+                            <div class="movie-details-meta-label" style="font-weight: 600; color: white; font-size: 14px;">Why Watch</div>
+                            <ul class="movie-details-bullets" style="margin: 8px 0 0 0; padding-left: 16px; list-style-type: disc;">
+                                <li style="margin-bottom: 4px; color: #ccc; font-size: 14px;">${movie.why.charAt(0).toUpperCase() + movie.why.slice(1).toLowerCase()}</li>
+                            </ul>
+                        </div>
+                        <div class="movie-details-divider" style="height: 1px; background: #333; margin: 8px 0;"></div>
+                        ` : ''}
+                        
+                        ${movie.narrative_structure ? `
+                        <div class="movie-details-meta-item" style="display: flex; flex-direction: column; gap: 4px;">
+                            <div class="movie-details-meta-label" style="font-weight: 600; color: white; font-size: 14px;">Narrative Structure</div>
+                            <ul class="movie-details-bullets" style="margin: 8px 0 0 0; padding-left: 16px; list-style-type: disc;">
+                                <li style="margin-bottom: 4px; color: #ccc; font-size: 14px;">${movie.narrative_structure.charAt(0).toUpperCase() + movie.narrative_structure.slice(1).toLowerCase()}</li>
+                            </ul>
+                        </div>
+                        <div class="movie-details-divider" style="height: 1px; background: #333; margin: 8px 0;"></div>
+                        ` : ''}
+                        
+                        ${movie.cultural_context && movie.cultural_context.length > 0 ? `
+                        <div class="movie-details-meta-item" style="display: flex; flex-direction: column; gap: 4px;">
+                            <div class="movie-details-meta-label" style="font-weight: 600; color: white; font-size: 14px;">Cultural Context</div>
+                            <ul class="movie-details-bullets" style="margin: 8px 0 0 0; padding-left: 16px; list-style-type: disc;">
+                                ${movie.cultural_context.map(item => `<li style="margin-bottom: 4px; color: #ccc; font-size: 14px;">${item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="movie-details-divider" style="height: 1px; background: #333; margin: 8px 0;"></div>
+                        ` : ''}
+                        
+                        ${movie.discussion_topics && movie.discussion_topics.length > 0 ? `
+                        <div class="movie-details-meta-item" style="display: flex; flex-direction: column; gap: 4px;">
+                            <div class="movie-details-meta-label" style="font-weight: 600; color: white; font-size: 14px;">Discussion Topics</div>
+                            <ul class="movie-details-bullets" style="margin: 8px 0 0 0; padding-left: 16px; list-style-type: disc;">
+                                ${movie.discussion_topics.map(topic => `<li style="margin-bottom: 4px; color: #ccc; font-size: 14px;">${topic.charAt(0).toUpperCase() + topic.slice(1).toLowerCase()}</li>`).join('')}
+                            </ul>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+            
+            content.innerHTML = html;
+            console.log('🎬 Movie details rendered for:', movie.title);
+        }
+
+        function testMovieDetailsPanel() {
+            showMovieDetailsPanel(sampleMovies[0]);
+        }
+
+        // Event handlers
+        document.getElementById('closeMovieDetailsBtn').addEventListener('click', hideMovieDetailsPanel);
+
+        // Click outside to close panel
+        document.addEventListener('click', (e) => {
+            const panel = document.getElementById('movieDetailsPanel');
+            if (panel && !panel.classList.contains('hidden')) {
+                const isClickInsidePanel = panel.contains(e.target);
+                const isClickOnCarouselCard = e.target.closest('.carousel-card');
+                
+                if (!isClickInsidePanel && !isClickOnCarouselCard) {
+                    hideMovieDetailsPanel();
+                }
+            }
+        });
+
+        // Initialize
+        createTestCarousel();
+    </script>
+</body>
+</html>

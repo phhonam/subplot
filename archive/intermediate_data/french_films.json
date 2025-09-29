@@ -1,0 +1,66 @@
+{
+  "movies": [
+    {
+      "title": "Metamorphosis",
+      "year": "2022",
+      "director": "Alex Smoot",
+      "genre_tags": [
+        "Horror",
+        "Science Fiction",
+        "Drama",
+        "Thriller"
+      ],
+      "plot_summary": "Seeking refuge on an island in Upstate New York, a married couple's final attempt to salvage their failing relationship takes a turn for the worse when the husband begins to regress emotionally, mentally, and physically.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt13265204",
+      "tmdb_id": 980478
+    },
+    {
+      "title": "Arthur: Malediction",
+      "year": "2022",
+      "director": "Barthélémy Grossmann",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "Longtime Minimoys fan Alex is taken by his friends to the filming location for his 18th birthday, unaware that they're all in for a horrific time.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt19783626",
+      "tmdb_id": 955569
+    },
+    {
+      "title": "Coma",
+      "year": "2022",
+      "director": "Bertrand Bonello",
+      "genre_tags": [
+        "Drama",
+        "Fantasy"
+      ],
+      "plot_summary": "Amidst a period of unprecedented world events, an eighteen-year-old girl’s life is placed on hold. Isolated in her bedroom, she falls under the spell of the mysterious vlogger Patricia Coma. As time carries on, the lines between her dreams, fears, hopes, and reality begin to blur into one another.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt17308130",
+      "tmdb_id": 920772
+    },
+    {
+      "title": "Passages",
+      "year": "2023",
+      "director": "Ira Sachs",
+      "genre_tags": [
+        "Romance",
+        "Drama"
+      ],
+      "plot_summary": "Tomas and Martin are a gay couple living in Paris whose marriage is thrown into crisis when Tomas impulsively begins a passionate affair with young schoolteacher Agathe. But when Martin begins an affair of his own, Tomas must confront life decisions he may be unprepared—or unwilling—to deal with.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt16252698",
+      "tmdb_id": 898673
+    }
+  ]
+}

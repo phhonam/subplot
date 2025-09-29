@@ -1,0 +1,257 @@
+{
+  "movies": [
+    {
+      "title": "The Farewell",
+      "director": "Lulu Wang",
+      "year": 2019,
+      "runtime": "100 min",
+      "genre_tags": ["Drama", "Comedy-Drama", "Family"],
+      "plot_summary": "A Chinese family discovers their grandmother has only a short while left to live and decide to keep her in the dark, scheduling a wedding to gather before she dies. Billi, who was raised in America, struggles with the family's decision to hide the truth.",
+      "critic_reviews": [
+        "A deeply personal story told with remarkable restraint and emotional honesty. Wang creates a perfect balance between comedy and heartbreak.",
+        "The film's quiet power comes from its authentic portrayal of cultural differences and family bonds that transcend geography.",
+        "Awkwafina delivers a career-best performance in this tender meditation on family, truth, and the weight of tradition."
+      ],
+      "user_reviews": [
+        "Made me cry and laugh in equal measure. So authentic to the immigrant experience.",
+        "Beautiful cinematography and such a real portrayal of family dynamics.",
+        "Slow-paced but deeply moving. The grandmother steals every scene she's in."
+      ],
+      "cast": ["Awkwafina", "Tzi Ma", "Diana Lin", "Zhao Shuzhen"],
+      "festival_awards": ["Sundance Film Festival - Audience Award"],
+      "visual_style": "Naturalistic cinematography with warm, intimate lighting. Handheld camera work that feels observational.",
+      "source_url": "https://letterboxd.com/film/the-farewell/",
+      "rating": 7.6
+    },
+    {
+      "title": "Parasite",
+      "director": "Bong Joon-ho",
+      "year": 2019,
+      "runtime": "132 min",
+      "genre_tags": ["Thriller", "Dark Comedy", "Social Commentary"],
+      "plot_summary": "A poor family schemes to become employed by a wealthy family by infiltrating their household and posing as unrelated, highly qualified individuals.",
+      "critic_reviews": [
+        "Bong Joon-ho masterfully weaves class commentary into a thrilling narrative that's both entertaining and deeply unsettling.",
+        "A genre-defying masterpiece that shifts seamlessly between comedy, thriller, and horror while maintaining its social critique.",
+        "The film's production design creates a visual language that reinforces its themes about social hierarchy and inequality."
+      ],
+      "user_reviews": [
+        "Absolutely gripping from start to finish. The twist in the middle completely changes everything.",
+        "Incredible cinematography and production design. Every detail matters.",
+        "A perfect movie that gets better with multiple viewings. So many layers to unpack."
+      ],
+      "cast": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong", "Choi Woo-shik", "Park So-dam"],
+      "festival_awards": ["Cannes Film Festival - Palme d'Or", "Academy Award - Best Picture"],
+      "visual_style": "Meticulous production design with stark contrasts between spaces. Dynamic camera work that emphasizes vertical movement and class hierarchy.",
+      "source_url": "https://www.cannesfilmfestival.com/en/films/parasite",
+      "rating": 8.5
+    },
+    {
+      "title": "Her",
+      "director": "Spike Jonze",
+      "year": 2013,
+      "runtime": "126 min",
+      "genre_tags": ["Romance", "Sci-Fi", "Drama"],
+      "plot_summary": "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
+      "critic_reviews": [
+        "Jonze creates a surprisingly tender love story that explores loneliness and connection in the digital age.",
+        "Phoenix delivers a masterful performance, creating chemistry with a voice while exploring themes of love and artificial intelligence.",
+        "The film's production design creates a believable near-future that feels both familiar and subtly different."
+      ],
+      "user_reviews": [
+        "Strange premise but incredibly moving. Made me think differently about relationships and technology.",
+        "Joaquin Phoenix is incredible. The cinematography is beautiful and dreamlike.",
+        "A love story unlike any other. Scarlett Johansson's voice performance is perfect."
+      ],
+      "cast": ["Joaquin Phoenix", "Scarlett Johansson", "Amy Adams", "Rooney Mara"],
+      "festival_awards": ["New York Film Festival - Centerpiece", "Academy Award - Best Original Screenplay"],
+      "visual_style": "Warm, intimate cinematography with soft lighting and close-ups. Futuristic production design that feels lived-in rather than sterile.",
+      "source_url": "https://www.indiewire.com/reviews/her-spike-jonze/",
+      "rating": 8.0
+    },
+    {
+      "title": "Tangerine",
+      "director": "Sean Baker",
+      "year": 2015,
+      "runtime": "88 min",
+      "genre_tags": ["Comedy-Drama", "LGBTQ+", "Independent"],
+      "plot_summary": "A transgender sex worker discovers her boyfriend and pimp has been cheating on her and sets out with her best friend to find him on Christmas Eve in Hollywood.",
+      "critic_reviews": [
+        "Baker creates an authentic, energetic portrait of marginalized lives with remarkable empathy and humor.",
+        "Shot entirely on iPhone, the film proves that innovative storytelling trumps big budgets every time.",
+        "The performances by Kitana Kiki Rodriguez and Mya Taylor are raw, honest, and completely captivating."
+      ],
+      "user_reviews": [
+        "So much energy and life. These characters feel completely real and lived-in.",
+        "Amazing what they accomplished with just an iPhone. The story is what matters.",
+        "Funny, heartbreaking, and genuine. Hollywood needs more films like this."
+      ],
+      "cast": ["Kitana Kiki Rodriguez", "Mya Taylor", "Karren Karagulian", "Mickey O'Hagan"],
+      "festival_awards": ["Sundance Film Festival - NEXT Audience Award"],
+      "visual_style": "Vibrant, saturated colors shot on iPhone with kinetic handheld cinematography. Raw, documentary-style approach with neon-soaked night scenes.",
+      "source_url": "https://www.sundance.org/projects/tangerine",
+      "rating": 7.1
+    },
+    {
+      "title": "Tokyo Story",
+      "director": "Yasujirō Ozu",
+      "year": 1953,
+      "runtime": "136 min",
+      "genre_tags": ["Drama", "Family", "Japanese Cinema"],
+      "plot_summary": "An elderly couple travels to Tokyo to visit their grown children, but find themselves treated as unwelcome guests in their busy lives.",
+      "critic_reviews": [
+        "Ozu's masterpiece is a profound meditation on family, aging, and the passage of time, told with extraordinary restraint.",
+        "The film's static camera and tatami-level shots create an intimate, contemplative viewing experience.",
+        "A deeply humanistic work that finds universal truths in the specific details of Japanese family life."
+      ],
+      "user_reviews": [
+        "Slow but incredibly moving. Made me want to call my parents immediately.",
+        "The cinematography is beautiful and the story is timeless. A true masterpiece.",
+        "Takes patience but rewards with deep emotional impact. About the loneliness of modern life."
+      ],
+      "cast": ["Chishū Ryū", "Chieko Higashiyama", "Setsuko Hara", "Haruko Sugimura"],
+      "festival_awards": ["Kinema Junpo Awards - Best Film"],
+      "visual_style": "Static camera positioned at tatami level with precise, symmetrical compositions. Minimalist visual approach that emphasizes human relationships.",
+      "source_url": "https://www.criterion.com/films/tokyo-story",
+      "rating": 8.2
+    },
+    {
+      "title": "Frances Ha",
+      "director": "Noah Baumbach",
+      "year": 2012,
+      "runtime": "86 min",
+      "genre_tags": ["Comedy-Drama", "Coming-of-age", "Mumblecore"],
+      "plot_summary": "A New York woman in her late twenties navigates friendship, career struggles, and the transition to adulthood while trying to make it as a dancer.",
+      "critic_reviews": [
+        "Baumbach and Gerwig create a perfectly observed portrait of millennial anxiety and artistic ambition.",
+        "The black-and-white cinematography gives the film a timeless quality while the dialogue feels completely contemporary.",
+        "Greta Gerwig's performance is effortlessly charming, making Frances both frustrating and deeply sympathetic."
+      ],
+      "user_reviews": [
+        "So relatable it hurts. Frances is every struggling creative in their twenties.",
+        "The friendship between Frances and Sophie feels so real and complicated.",
+        "Funny and sad in equal measure. The ending gave me hope about growing up."
+      ],
+      "cast": ["Greta Gerwig", "Mickey Sumner", "Adam Driver", "Michael Zegen"],
+      "festival_awards": ["Telluride Film Festival - Premiere"],
+      "visual_style": "Black-and-white cinematography with handheld camera work. Natural lighting and intimate framing that captures the spontaneous energy of New York.",
+      "source_url": "https://www.criterion.com/films/frances-ha",
+      "rating": 7.4
+    },
+    {
+      "title": "Past Lives",
+      "director": "Celine Sciamma",
+      "year": 2023,
+      "runtime": "105 min",
+      "genre_tags": ["Romance", "Drama", "Korean-American"],
+      "plot_summary": "Nora and Hae Sung, two childhood friends, are reunited in New York for one fateful week as they confront notions of destiny, love, and the choices that make a life.",
+      "critic_reviews": [
+        "A masterful exploration of love, fate, and the paths not taken, told with remarkable emotional intelligence.",
+        "Sciamma's direction is subtle and precise, allowing the weight of unspoken feelings to drive the narrative.",
+        "The film captures the specific pain of immigrant experience and the complexity of cultural identity."
+      ],
+      "user_reviews": [
+        "Absolutely devastating in the best way. Made me think about all my what-ifs.",
+        "The three leads have incredible chemistry. Every glance and pause feels meaningful.",
+        "Beautiful meditation on love and timing. The ending destroyed me."
+      ],
+      "cast": ["Greta Lee", "Teo Yoo", "John Magaro"],
+      "festival_awards": ["Sundance Film Festival - U.S. Dramatic Competition"],
+      "visual_style": "Elegant, composed cinematography with warm lighting. Static shots that allow emotional moments to breathe and develop naturally.",
+      "source_url": "https://www.sundance.org/projects/past-lives",
+      "rating": 8.2
+    },
+    {
+      "title": "Still Walking",
+      "director": "Hirokazu Kore-eda",
+      "year": 2008,
+      "runtime": "115 min",
+      "genre_tags": ["Drama", "Family", "Japanese Cinema"],
+      "plot_summary": "A family gathers for their annual commemoration of an eldest son's death, revealing long-held resentments and the quiet dynamics of family life.",
+      "critic_reviews": [
+        "Kore-eda crafts a quietly devastating portrait of family grief with extraordinary attention to domestic detail.",
+        "The film finds profound meaning in everyday interactions, building emotional weight through accumulated small moments.",
+        "A masterclass in understated filmmaking that trusts audiences to find depth in simplicity."
+      ],
+      "user_reviews": [
+        "So subtle and real. The family dynamics feel completely authentic.",
+        "Made me appreciate the small moments with family. Beautifully observed.",
+        "Slow but deeply rewarding. About how families carry grief and love together."
+      ],
+      "cast": ["Hiroshi Abe", "Yui Natsukawa", "You", "Kazuya Takahashi"],
+      "festival_awards": ["Venice Film Festival - Competition Selection"],
+      "visual_style": "Naturalistic cinematography with static shots and careful composition. Emphasis on domestic spaces and the rhythm of daily life.",
+      "source_url": "https://www.criterion.com/films/still-walking",
+      "rating": 7.9
+    },
+    {
+      "title": "Parallel Mothers",
+      "director": "Pedro Almodóvar",
+      "year": 2021,
+      "runtime": "123 min",
+      "genre_tags": ["Drama", "Spanish Cinema", "Maternal"],
+      "plot_summary": "Two women, Janis and Ana, coincide in a hospital room where they are going to give birth. Both are single and became pregnant by accident. A complex story of motherhood, family secrets, and Spain's historical memory unfolds.",
+      "critic_reviews": [
+        "Almodóvar weaves personal and political history into a rich tapestry of maternal love and national memory.",
+        "Penélope Cruz delivers a powerhouse performance in this emotionally complex drama about women, secrets, and Spain's past.",
+        "The film masterfully connects intimate family drama with broader themes of historical justice and collective memory."
+      ],
+      "user_reviews": [
+        "Cruz is incredible as always. The story kept me guessing until the end.",
+        "Beautiful cinematography and such a unique story. Only Almodóvar could make this work.",
+        "Emotional and political in the best way. Made me think about family secrets and history."
+      ],
+      "cast": ["Penélope Cruz", "Milena Smit", "Israel Elejalde", "Aitana Sánchez-Gijón"],
+      "festival_awards": ["Venice Film Festival - Competition", "Academy Award Nomination - Best Actress"],
+      "visual_style": "Rich, saturated colors with Almodóvar's signature visual style. Intimate close-ups balanced with carefully composed interior shots.",
+      "source_url": "https://www.sonyclassics.com/parallel-mothers/",
+      "rating": 7.1
+    },
+    {
+      "title": "Nomadland",
+      "director": "Chloé Zhao",
+      "year": 2020,
+      "runtime": "107 min",
+      "genre_tags": ["Drama", "Road Movie", "American West"],
+      "plot_summary": "A woman in her sixties, after losing everything in the Great Recession, embarks on a journey through the American West, living in a van and working seasonal jobs while searching for a sense of community.",
+      "critic_reviews": [
+        "Zhao creates a poetic meditation on economic displacement and the search for belonging in contemporary America.",
+        "Frances McDormand gives a career-defining performance in this deeply empathetic portrait of modern nomads.",
+        "The film blends documentary realism with narrative filmmaking to create something uniquely powerful and authentic."
+      ],
+      "user_reviews": [
+        "Heartbreaking and beautiful. Made me rethink what home really means.",
+        "The real nomads in the film bring such authenticity. McDormand is perfect.",
+        "Slow but mesmerizing. The American landscape becomes a character itself."
+      ],
+      "cast": ["Frances McDormand", "David Strathairn", "Linda May", "Charlene Swankie"],
+      "festival_awards": ["Venice Film Festival - Golden Lion", "Academy Award - Best Picture"],
+      "visual_style": "Expansive cinematography capturing the vastness of the American landscape. Natural lighting and documentary-style realism.",
+      "source_url": "https://www.searchlightpictures.com/nomadland/",
+      "rating": 7.3
+    },
+    {
+      "title": "Little Miss Sunshine",
+      "director": "Jonathan Dayton, Valerie Faris",
+      "year": 2006,
+      "runtime": "101 min",
+      "genre_tags": ["Comedy-Drama", "Family", "Road Movie"],
+      "plot_summary": "A family's road trip to a child beauty pageant takes a turn for the worse when their van breaks down, stranding them in the middle of nowhere.",
+      "critic_reviews": [
+        "A perfectly balanced blend of comedy and pathos that finds humor in family dysfunction without mocking its characters.",
+        "The ensemble cast creates authentic family chemistry, making both the laughs and tears feel completely earned.",
+        "A smart, funny film that celebrates the beautiful messiness of family life while critiquing American success culture."
+      ],
+      "user_reviews": [
+        "Made me laugh and cry. Such a genuine portrayal of a dysfunctional but loving family.",
+        "Steve Carell is amazing in this. The whole cast works so well together.",
+        "The dance scene at the end is pure joy. A perfect feel-good movie with depth."
+      ],
+      "cast": ["Steve Carell", "Toni Collette", "Greg Kinnear", "Alan Arkin", "Paul Dano", "Abigail Breslin"],
+      "festival_awards": ["Sundance Film Festival - Audience Award", "Academy Award - Best Supporting Actor"],
+      "visual_style": "Bright, colorful cinematography with a warm, inviting visual tone. Road movie aesthetic with emphasis on family interactions in confined spaces.",
+      "source_url": "https://www.foxsearchlight.com/little-miss-sunshine/",
+      "rating": 7.8
+    }
+  ]
+}

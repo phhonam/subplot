@@ -1,0 +1,58 @@
+{
+  "movies": [
+    {
+      "title": "Blade Runner 2049",
+      "year": "2017",
+      "director": "Denis Villeneuve",
+      "genre_tags": [
+        "Science Fiction",
+        "Drama"
+      ],
+      "plot_summary": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1856101",
+      "tmdb_id": 335984,
+      "poster_url": "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg"
+    },
+    {
+      "title": "Sicario",
+      "year": "2015",
+      "director": "Denis Villeneuve",
+      "genre_tags": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "plot_summary": "An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt3397884",
+      "tmdb_id": 273481,
+      "poster_url": "https://image.tmdb.org/t/p/w500/lz8vNyXeidqqOdJW9ZjnDAMb5Vr.jpg"
+    },
+    {
+      "title": "Enemy",
+      "year": "2014",
+      "director": "Denis Villeneuve",
+      "genre_tags": [
+        "Thriller",
+        "Mystery"
+      ],
+      "plot_summary": "A mild-mannered college professor discovers a look-alike actor and delves into the other man's private affairs.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2316411",
+      "tmdb_id": 181886,
+      "poster_url": "https://image.tmdb.org/t/p/w500/vf40tyDRKZsBmaLsYeopzfFLzLx.jpg"
+    }
+  ],
+  "metadata": {
+    "collection_date": "2025-09-21T10:08:14.851430",
+    "total_movies": 3,
+    "source": "director_collection"
+  }
+}

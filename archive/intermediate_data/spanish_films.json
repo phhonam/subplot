@@ -1,0 +1,109 @@
+{
+  "movies": [
+    {
+      "title": "Siempre es Otoño",
+      "year": "2020",
+      "director": "Alex Sereno",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A young couple is reunited 7 years after having broken. Filled with insecurities, frustrations and dreams that have not been fulfilled, they decide to spend a day together that is slowly becoming an excuse to reopen wounds that they believed were closed and see if they are able to leave their past behind in order to move forward.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt8508496",
+      "tmdb_id": 679129
+    },
+    {
+      "title": "Amor platónico",
+      "year": "2024",
+      "director": "Vicente Bonet",
+      "genre_tags": [
+        "Comedy",
+        "Romance"
+      ],
+      "plot_summary": "",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt30833221",
+      "tmdb_id": 1302788
+    },
+    {
+      "title": "Perspectiva",
+      "year": "2024",
+      "director": "Ben Blas",
+      "genre_tags": [
+        "Science Fiction",
+        "Drama"
+      ],
+      "plot_summary": "In the near future, technology will allow us to see what's going to happen in our lives, creating an illusion of future by using our memories and cognitive processes. LookApp is a brand new app that, for some money, can show you the right path. Aaron, although very aware of the harm and the number of addicted victims, uses it against warnings due to his suspicions about his girlfriend and best friend's affair.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt10127964",
+      "tmdb_id": 1314236
+    },
+    {
+      "title": "A Wind from the South",
+      "year": "2023",
+      "director": "Álvaro García-Capelo",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A lighthouse keeper and her late brother's best friend live together in a lighthouse, waiting for the south wind to scatter the ashes of the deceased.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt27428167",
+      "tmdb_id": 1134791
+    },
+    {
+      "title": "Bukraken!",
+      "year": "2023",
+      "director": "David Díaz",
+      "genre_tags": [
+        "Comedy",
+        "Horror",
+        "Fantasy"
+      ],
+      "plot_summary": "In 2016, journalism student Susana Rojas disappeared without a trace while making a documentary for her end-of-career work. After several years, her project is finally uncovered.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt6836744",
+      "tmdb_id": 1127781
+    },
+    {
+      "title": "Honeymoon",
+      "year": "2015",
+      "director": "Diego Cohen",
+      "genre_tags": [
+        "Thriller",
+        "Horror"
+      ],
+      "plot_summary": "A psychotic doctor kidnaps his neighbor and locks her in a dungeon, where he uses twisted conditioning methods to make her submit to being his wife.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4459912",
+      "tmdb_id": 295466
+    },
+    {
+      "title": "Aj Zombies!",
+      "year": "2017",
+      "director": "Daniel Martín Rodríguez",
+      "genre_tags": [
+        "Comedy",
+        "Horror"
+      ],
+      "plot_summary": "Claudia and Felipe can't be any more different. Only a zombie apocalypse could bring them together. A hilarious love story set in zombie times, Claudia, Felipe, a drunkard and a security guard must escape Lima together in search of safety.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt7592928",
+      "tmdb_id": 638688
+    }
+  ]
+}

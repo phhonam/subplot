@@ -1,0 +1,762 @@
+{
+  "movies": [
+    {
+      "title": "I Like Movies",
+      "year": "2023",
+      "director": "Chandler Levack",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "Socially inept 17-year-old cinephile Lawrence Kweller gets a job at a video store, where he forms a complicated friendship with his older female manager.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt14913282",
+      "tmdb_id": 980996
+    },
+    {
+      "title": "My Penguin Friend",
+      "year": "2024",
+      "director": "David Schurmann",
+      "genre_tags": [
+        "Family",
+        "Adventure",
+        "Drama"
+      ],
+      "plot_summary": "A lost penguin rescued from an oil spill transforms the life of a heartbroken fisherman. They become unlikely friends, so bonded that even the vast ocean cannot divide them.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt8609660",
+      "tmdb_id": 1159799
+    },
+    {
+      "title": "Triumph",
+      "year": "2021",
+      "director": "Brett Leonard",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A bright and determined teen who has mild cerebral palsy strives to be a wrestler on his high school's team and to win over the heart of a classmate, the girl of his dreams.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt3859466",
+      "tmdb_id": 809910
+    },
+    {
+      "title": "We're All Going to the World's Fair",
+      "year": "2022",
+      "director": "Jane Schoenbrun",
+      "genre_tags": [
+        "Drama",
+        "Horror"
+      ],
+      "plot_summary": "Reality and fantasy begin to blur when a teenager, alone in her attic bedroom, immerses herself in a role-playing horror game online.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt13648224",
+      "tmdb_id": 776501
+    },
+    {
+      "title": "Son of the South",
+      "year": "2021",
+      "director": "Barry Alexander Brown",
+      "genre_tags": [
+        "History",
+        "Drama"
+      ],
+      "plot_summary": "In civil rights era Montgomery, Alabama, Klansman's grandson Bob Zellner must choose which side of history to be on during the Movement. Defying his family and white Southern norms, he fought against social injustice, repression and violence to change the world around him",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2235372",
+      "tmdb_id": 686548
+    },
+    {
+      "title": "God's Not Dead: We The People",
+      "year": "2021",
+      "director": "Vance Null",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "Reverend Dave has to defend himself and a group of Christian homeschooling families after an inspection by local government officials.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt14578032",
+      "tmdb_id": 793285
+    },
+    {
+      "title": "After Death",
+      "year": "2023",
+      "director": "Chris Radtke",
+      "genre_tags": [
+        "Documentary",
+        "Drama"
+      ],
+      "plot_summary": "Based on real near-death experiences, the afterlife is explored with the guidance of New York Times bestselling authors, medical experts, scientists and survivors who shed a light on what awaits us.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt21191906",
+      "tmdb_id": 1162322
+    },
+    {
+      "title": "Slotherhouse",
+      "year": "2023",
+      "director": "Matthew Goodhue",
+      "genre_tags": [
+        "Horror",
+        "Comedy",
+        "Thriller"
+      ],
+      "plot_summary": "Emily Young, a senior, wants to be elected as her sorority's president. She adopts a cute sloth, thinking it can become the new mascot and help her win, until a string of fatalities implicate the sloth as the main suspect in the murders.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt15422224",
+      "tmdb_id": 1040892
+    },
+    {
+      "title": "Half Brothers",
+      "year": "2020",
+      "director": "Luke Greenfield",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "Mexican aviation exec Renato is shocked to learn that he has an American half-brother he never knew about: free-spirited Asher. They are forced on a road trip together, tracing the path their father took from Mexico to the U.S.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt10515926",
+      "tmdb_id": 652962
+    },
+    {
+      "title": "The Last Stop in Yuma County",
+      "year": "2024",
+      "director": "Francis Galluppi",
+      "genre_tags": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "plot_summary": "While awaiting the next fuel truck at a middle-of-nowhere Arizona rest stop, a traveling young knife salesman is thrust into a high-stakes hostage situation by the arrival of two similarly stranded bank robbers with no qualms about using cruelty—or cold, hard steel—to protect their bloodstained, ill-gotten fortune.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt11674730",
+      "tmdb_id": 1047020
+    },
+    {
+      "title": "The Shift",
+      "year": "2023",
+      "director": "Brock Heasley",
+      "genre_tags": [
+        "Science Fiction"
+      ],
+      "plot_summary": "Following a tense encounter with a mysterious stranger with otherworldly powers, a man is banished to a parallel, tyrannical, liberal Earth, where he fights to get back the woman he loves.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt19406606",
+      "tmdb_id": 1108658
+    },
+    {
+      "title": "The Lesson",
+      "year": "2023",
+      "director": "Alice Troughton",
+      "genre_tags": [
+        "Thriller",
+        "Drama"
+      ],
+      "plot_summary": "Liam, an aspiring and ambitious young writer, eagerly accepts a tutoring position at the family estate of his idol, renowned author J.M. Sinclair. But soon, Liam realizes that he is ensnared in a web of family secrets, resentment, and retribution. Sinclair, his wife Hélène, and their son Bertie all guard a dark past, one that threatens Liam’s future as well as their own.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt20358284",
+      "tmdb_id": 977770
+    },
+    {
+      "title": "His Only Son",
+      "year": "2023",
+      "director": "David Helling",
+      "genre_tags": [
+        "Drama",
+        "Fantasy"
+      ],
+      "plot_summary": "By God's order, Abraham was commanded to sacrifice his son Isaac on the mountain of Moriah. While traveling to the place of the sacrifice, alongside Isaac and two servants, Abraham is flooded with vivid memories from the years he and Sarah spent longing for the son they were promised—the son he must now lay upon the altar.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt8277246",
+      "tmdb_id": 761851
+    },
+    {
+      "title": "Night of the Hunted",
+      "year": "2023",
+      "director": "Franck Khalfoun",
+      "genre_tags": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "When an unsuspecting woman stops at a remote gas station in the dead of night, she's made the plaything of a sociopath sniper with a secret vendetta. To survive, she must not only dodge his bullets and fight for her life, but also figure out who wants her dead and why.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt23642744",
+      "tmdb_id": 1160003
+    },
+    {
+      "title": "Freud's Last Session",
+      "year": "2023",
+      "director": "Matt Brown",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "On the eve of the Second World War, two of the greatest minds of the twentieth century, C.S. Lewis and Sigmund Freud converge for their own personal battle over the existence of God. The film interweaves the lives of Freud and Lewis, past, present, and through fantasy, bursting from the confines of Freud’s study on a dynamic journey.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt20420628",
+      "tmdb_id": 1025491
+    },
+    {
+      "title": "Love Me",
+      "year": "2025",
+      "director": "Andrew Zuchero",
+      "genre_tags": [
+        "Romance",
+        "Drama",
+        "Science Fiction",
+        "Animation"
+      ],
+      "plot_summary": "In a story that spans billions of years, a buoy and a satellite meet online long after humanity’s extinction. As they learn what life was like on Earth, they discover themselves and what it means to be alive and in love.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt21375602",
+      "tmdb_id": 881415
+    },
+    {
+      "title": "Winnie the Pooh: Blood and Honey",
+      "year": "2023",
+      "director": "Rhys Frake-Waterfield",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "After Christopher Robin abandons them for college, Pooh and Piglet embark on a bloody rampage as they search for a new source of food.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt19623240",
+      "tmdb_id": 980078
+    },
+    {
+      "title": "The Best Christmas Pageant Ever",
+      "year": "2024",
+      "director": "Dallas Jenkins",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "Family"
+      ],
+      "plot_summary": "The Herdman kids are undeniably the worst kids in the history of the world. They lie, steal, cheat, bully and overall terrorize their small community. But this Christmas, they're taking over their local church Pageant – and they just might unwittingly teach a shocked little town the true meaning of Christmas.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2347285",
+      "tmdb_id": 1206617
+    },
+    {
+      "title": "Mad Heidi",
+      "year": "2022",
+      "director": "Johannes Hartmann",
+      "genre_tags": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Horror"
+      ],
+      "plot_summary": "In a dystopian Switzerland that has fallen under the fascist rule of an evil cheese tyrant, Swiss mountain girl Heidi transforms herself into a kick-ass female fighting force who sets out to liberate the country from a cheese-fueled machinery of hate. ",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2943178",
+      "tmdb_id": 566805
+    },
+    {
+      "title": "Monster High: The Movie",
+      "year": "2022",
+      "director": "Todd Holland",
+      "genre_tags": [
+        "Family",
+        "Fantasy",
+        "Comedy",
+        "Adventure"
+      ],
+      "plot_summary": "Clawdeen Wolf, half human and half werewolf, has recently started attending Monster High, a school for monsters in all forms. After quickly befriending her classmates Frankie Stein and Draculaura, Clawdeen feels like she has finally found a place where she can truly be herself, or so she thinks. Soon, a devious plan to destroy Monster High threatens to reveal her real identity and Clawdeen must learn to embrace her true monster heart before it's too late.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1447981",
+      "tmdb_id": 335795
+    },
+    {
+      "title": "Hard Truths",
+      "year": "2024",
+      "director": "Mike Leigh",
+      "genre_tags": [
+        "Drama",
+        "Comedy"
+      ],
+      "plot_summary": "Pansy is a woman so full of rage that every interaction she has devolves into lashing out, whether at her utterly cowed husband and son, or random strangers who have the temerity to address her. In contrast, her younger sister Chantelle lives with her two vivacious daughters and plies a successful trade as a hairdresser, putting clients at their ease all day long. Yet beneath Pansy’s abrasive exterior are hints of a more fragile psyche, one motivated by fear and damaged by repressed pain.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt11891850",
+      "tmdb_id": 1013154
+    },
+    {
+      "title": "The Last Rodeo",
+      "year": "2025",
+      "director": "Jon Avnet",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A retired rodeo legend risks it all to save his grandson. Facing his own painful past and the fears of his family, he enters a high-stakes bullriding competition as the oldest contestant ever. Along the way, he reconciles old wounds with his estranged daughter and proves that true courage is found in the fight for family.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt30908405",
+      "tmdb_id": 1380682
+    },
+    {
+      "title": "Dìdi (弟弟)",
+      "year": "2024",
+      "director": "Sean Wang",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "In 2008, during the last month of summer before high school begins, an impressionable 13-year-old Taiwanese American boy learns what his family can't teach him: how to skate, how to flirt, and how to love your mom.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt30319503",
+      "tmdb_id": 1158915
+    },
+    {
+      "title": "Things Will Be Different",
+      "year": "2024",
+      "director": "Michael Felker",
+      "genre_tags": [
+        "Horror",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "plot_summary": "In order to escape the police after a robbery, two estranged siblings lay low in a metaphysical farmhouse that hides them away in a different time. There they reckon with a mysterious force that pushes their familial bonds to unnatural breaking points.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt27491225",
+      "tmdb_id": 1226840
+    },
+    {
+      "title": "Beautiful Wedding",
+      "year": "2024",
+      "director": "Roger Kumble",
+      "genre_tags": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "Abby and Travis wake after a crazy night in Vegas as accidental newlyweds! With the mob on their heels, they flee to Mexico for a wild, weird honeymoon—but are they in for another disaster?",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt26546123",
+      "tmdb_id": 1096342
+    },
+    {
+      "title": "Alice, Darling",
+      "year": "2022",
+      "director": "Mary Nighy",
+      "genre_tags": [
+        "Thriller",
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "Pushed to the breaking point by Simon, her psychologically abusive boyfriend, Alice becomes an unwitting participant in an intervention staged by her two closest friends while on vacation. As she rediscovers the essence of herself and gains some much-needed perspective, she slowly starts to fray the cords of codependency that bind her. However, Simon's vengeance is as inevitable as it is shattering, and once unleashed, it tests her strength, her courage, and the bonds of deep-rooted friendships.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt11687104",
+      "tmdb_id": 850028
+    },
+    {
+      "title": "All of Us Strangers",
+      "year": "2023",
+      "director": "Andrew Haigh",
+      "genre_tags": [
+        "Romance",
+        "Drama",
+        "Fantasy"
+      ],
+      "plot_summary": "One night in his near-empty tower block in contemporary London, Adam has a chance encounter with a mysterious neighbor Harry, which punctures the rhythm of his everyday life.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt21192142",
+      "tmdb_id": 994108
+    },
+    {
+      "title": "Bonhoeffer: Pastor. Spy. Assassin",
+      "year": "2024",
+      "director": "Todd Komarnicki",
+      "genre_tags": [
+        "History",
+        "Drama",
+        "War"
+      ],
+      "plot_summary": "As the world teeters on the brink of annihilation, Dietrich Bonhoeffer joins a deadly plot to assassinate Hitler, risking his faith and fate to save millions of Jews from genocide.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt26237514",
+      "tmdb_id": 1079244
+    },
+    {
+      "title": "I Saw the TV Glow",
+      "year": "2024",
+      "director": "Jane Schoenbrun",
+      "genre_tags": [
+        "Drama",
+        "Horror"
+      ],
+      "plot_summary": "Teenager Owen is just trying to make it through life in the suburbs when his classmate Maddy introduces him to a mysterious TV show — a vision of a supernatural world beneath their own. In the pale glow of the television, Owen’s view of reality begins to crack.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt15574270",
+      "tmdb_id": 858017
+    },
+    {
+      "title": "The Sweet East",
+      "year": "2023",
+      "director": "Sean Price Williams",
+      "genre_tags": [
+        "Comedy",
+        "Drama",
+        "Fantasy"
+      ],
+      "plot_summary": "A high school senior from South Carolina gets her first glimpse of the wider world, picturesque cities, and woods of the Eastern seaboard on a class trip to Washington, D.C.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt27546190",
+      "tmdb_id": 1010639
+    },
+    {
+      "title": "Robots",
+      "year": "2023",
+      "director": "Casper Christensen",
+      "genre_tags": [
+        "Comedy",
+        "Science Fiction",
+        "Romance",
+        "Fantasy"
+      ],
+      "plot_summary": "A womanizer and a gold digger trick people into relationships with illegal robot doubles. When they unwittingly use this scam on each other, their robot doubles fall in love and elope, forcing the duo to team up to hunt them down before the authorities discover their secret.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt12579470",
+      "tmdb_id": 723347
+    },
+    {
+      "title": "Someone Like You",
+      "year": "2024",
+      "director": "Tyler Russell",
+      "genre_tags": [
+        "Romance",
+        "Drama"
+      ],
+      "plot_summary": "Shocking news hits after young architect Dawson loses his best friend London. In his heartbreak, Dawson is compelled to launch an impossible search for London’s secret sister, twins separated as embryos. But along the way, Dawson never planned to fall in love.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt22334258",
+      "tmdb_id": 1029330
+    },
+    {
+      "title": "The Unholy Trinity",
+      "year": "2025",
+      "director": "Richard Gray",
+      "genre_tags": [
+        "Western",
+        "Adventure",
+        "Crime"
+      ],
+      "plot_summary": "Set against the turbulent backdrop of 1870s Montana, in the moments before the execution of Isaac Broadway, he gives his estranged son, Henry, an impossible task: murder the man who framed him for a crime he didn’t commit. Intent on fulfilling his promise, Henry travels to the remote town of Trinity, where an unexpected turn of events traps him in town and leaves him caught between Gabriel Dove, the town’s upstanding new sheriff, and a mysterious figure named St. Christopher.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt6300910",
+      "tmdb_id": 1195518
+    },
+    {
+      "title": "Alice in Terrorland",
+      "year": "2023",
+      "director": "Richard John Taylor",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "A recently bereaved teenage girl goes to live with her aunt in a secluded woodland house, unaware that sinister forces lurk within.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt22398528",
+      "tmdb_id": 1174618
+    },
+    {
+      "title": "The Forge",
+      "year": "2024",
+      "director": "Alex Kendrick",
+      "genre_tags": [
+        "Drama",
+        "Family"
+      ],
+      "plot_summary": "19 year old Isaiah Wright lives for basketball and video games. A year out of high school, he has no job, no plans, and no idea how to be a man. At odds with his single mother Cynthia, Isaiah is given an ultimatum – to step up or move out. Feeling the pull from his friends and the push from his mom, Isaiah is hired by Moore Fitness, unaware of how the owner will personally impact his life. With the prayers of his mother and unexpected guidance from his new mentor, Isaiah is forced to deal with his past, sacrifice his selfishness and discover how God might have a greater purpose for his life.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt26731216",
+      "tmdb_id": 1186532
+    },
+    {
+      "title": "Homestead",
+      "year": "2024",
+      "director": "Ben Smallbone",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A nuclear bomb is detonated in Los Angeles, and the nation devolves into unprecedented chaos. Ex-Green Beret Jeff Eriksson and his family escape to The Homestead, an eccentric prepper’s fortress nestled in the mountains. As violent threats and apocalyptic conditions creep toward their borders, the residents of The Homestead are left to wonder: how long can a group of people resist both the dangers of human nature and the bloodshed at their doorstep?",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt29137778",
+      "tmdb_id": 1217690
+    },
+    {
+      "title": "Last Straw",
+      "year": "2024",
+      "director": "Alan Scott Neal",
+      "genre_tags": [
+        "Horror",
+        "Drama",
+        "Thriller"
+      ],
+      "plot_summary": "A rural roadside diner becomes the host of a maniacal killing spree – leaving a young waitress to clean up the mess. After hard-headed Nancy fires the staff at her dad’s diner, she decides to cover the last shift of the night by herself. Little does she know, she is far from alone. The day is coming back to haunt her and when things begin to spiral out of control, she must fight for her life over the course of one long night.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt24249072",
+      "tmdb_id": 1137205
+    },
+    {
+      "title": "In a Violent Nature",
+      "year": "2024",
+      "director": "Chris Nash",
+      "genre_tags": [
+        "Drama",
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "The enigmatic resurrection, rampage, and retribution of an undead monster in a remote wilderness unleashes an iconic new killer after a locket is removed from a collapsed fire tower that entombed its rotting corpse.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt30321146",
+      "tmdb_id": 1214509
+    },
+    {
+      "title": "Peter Pan's Neverland Nightmare",
+      "year": "2025",
+      "director": "Scott Chambers",
+      "genre_tags": [
+        "Horror",
+        "Thriller",
+        "Fantasy"
+      ],
+      "plot_summary": "Wendy Darling strikes out in an attempt to rescue her brother Michael from the clutches of the evil Peter Pan who intends to send him to Neverland. Along the way she meets a twisted Tinkerbell, who is hooked on what she thinks is fairy dust.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt21955520",
+      "tmdb_id": 1020414
+    },
+    {
+      "title": "Beautiful Disaster",
+      "year": "2023",
+      "director": "Roger Kumble",
+      "genre_tags": [
+        "Romance",
+        "Drama",
+        "Comedy"
+      ],
+      "plot_summary": "College freshman Abby tries to distance herself from her dark past while resisting her attraction to bad boy Travis.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2316548",
+      "tmdb_id": 1016121
+    },
+    {
+      "title": "Winnie-the-Pooh: Blood and Honey 2",
+      "year": "2024",
+      "director": "Rhys Frake-Waterfield",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "Five months following the murders, Christopher Robin struggles to maintain a regular life while dealing with PTSD. However, deep within the 100-Acre-Wood, a destructive rage grows as Pooh, Piglet, Owl, and Tigger find their home and their lives endangered after their existence is revealed.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt23330554",
+      "tmdb_id": 1079485
+    },
+    {
+      "title": "Sorry, Baby",
+      "year": "2025",
+      "director": "Eva Victor",
+      "genre_tags": [
+        "Drama",
+        "Comedy"
+      ],
+      "plot_summary": "Something bad happened to Agnes. But life goes on… for everyone around her, at least.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt32843349",
+      "tmdb_id": 1205515
+    },
+    {
+      "title": "Fear Below",
+      "year": "2025",
+      "director": "Matthew Holmes",
+      "genre_tags": [
+        "Horror",
+        "Action",
+        "Adventure",
+        "Thriller"
+      ],
+      "plot_summary": "A rag-tag team of divers attempting to salvage a sunken car from a river are thwarted by a highly aggressive bull shark.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt13098590",
+      "tmdb_id": 1232933
+    },
+    {
+      "title": "My Old Ass",
+      "year": "2024",
+      "director": "Megan Park",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "An 18th birthday mushroom trip brings free-spirited Elliott face-to-face with her wisecracking 39-year-old self. But when Elliott’s \"old ass\" starts handing out warnings about what her younger self should and shouldn't do, Elliott realizes she has to rethink everything about family, love, and what's becoming a transformative summer.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt18559464",
+      "tmdb_id": 947891
+    },
+    {
+      "title": "Strange Darling",
+      "year": "2024",
+      "director": "JT Mollner",
+      "genre_tags": [
+        "Crime",
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "Nothing is what it seems when a twisted one-night stand spirals into a serial killer’s vicious murder spree.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt22375054",
+      "tmdb_id": 1029281
+    },
+    {
+      "title": "The Hangman",
+      "year": "2024",
+      "director": "Bruce Wemple",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "Troubled father Leon takes son camping in Appalachia. Local cult summons evil Hangman demon. Son goes missing. Leon must confront cult, monster to find him amid rising body count.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt31645789",
+      "tmdb_id": 1257586
+    },
+    {
+      "title": "Screamboat",
+      "year": "2025",
+      "director": "Steven LaMorte",
+      "genre_tags": [
+        "Horror",
+        "Comedy"
+      ],
+      "plot_summary": "A late-night boat ride turns into a desperate fight for survival in New York City when a mischievous mouse becomes a monstrous reality.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt30766582",
+      "tmdb_id": 1225572
+    },
+    {
+      "title": "Terrifier 3",
+      "year": "2024",
+      "director": "Damien Leone",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "Five years after surviving Art the Clown's Halloween massacre, Sienna and Jonathan are still struggling to rebuild their shattered lives. As the holiday season approaches, they try to embrace the Christmas spirit and leave the horrors of the past behind. But just when they think they're safe, Art returns, determined to turn their holiday cheer into a new nightmare. The festive season quickly unravels as Art unleashes his twisted brand of terror, proving that no holiday is safe.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt27911000",
+      "tmdb_id": 1034541
+    },
+    {
+      "title": "Clown in a Cornfield",
+      "year": "2025",
+      "director": "Eli Craig",
+      "genre_tags": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "Quinn and her father have just moved to the quiet town of Kettle Springs hoping for a fresh start. Instead, she discovers a fractured community that has fallen on hard times after the treasured Baypen Corn Syrup Factory burned down. As the locals bicker amongst themselves and tensions boil over, a sinister, grinning figure emerges from the cornfields to cleanse the town of its burdens, one bloody victim at a time.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt23060698",
+      "tmdb_id": 713364
+    }
+  ]
+}

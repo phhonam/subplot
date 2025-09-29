@@ -1,0 +1,618 @@
+{
+  "movies": [
+    {
+      "title": "Goldilocks and the Three Bears: Death & Porridge",
+      "year": "2024",
+      "director": "Craig Rees",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "A group of friends on a rural getaway must fight for their lives against vengeful masked versions of the fairy tale characters.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt27747488",
+      "tmdb_id": 1186274
+    },
+    {
+      "title": "Scorched Earth",
+      "year": "2022",
+      "director": "Joshua Morrison",
+      "genre_tags": [
+        "Science Fiction",
+        "Thriller",
+        "Action",
+        "Drama"
+      ],
+      "plot_summary": "After the apocalypse, all water is radioactive and deadly to drink. In this dystopian world, Gylian goes to extreme lengths to make sure her daughter gets the medication she needs to survive.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt15015460",
+      "tmdb_id": 906365
+    },
+    {
+      "title": "About Him & Her",
+      "year": "2023",
+      "director": "Íce Mrozek",
+      "genre_tags": [
+        "Romance"
+      ],
+      "plot_summary": "Based on a true story, Crossed phone lines in 1989 lead to a life changing conversation between two strangers, who eventually meet in an unusual way.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt15533748",
+      "tmdb_id": 915566
+    },
+    {
+      "title": "Visher",
+      "year": "2024",
+      "director": "Isaac Rodriguez",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "An online scammer's obsession with a woman takes a nightmarish turn when he witnesses a haunting series of events within her home, all through the lens of her webcam.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt27862813",
+      "tmdb_id": 1270762
+    },
+    {
+      "title": "A Reel Heist",
+      "year": "2024",
+      "director": "Joe Rule",
+      "genre_tags": [
+        "Comedy",
+        "Crime"
+      ],
+      "plot_summary": "A group of teenagers making a no-budget heist movie are forced to pull off a genuine heist, when the memory card containing their film is taken by the callous manager of a shopping mall.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt21622382",
+      "tmdb_id": 1267077
+    },
+    {
+      "title": "The Unknown Country",
+      "year": "2023",
+      "director": "Morrisa Maltz",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A grieving woman embarks on an unexpected road trip as she grapples with the pain of her recent loss and seeks to understand her place in the world.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt12783826",
+      "tmdb_id": 934606
+    },
+    {
+      "title": "Delirium",
+      "year": "2013",
+      "director": "Ihor Podolchak",
+      "genre_tags": [
+        "Drama",
+        "Crime",
+        "Mystery"
+      ],
+      "plot_summary": "A funeral procession leads to a distorted reality where time loops and images of death appear. A psychiatrist is invited by a family to help with their father’s suicidal fixation on ropes and knots. As he delves into the case, he blurs the lines between doctor, patient, guest, and priest, questioning his own identity and the shifting nature of reality.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2040319",
+      "tmdb_id": 418528
+    },
+    {
+      "title": "Prototype",
+      "year": "2022",
+      "director": "Jack Peter Mundy",
+      "genre_tags": [
+        "Science Fiction",
+        "Thriller"
+      ],
+      "plot_summary": "In the near future, life-like androids with artificial intelligence have been created to help people with menial household tasks. The prototype, One, created by Roger Marshall and tested by his family, proves to be popular but flawed. Roger has been working on a new model, Two, whose improved features show promise of its super-human abilities. As tensions rise between Roger and wife Shelley, the androids malfunction and the lives of the whole family are soon in danger of Two's sinister plans.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt13156334",
+      "tmdb_id": 951535
+    },
+    {
+      "title": "Bright Sky",
+      "year": "2025",
+      "director": "Spencer T. Folmar",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A single mother escapes a dark past to a small town. As she begins to build a new life, she comes across an outlaw looking for redemption.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt20242102",
+      "tmdb_id": 1342121
+    },
+    {
+      "title": "Iconic",
+      "year": "2024",
+      "director": "Matthew Freiheit",
+      "genre_tags": [
+        "Thriller",
+        "Drama",
+        "Horror"
+      ],
+      "plot_summary": "Makeup guru Rose faces hate mail from a rival artist, in addition to dealing with a violent stalker. After falling into a toxic love spiral with Lily, Rose slides down a dangerous rabbit hole of drugs, paranoia and jealousy until she hits an unimaginable rock bottom.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt31565932",
+      "tmdb_id": 1217647
+    },
+    {
+      "title": "I Kissed a Vampire",
+      "year": "2012",
+      "director": "Chris Nolan",
+      "genre_tags": [
+        "Fantasy",
+        "Romance",
+        "Comedy"
+      ],
+      "plot_summary": "A desperate teen tries to save himself and the girl he loves after discovering he's transforming into a vampire.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1656179",
+      "tmdb_id": 96316
+    },
+    {
+      "title": "The Last Video Store",
+      "year": "2023",
+      "director": "Brian Vining",
+      "genre_tags": [
+        "Comedy",
+        "Romance",
+        "Crime",
+        "Drama"
+      ],
+      "plot_summary": "After a Gold Coast video rental store is robbed, Gary the store owner installs security cameras store wide. Unbeknown to the staff, Gary uses the cameras to capture an emerging love story unfold between two of his young employees Andrew and Stacy. Stacy's ex-boyfriend Damian a twisted criminal with a terrifying secret, returns to the store to make trouble for the young lovers. This conflict culminates in a dramatic showdown amidst the Comedy, Drama and Horror sections. The Last Video Store examines the themes of, movie nostalgia, unrequited love, bravery and the human cost of late returns.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt8560648",
+      "tmdb_id": 1087971
+    },
+    {
+      "title": "My Last Best Friend",
+      "year": "2023",
+      "director": "Filippo M. Prandi",
+      "genre_tags": [
+        "Drama",
+        "Mystery"
+      ],
+      "plot_summary": "New York City. March - April 2020. At the beginning of the COVID-19 pandemic, two men, both named Walter Stoyanov, watch their lives getting turned upside down, as one of them falls ill and the other one is being investigated by FBI Special Agent John McCallany.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt12598744",
+      "tmdb_id": 1157251
+    },
+    {
+      "title": "Don't Suck",
+      "year": "2023",
+      "director": "RJ Collins",
+      "genre_tags": [
+        "Comedy",
+        "Horror"
+      ],
+      "plot_summary": "A veteran comedian's last chance at stardom takes him on the road with a young comic whom reveals an unexpected past.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt11306480",
+      "tmdb_id": 1128474
+    },
+    {
+      "title": "Todd",
+      "year": "2021",
+      "director": "Aaron Warren",
+      "genre_tags": [
+        "Drama",
+        "Mystery",
+        "Thriller",
+        "Horror"
+      ],
+      "plot_summary": "Todd is the story of a man who has always felt like the \"odd man out.\" From a young age, Todd is shunned and ridiculed by his peers. Over time his pain and anger turns into rage and despair. When psychoanalysis and depression drugs don't work, the young eccentric becomes morbid and introverted, withdrawing from society in a downward spiral to insanity. He not only sets his sights on an aspiring young actress, but on his psychiatrist and the doctor's family too. \"TODD\" takes you on a nail biting, edge of your seat journey into the mind of a budding madman.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt9412088",
+      "tmdb_id": 784284
+    },
+    {
+      "title": "Bogieville",
+      "year": "2024",
+      "director": "Sean Cronin",
+      "genre_tags": [
+        "Horror"
+      ],
+      "plot_summary": "A young couple on the run come across a derelict trailer park called Bogieville. Convinced to stay by the sinister caretaker, they soon learn that he is a guardian to the Bogievillians, a pack of vampires.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4546450",
+      "tmdb_id": 1234905
+    },
+    {
+      "title": "Cade: The Tortured Crossing",
+      "year": "2023",
+      "director": "Neil Breen",
+      "genre_tags": [
+        "Science Fiction",
+        "Thriller",
+        "Mystery"
+      ],
+      "plot_summary": "An identical twin restores an old mental asylum, where he takes it upon himself to mystically train the patients as warriors for humanity and justice.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt24786094",
+      "tmdb_id": 1062226
+    },
+    {
+      "title": "4 O'Clock",
+      "year": "2022",
+      "director": "Robert Flanagan",
+      "genre_tags": [
+        "Comedy",
+        "Thriller"
+      ],
+      "plot_summary": "Special agent Mott McCampbell has a mission, escorting a Japanese dignitary from JFK airport to the United Nations. A gang of stewardesses has a different plan, kidnapping! Will Mott be able to stop them in time? Find out, see 4 O’CLOCK, the underground, film-noir comedy.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt16068914",
+      "tmdb_id": 899609
+    },
+    {
+      "title": "The Girl in the Trunk",
+      "year": "2024",
+      "director": "Jonas Kvist Jensen",
+      "genre_tags": [
+        "Thriller",
+        "Horror"
+      ],
+      "plot_summary": "A woman finds herself kidnapped and entrapped in the enclosed space of a speeding car's trunk. As the kidnapper toys with and torments her, she must use what little means are at her disposal to fight for her freedom.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt14026644",
+      "tmdb_id": 1202859
+    },
+    {
+      "title": "Saving Christmas",
+      "year": "2014",
+      "director": "Darren Doane",
+      "genre_tags": [
+        "Comedy",
+        "Fantasy"
+      ],
+      "plot_summary": "Kirk is enjoying the annual Christmas party extravaganza thrown by his sister until he realizes he needs to help out Christian, his brother-in-law who has a bad case of the bah-humbugs.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4009460",
+      "tmdb_id": 295884
+    },
+    {
+      "title": "The Stalker",
+      "year": "2020",
+      "director": "John Giorgio",
+      "genre_tags": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "The man only known as the Stalker, is looking for the Hamilton's, and is willing to kill anyone who gets in his way. Embark on this horror, mystery, thrill ride, that takes you back to the classic films of the genre.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt9363342",
+      "tmdb_id": 733837
+    },
+    {
+      "title": "The Misadventures of Mistress Maneater",
+      "year": "2020",
+      "director": "C.J. Julianus",
+      "genre_tags": [
+        "Comedy",
+        "Action",
+        "Romance"
+      ],
+      "plot_summary": "Ava Moriarty, Art History PhD dropout-turned-dominatrix, wants OUT. But there's no safeword for golden handcuffs. When her mobster ex gives her 30 days to repay a massive loan, she's forced to agree to one last job--seducing and extorting \"Father Dracula,\" a small town Episcopal priest. But Father Radovan Markovic brought his own secrets from Serbia, and moonlights as an MMA fighter while unwittingly hiding the world's greatest lost painting. Not to mention he's the one hot guy avoiding Ava like loose glitter. Certain he's embezzling a priceless art collection, will she win his heart only to destroy his life, or doom herself to a custom pair of concrete stilettos?",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt9763402",
+      "tmdb_id": 759354
+    },
+    {
+      "title": "Bloody Axe Wound",
+      "year": "2024",
+      "director": "Matthew John Lawrence",
+      "genre_tags": [
+        "Horror",
+        "Comedy"
+      ],
+      "plot_summary": "Abbie Bladecut is a teenager torn between the macabre traditions of her family’s bloody trade and the tender stirrings of her first crush. In the small town of Clover Falls, Abbie’s father Roger has built an infamous legacy by capturing real-life killings on tape and selling them to eager customers, but as Abbie delves deeper into the grisly family business, she begins to wonder if it’s time to take the family tradition in a new direction.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt6975842",
+      "tmdb_id": 1396558
+    },
+    {
+      "title": "Nova Seed",
+      "year": "2016",
+      "director": "Nick DiLiberto",
+      "genre_tags": [
+        "Animation",
+        "Fantasy",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "plot_summary": "Beneath the decay of a dying world lives the Mad Doctor Mindskull. Using the planet's power of creation he has created the ultimate Weapon. Can mankind find a way to stop this Evil before time runs out? The only answer lies within the Nova Seed.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt5569618",
+      "tmdb_id": 404663
+    },
+    {
+      "title": "After She Died",
+      "year": "2022",
+      "director": "Jack Dignan",
+      "genre_tags": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "A young woman is horrified to discover that her father's new girlfriend looks identical to her dead mother.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt12664558",
+      "tmdb_id": 856290
+    },
+    {
+      "title": "Dicks: The Musical",
+      "year": "2023",
+      "director": "Larry Charles",
+      "genre_tags": [
+        "Music",
+        "Comedy"
+      ],
+      "plot_summary": "Two self-obsessed businessmen discover they're long-lost identical twins and come together to plot the reunion of their eccentric divorced parents.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt7130916",
+      "tmdb_id": 939997
+    },
+    {
+      "title": "This Closeness",
+      "year": "2024",
+      "director": "Kit Zauhar",
+      "genre_tags": [
+        "Drama",
+        "Comedy"
+      ],
+      "plot_summary": "In Philadelphia for the weekend, Tessa and Ben, a couple on the rocks, rent a room in the apartment of Adam, a reclusive stranger who quickly becomes an unwilling voyeur to the most private parts of the couple’s life. Tensions rise as the three enter an intimate battle to gain and reclaim territory.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt19891040",
+      "tmdb_id": 1079482
+    },
+    {
+      "title": "The Resurrection of Gavin Stone",
+      "year": "2017",
+      "director": "Dallas Jenkins",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "Gavin Stone, a washed-up former child star, is forced to do community service at a local megachurch and pretends to be Christian so he can land the part of Jesus in their annual Passion Play, only to discover that the most important role of his life is far from Hollywood.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4902904",
+      "tmdb_id": 422114
+    },
+    {
+      "title": "Gazer",
+      "year": "2025",
+      "director": "Ryan J. Sloan",
+      "genre_tags": [
+        "Mystery",
+        "Thriller",
+        "Horror"
+      ],
+      "plot_summary": "Frankie, a young mother with dyschronometria, struggles to perceive time. Using cassette tapes for guidance, she takes a risky job from a mysterious woman to support her family, unaware of the dark consequences that await.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt28633405",
+      "tmdb_id": 1215077
+    },
+    {
+      "title": "1 Million Followers",
+      "year": "2024",
+      "director": "Harvey Lowry",
+      "genre_tags": [
+        "Thriller"
+      ],
+      "plot_summary": "Karissa, a small-town girl, is invited by a renowned influencer to a mansion in Thailand where the beautiful mingle as they build Karissa up to a million followers. Things take a dark turn with the introduction of the guests' mysterious sponsor and true intentions are revealed.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt20031676",
+      "tmdb_id": 1117126
+    },
+    {
+      "title": "Old Fashioned",
+      "year": "2014",
+      "director": "Rik Swartzwelder",
+      "genre_tags": [
+        "Romance",
+        "Drama"
+      ],
+      "plot_summary": "A reformed frat boy opens an antique store in a college town and falls for the free-spirited girl who moves into the apartment above his shop. In time, this unlikely pair fall into a traditional courtship.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2048824",
+      "tmdb_id": 297462
+    },
+    {
+      "title": "Hell Hole",
+      "year": "2024",
+      "director": "John Adams",
+      "genre_tags": [
+        "Horror",
+        "Science Fiction"
+      ],
+      "plot_summary": "Far away, in the desolate Serbian wilderness, a U.S.-led fracking crew uncover a dormant monster gestating inside a centuries-old French soldier. Now awakened and exposed in its most dangerously fragile state, it tears through the men on the grounds in search of a new womb.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt32394528",
+      "tmdb_id": 1287850
+    },
+    {
+      "title": "Beyond Paranormal",
+      "year": "2021",
+      "director": "Matteo Ribaudo",
+      "genre_tags": [
+        "Horror"
+      ],
+      "plot_summary": "Aspiring influencer Box Girl Lily will risk anything for fans, including the sanity of her long-suffering boyfriend. Promoting her next project, she receives a mysterious statue. Desperate for likes, she recruits him to capture her own possession. The social media-crazed couple get more than they can bargain for when she calls upon powers that are beyond paranormal.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt11121174",
+      "tmdb_id": 869710
+    },
+    {
+      "title": "Natural Born Pranksters",
+      "year": "2016",
+      "director": "Roman Atwood",
+      "genre_tags": [
+        "Comedy"
+      ],
+      "plot_summary": "The world’s three most notorious, ballsy, and outrageous pranksters come together for the first time to unleash the most epic pranks in an outrageous feature-film event. Jam-packed with cameos from some of YouTube’s biggest stars, watch as Roman Atwood, Dennis Roady, and Vitaly Zdorovetskiy take fearlessness and unbelievable social experiments to the next level.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt3671086",
+      "tmdb_id": 383524
+    },
+    {
+      "title": "Girl From Nowhere",
+      "year": "2017",
+      "director": "Mark Jackson",
+      "genre_tags": [
+        "Thriller",
+        "Romance"
+      ],
+      "plot_summary": "A Cape Town couple, Katherine and Hugh, are headed to their private mountain getaway, when they pick up a hitchhiker, Liza, who carries a gun. Liza is invited  for lunch, but soon the couple can't get rid of her.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4554186",
+      "tmdb_id": 478280
+    },
+    {
+      "title": "Friend of the World",
+      "year": "2020",
+      "director": "Brian Patrick Butler",
+      "genre_tags": [
+        "Comedy",
+        "Science Fiction",
+        "Horror"
+      ],
+      "plot_summary": "After a catastrophic global war, a young filmmaker awakens in the carnage and seeks refuge in the only other survivor: an eccentric, ideologically opposed figure of the United States military. Together, they brave the toxic landscape in search of safety... and answers.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt6074542",
+      "tmdb_id": 437518
+    },
+    {
+      "title": "I Like Movies",
+      "year": "2023",
+      "director": "Chandler Levack",
+      "genre_tags": [
+        "Comedy",
+        "Drama"
+      ],
+      "plot_summary": "Socially inept 17-year-old cinephile Lawrence Kweller gets a job at a video store, where he forms a complicated friendship with his older female manager.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt14913282",
+      "tmdb_id": 980996
+    },
+    {
+      "title": "Listen Carefully",
+      "year": "2024",
+      "director": "Ryan Barton-Grimley",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "When troubled assistant bank manager Andy McNeary's infant daughter goes missing, he must follow the instructions of a mysterious voice on the other end of a baby monitor to save her before she disappears forever.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt7365436",
+      "tmdb_id": 1192794
+    },
+    {
+      "title": "The Unseen",
+      "year": "2017",
+      "director": "Gary Sinyor",
+      "genre_tags": [
+        "Drama",
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "After the tragic loss of their son, perfect couple Gemma and Will begin to experience strange auditory hallucinations and losses of vision, as they attempt to escape their worries while vacationing at an acquaintance's remote cottage in the Lake District.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2042692",
+      "tmdb_id": 483087
+    },
+    {
+      "title": "My Animal",
+      "year": "2023",
+      "director": "Jacqueline Castel",
+      "genre_tags": [
+        "Horror",
+        "Romance",
+        "Fantasy"
+      ],
+      "plot_summary": "Tormented by a hidden family curse, Heather lives in seclusion on the outskirts of a small town. When she falls for the rebellious Jonny, their connection threatens to unravel Heather's suppressed desires, tempting her to unleash the animal within.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt23572542",
+      "tmdb_id": 1058689
+    }
+  ]
+}

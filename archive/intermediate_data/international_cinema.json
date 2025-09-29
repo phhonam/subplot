@@ -1,0 +1,309 @@
+{
+  "movies": [
+    {
+      "title": "Siempre es Otoño",
+      "year": "2020",
+      "director": "Alex Sereno",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "A young couple is reunited 7 years after having broken. Filled with insecurities, frustrations and dreams that have not been fulfilled, they decide to spend a day together that is slowly becoming an excuse to reopen wounds that they believed were closed and see if they are able to leave their past behind in order to move forward.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt8508496",
+      "tmdb_id": 679129
+    },
+    {
+      "title": "Amor platónico",
+      "year": "2024",
+      "director": "Vicente Bonet",
+      "genre_tags": [
+        "Comedy",
+        "Romance"
+      ],
+      "plot_summary": "",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt30833221",
+      "tmdb_id": 1302788
+    },
+    {
+      "title": "Perspectiva",
+      "year": "2024",
+      "director": "Ben Blas",
+      "genre_tags": [
+        "Science Fiction",
+        "Drama"
+      ],
+      "plot_summary": "In the near future, technology will allow us to see what's going to happen in our lives, creating an illusion of future by using our memories and cognitive processes. LookApp is a brand new app that, for some money, can show you the right path. Aaron, although very aware of the harm and the number of addicted victims, uses it against warnings due to his suspicions about his girlfriend and best friend's affair.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt10127964",
+      "tmdb_id": 1314236
+    },
+    {
+      "title": "A Wind from the South",
+      "year": "2023",
+      "director": "Álvaro García-Capelo",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "A lighthouse keeper and her late brother's best friend live together in a lighthouse, waiting for the south wind to scatter the ashes of the deceased.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt27428167",
+      "tmdb_id": 1134791
+    },
+    {
+      "title": "Bukraken!",
+      "year": "2023",
+      "director": "David Díaz",
+      "genre_tags": [
+        "Comedy",
+        "Horror",
+        "Fantasy"
+      ],
+      "plot_summary": "In 2016, journalism student Susana Rojas disappeared without a trace while making a documentary for her end-of-career work. After several years, her project is finally uncovered.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt6836744",
+      "tmdb_id": 1127781
+    },
+    {
+      "title": "Honeymoon",
+      "year": "2015",
+      "director": "Diego Cohen",
+      "genre_tags": [
+        "Thriller",
+        "Horror"
+      ],
+      "plot_summary": "A psychotic doctor kidnaps his neighbor and locks her in a dungeon, where he uses twisted conditioning methods to make her submit to being his wife.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4459912",
+      "tmdb_id": 295466
+    },
+    {
+      "title": "Aj Zombies!",
+      "year": "2017",
+      "director": "Daniel Martín Rodríguez",
+      "genre_tags": [
+        "Comedy",
+        "Horror"
+      ],
+      "plot_summary": "Claudia and Felipe can't be any more different. Only a zombie apocalypse could bring them together. A hilarious love story set in zombie times, Claudia, Felipe, a drunkard and a security guard must escape Lima together in search of safety.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt7592928",
+      "tmdb_id": 638688
+    },
+    {
+      "title": "Metamorphosis",
+      "year": "2022",
+      "director": "Alex Smoot",
+      "genre_tags": [
+        "Horror",
+        "Science Fiction",
+        "Drama",
+        "Thriller"
+      ],
+      "plot_summary": "Seeking refuge on an island in Upstate New York, a married couple's final attempt to salvage their failing relationship takes a turn for the worse when the husband begins to regress emotionally, mentally, and physically.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt13265204",
+      "tmdb_id": 980478
+    },
+    {
+      "title": "Arthur: Malediction",
+      "year": "2022",
+      "director": "Barthélémy Grossmann",
+      "genre_tags": [
+        "Horror",
+        "Thriller"
+      ],
+      "plot_summary": "Longtime Minimoys fan Alex is taken by his friends to the filming location for his 18th birthday, unaware that they're all in for a horrific time.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt19783626",
+      "tmdb_id": 955569
+    },
+    {
+      "title": "Coma",
+      "year": "2022",
+      "director": "Bertrand Bonello",
+      "genre_tags": [
+        "Drama",
+        "Fantasy"
+      ],
+      "plot_summary": "Amidst a period of unprecedented world events, an eighteen-year-old girl’s life is placed on hold. Isolated in her bedroom, she falls under the spell of the mysterious vlogger Patricia Coma. As time carries on, the lines between her dreams, fears, hopes, and reality begin to blur into one another.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt17308130",
+      "tmdb_id": 920772
+    },
+    {
+      "title": "Passages",
+      "year": "2023",
+      "director": "Ira Sachs",
+      "genre_tags": [
+        "Romance",
+        "Drama"
+      ],
+      "plot_summary": "Tomas and Martin are a gay couple living in Paris whose marriage is thrown into crisis when Tomas impulsively begins a passionate affair with young schoolteacher Agathe. But when Martin begins an affair of his own, Tomas must confront life decisions he may be unprepared—or unwilling—to deal with.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt16252698",
+      "tmdb_id": 898673
+    },
+    {
+      "title": "Final Voyage",
+      "year": "2021",
+      "director": "Marcel Barion",
+      "genre_tags": [
+        "Drama",
+        "Science Fiction"
+      ],
+      "plot_summary": "Adem and Novak, two very different young men, escape from a desolate planet in a small, old spaceship in search of a new home in space.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt9474736",
+      "tmdb_id": 570871
+    },
+    {
+      "title": "Der Wolf und die 7 Geißlein",
+      "year": "2021",
+      "director": "David Brückner",
+      "genre_tags": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "plot_summary": "",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt13763684",
+      "tmdb_id": 887751
+    },
+    {
+      "title": "Carcinoma",
+      "year": "2014",
+      "director": "Marian Dora",
+      "genre_tags": [
+        "Horror",
+        "Drama"
+      ],
+      "plot_summary": "The trials and tribulations of a man diagnosed with colorectal cancer who refuses treatment and establishes a carnal fixation on the tumor that slowly siphons the life out of him.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt2498618",
+      "tmdb_id": 405465
+    },
+    {
+      "title": "Rasputin",
+      "year": "2010",
+      "director": "Louis Nero",
+      "genre_tags": [
+        "Drama",
+        "History",
+        "Thriller"
+      ],
+      "plot_summary": "Grigorij Efimovic Rasputin (1869-1916) the mystic and self-proclaimed holy man. The saint-demon and the simple peasant. About the plot against  Rasputin, hated and feared at the highest levels of government because of his surreal influence on the Tsar.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt1585270",
+      "tmdb_id": 82301
+    },
+    {
+      "title": "1",
+      "year": "2021",
+      "director": "KAIBASHIRA",
+      "genre_tags": [
+        "Drama"
+      ],
+      "plot_summary": "",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": null,
+      "tmdb_id": 1078760
+    },
+    {
+      "title": "Starting Over",
+      "year": "2014",
+      "director": "Takashi Nishihara",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "Nana is 19 and lives in a corner of Tokyo. Her birth mother and Marin, a girl the same age who she loves, were the only people she could trust. Nana confronts them in her yearning for love, but the world does not give it to her. With her whole life ahead of her, Nana struggles, suffers, and begins a search for the true meaning of love.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt4132736",
+      "tmdb_id": 314608
+    },
+    {
+      "title": "Heavy Snow",
+      "year": "2024",
+      "director": "Yun Su-ik",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "Su-an, a performing arts high school student, becomes close with Seol, an actress and celebrity. During a trip, they realize that they have feelings for each other. However, misunderstandings pile up too much, and Seol leaves Su-an. Su-an later becomes an actress and returns to the winter sea, longing for Seol.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt28679156",
+      "tmdb_id": 1104331
+    },
+    {
+      "title": "Maggie",
+      "year": "2019",
+      "director": "Yi Ok-seop",
+      "genre_tags": [
+        "Drama",
+        "Comedy"
+      ],
+      "plot_summary": "A couple's hospital tryst is caught on X-Ray. Thinking she and her boyfriend are the ones in the compromising radiograph, nurse Yoon-young goes in the next day to resign only to find that everyone has called in sick except the head doctor.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt9000062",
+      "tmdb_id": 546768
+    },
+    {
+      "title": "Mahavatar Narsimha",
+      "year": "2025",
+      "director": "Ashwin Kumar",
+      "genre_tags": [
+        "Animation",
+        "Action",
+        "Fantasy",
+        "Drama"
+      ],
+      "plot_summary": "Hiranyakashyap, the tyrannical demon, challenges Vishnu, proclaiming himself a god. However, his son Prahlad remains devoted to Vishnu, who appears as Narsimha to defeat the demon.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt34365591",
+      "tmdb_id": 1383072
+    }
+  ]
+}

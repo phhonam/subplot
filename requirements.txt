@@ -1,0 +1,22 @@
+# Core FastAPI dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# Database and data handling
+sqlite3  # Built into Python
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# YouTube and web scraping
+google-api-python-client>=2.100.0
+lxml>=4.9.0
+ratelimit>=2.2.0
+
+# LLM and AI dependencies (optional - only if using LLM features)
+openai>=1.0.0
+anthropic>=0.7.0
+python-dotenv>=1.0.0
+
+# Additional utilities
+pathlib2>=2.3.0; python_version < "3.4"

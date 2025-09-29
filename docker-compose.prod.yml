@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  movie-recommender:
+    build: .
+    ports:
+      - "8003:8003"  # API server
+      - "8004:8004"  # Static file server
+    env_file:
+      - .env.production
+    environment:
+      # Override for production
+      - ENVIRONMENT=production
+      - DEBUG=false
+      - API_HOST=0.0.0.0
+      - STATIC_HOST=0.0.0.0
+      - PYTHONPATH=/app
+    volumes:
+      - ./movie_profiles_merged.json:/app/movie_profiles_merged.json:ro
+      - ./backups:/app/backups
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Security: Run as non-root user
+    user: "1000:1000"
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1.0'
+        reservations:
+          memory: 512M
+          cpus: '0.5'

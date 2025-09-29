@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "title": "Heavy Snow",
+      "year": "2024",
+      "director": "Yun Su-ik",
+      "genre_tags": [
+        "Drama",
+        "Romance"
+      ],
+      "plot_summary": "Su-an, a performing arts high school student, becomes close with Seol, an actress and celebrity. During a trip, they realize that they have feelings for each other. However, misunderstandings pile up too much, and Seol leaves Su-an. Su-an later becomes an actress and returns to the winter sea, longing for Seol.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt28679156",
+      "tmdb_id": 1104331
+    },
+    {
+      "title": "Maggie",
+      "year": "2019",
+      "director": "Yi Ok-seop",
+      "genre_tags": [
+        "Drama",
+        "Comedy"
+      ],
+      "plot_summary": "A couple's hospital tryst is caught on X-Ray. Thinking she and her boyfriend are the ones in the compromising radiograph, nurse Yoon-young goes in the next day to resign only to find that everyone has called in sick except the head doctor.",
+      "visual_style": "",
+      "critic_reviews": [],
+      "user_reviews": [],
+      "imdb_id": "tt9000062",
+      "tmdb_id": 546768
+    }
+  ]
+}

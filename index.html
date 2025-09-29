@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subplotly</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <!-- Font imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20241227-3" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-container">
+      <h1>Subplotly</h1>
+    </div>
+    <div class="controls">
+      <label style="display:none">
+        Dataset:
+        <select id="datasetSelect"></select>
+      </label>
+      <div class="search-container">
+        <input id="searchInput" type="search" placeholder="Search title, themes, tones, audience..." />
+        <button id="clearBtn" title="Clear search and filters" class="clear-btn">✕</button>
+      </div>
+      <button id="searchBtn" title="Run search">Search</button>
+      <div class="quick-actions">
+        <button id="showFavoritesBtn" title="Show your favorite movies">
+          Favorites
+          <span id="favoritesCount" class="favorites-badge">0</span>
+        </button>
+        <button id="showObsBtn" title="Observability dashboard for search">Observability</button>
+      </div>
+    </div>
+    <div class="filters">
+      <button id="randomizeBtn" title="Show random movies" class="randomize-btn">
+        <svg class="randomize-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+          <path d="M21 3v5h-5"></path>
+          <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+          <path d="M3 21v-5h5"></path>
+        </svg>
+        Random
+      </button>
+      <details>
+        <summary>
+          <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46"></polygon>
+          </svg>
+          Vibe
+        </summary>
+        <div id="toneFilters" class="chips"></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46"></polygon>
+          </svg>
+          Theme
+        </summary>
+        <div id="themeFilters" class="chips"></div>
+      </details>
+      <div class="theme-examples">
+        <button class="theme-example-btn" data-theme="Found Family">Found Family</button>
+        <button class="theme-example-btn" data-theme="Identity Crisis">Identity Crisis</button>
+        <button class="theme-example-btn" data-theme="Forbidden Love">Forbidden Love</button>
+        <button class="theme-example-btn" data-theme="Underdog Triumph">Underdog Triumph</button>
+        <button class="theme-example-btn" data-theme="Toxic Relationships">Toxic Relationships</button>
+        <button class="theme-example-btn" data-theme="Institutional Corruption">Institutional Corruption</button>
+        <button class="theme-example-btn" data-theme="War Trauma">War Trauma</button>
+        <button class="theme-example-btn" data-theme="Coming Of Age">Coming Of Age</button>
+        <button class="theme-example-btn" data-theme="Revenge Justice">Revenge Justice</button>
+        <button class="theme-example-btn" data-theme="Organized Crime">Organized Crime</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Observability Dashboard -->
+    <section id="obsPanel" class="panel hidden">
+      <header class="panel-hd">
+        <h3>Observability — Recent Searches</h3>
+        <button id="closeObsBtn" aria-label="Close">✕</button>
+      </header>
+      <div class="panel-body" id="obsBody">
+        <div class="text-muted">Set API base and run a few searches via API mode, then open this panel.</div>
+      </div>
+    </section>
+
+    <!-- Themed Movie Carousels -->
+    <section id="themedCarousels" class="themed-carousels">
+      <!-- Carousels will be dynamically generated here -->
+    </section>
+
+    <!-- All Movies Section -->
+    <section id="allMoviesSection" class="all-movies-section">
+      <h2 class="all-movies-title">All Movies</h2>
+    </section>
+
+    <section id="cards" class="cards"></section>
+    <nav class="pagination" id="pagination"></nav>
+  </main>
+
+  <template id="cardTpl">
+    <article class="card">
+      <div class="backdrop-image"></div>
+      <h2 class="title"></h2>
+      <div class="movie-subtitle"></div>
+      <div class="why text-muted" data-field="why"></div>
+      <div class="meta">
+        <div class="themes-preview">
+          <strong>Key Themes:</strong> 
+          <span class="theme-keywords" data-list="themes"></span>
+        </div>
+        <div class="profile-preview">
+          <strong>Profile:</strong> 
+          <span class="short-profile" data-field="profile_text"></span>
+        </div>
+      </div>
+      <div class="row tags-row">
+        <div class="tags" data-list="themes"></div>
+        <div class="tags" data-list="emotional_tone"></div>
+      </div>
+      <div class="card-actions">
+        <button class="like-btn" title="Add to your likes" aria-pressed="false">♡ Like</button>
+        <button class="similar-btn" title="Recommend similar to this">Similar</button>
+        <button class="more-btn" title="View more details">More</button>
+      </div>
+      <details class="more hidden">
+        <summary>More</summary>
+        <div class="row">
+          <div class="col">
+            <strong>Similar films</strong>
+            <div class="tags" data-list="similar_films"></div>
+          </div>
+          <div class="col">
+            <strong>Cultural context</strong>
+            <div class="bullets" data-list="cultural_context"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <strong>Narrative structure</strong>
+            <div class="text" data-field="narrative_structure"></div>
+          </div>
+          <div class="col">
+            <strong>Discussion topics</strong>
+            <div class="bullets" data-list="discussion_topics"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col full">
+            <strong>Profile</strong>
+            <p class="profile" data-field="profile_text"></p>
+          </div>
+        </div>
+      </details>
+    </article>
+  </template>
+
+  <!-- Bottom Sheet for movie details -->
+  <div id="movieModal" class="bottom-sheet-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="bottom-sheet" role="document">
+      <div class="bottom-sheet-handle"></div>
+      <header class="bottom-sheet-header">
+        <h3 id="modalTitle">Movie</h3>
+        <button class="close-btn" id="modalClose" aria-label="Close">✕</button>
+      </header>
+      <div class="bottom-sheet-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Developer API Tools - positioned at bottom -->
+  <div class="dev-tools">
+    <details>
+      <summary>🔧 Developer Tools</summary>
+      <div class="api-tools">
+        <div id="stats" class="stats">Loading…</div>
+        <input id="apiBaseInput" placeholder="API base (e.g., http://127.0.0.1:8003)" size="28" />
+        <button id="testApiBtn" title="Test API /health">Test API</button>
+        <span id="apiStatus" class="text-muted" aria-live="polite"></span>
+        
+        <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #333;">
+          <strong style="color: #ccc; font-size: 0.9rem;">Admin Tools</strong>
+          <div style="margin-top: 8px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <input id="adminUsername" placeholder="Username" value="admin" size="12" style="background: #2a2a2a; border: 1px solid #444; color: #fff; padding: 4px 8px; border-radius: 4px;" />
+            <input id="adminPassword" type="password" placeholder="Password" size="12" style="background: #2a2a2a; border: 1px solid #444; color: #fff; padding: 4px 8px; border-radius: 4px;" />
+            <button id="adminLoginBtn" title="Login to Admin Panel" style="background: #6366f1; color: white; border: none; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 0.9rem;">Login</button>
+            <button id="openAdminBtn" title="Open Admin Panel" style="background: #374151; color: white; border: none; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 0.9rem;">Open Admin</button>
+          </div>
+          <span id="adminStatus" class="text-muted" style="font-size: 0.8rem; display: block; margin-top: 4px;" aria-live="polite"></span>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- Favorites Panel (right-side sliding panel) -->
+  <section id="favoritesPanel" class="favorites-panel hidden" aria-live="polite">
+    <header class="panel-hd">
+      <h3>Your Favorites</h3>
+      <button id="closeFavoritesBtn" aria-label="Close">✕</button>
+    </header>
+    <div class="panel-body">
+      <div id="favoritesContent">
+        <!-- Content will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Movie Details Panel (right-side sliding panel) -->
+  <section id="movieDetailsPanel" class="movie-details-panel hidden" aria-live="polite">
+    <header class="panel-hd">
+      <h3 id="movieDetailsTitle">Movie Details</h3>
+      <button id="closeMovieDetailsBtn" aria-label="Close">✕</button>
+    </header>
+    <div class="panel-body">
+      <div id="movieDetailsContent">
+        <!-- Content will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js?v=20241227"></script>
+</body>
+</html>

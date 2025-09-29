@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Test</title>
+</head>
+<body>
+    <h1>Movie Data Test</h1>
+    <div id="output"></div>
+    
+    <script>
+        async function testData() {
+            const output = document.getElementById('output');
+            
+            try {
+                // Test loading profile data
+                const profileResponse = await fetch('movie_profiles_merged.json');
+                const profileData = await profileResponse.json();
+                
+                // Test loading image data
+                const imageResponse = await fetch('merged_movie_data_with_images.json');
+                const imageData = await imageResponse.json();
+                
+                const firstProfile = Object.values(profileData)[0];
+                const firstImage = imageData.movies[0];
+                
+                output.innerHTML = `
+                    <h2>Profile Data (Citizen Kane):</h2>
+                    <p>Primary Emotional Tone: ${firstProfile.primary_emotional_tone}</p>
+                    <p>Secondary Emotional Tone: ${firstProfile.secondary_emotional_tone}</p>
+                    <p>Primary Theme: ${firstProfile.primary_theme}</p>
+                    <p>Secondary Theme: ${firstProfile.secondary_theme}</p>
+                    <p>Card Description: ${firstProfile.card_description}</p>
+                    
+                    <h2>Image Data (Citizen Kane):</h2>
+                    <p>Poster URL: ${firstImage.poster_url}</p>
+                    <p>Backdrop URL: ${firstImage.backdrop_url}</p>
+                    
+                    <h2>Test Image:</h2>
+                    <img src="${firstImage.poster_url}" alt="Citizen Kane Poster" style="max-width: 200px;">
+                `;
+                
+            } catch (error) {
+                output.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                console.error('Error:', error);
+            }
+        }
+        
+        testData();
+    </script>
+</body>
+</html>
