@@ -1,8 +1,8 @@
 // Use the merged dataset which contains all movie profiles
 function getSources() {
   // Always use the merged dataset which contains all profiles
-  // Use the static server URL for the JSON file since it's not served by the API server
-  const staticBase = 'http://localhost:8004';
+  // Use the current domain for the JSON file
+  const staticBase = window.location.origin;
   // Add cache-busting parameter to prevent browser caching
   const timestamp = Date.now();
   return [`${staticBase}/movie_profiles_merged.json?v=${timestamp}`];
@@ -209,7 +209,7 @@ let THEMED_CAROUSELS = [];
 async function loadThemesFromData() {
   try {
     console.log('🔄 Loading themes from movie data for main app...');
-    const response = await fetch('http://localhost:8004/movie_profiles_merged.json');
+    const response = await fetch('/movie_profiles_merged.json');
     const data = await response.json();
     
     // Handle object structure where keys are movie titles
@@ -475,9 +475,11 @@ function createCarouselCard(movie) {
   const posterUrl = movie.poster_url || movie.backdrop_url || '';
   const director = movie.director || '';
   const year = movie.year || movie.release_year || '';
+  // Escape HTML to prevent attribute breaking
+  const escapedTitle = escapeHtml(movie.title);
   
   return `
-    <div class="carousel-card" data-movie-title="${movie.title}">
+    <div class="carousel-card" data-movie-title="${escapedTitle}">
       <div class="carousel-card-poster" style="background-image: url('${posterUrl}')"></div>
       <div class="carousel-card-content">
         <h4 class="carousel-card-title">${movie.title}</h4>
@@ -1068,9 +1070,10 @@ function bindEvents() {
         const movieTitle = carouselCard.getAttribute('data-movie-title');
         if (movieTitle) {
           // Find the movie in the data and show its modal
-          const movie = state.data.find(m => m.title === movieTitle);
+          // Compare with escaped titles since data-movie-title is escaped
+          const movie = state.data.find(m => escapeHtml(m.title) === movieTitle);
           if (movie) {
-            showMovieModal(movie);
+            showMovieDetailsPanel(movie);
           }
         }
         return;
@@ -1344,6 +1347,7 @@ function normalizeMovie(obj) {
     discussion_topics: toArray(obj.discussion_topics),
     card_description: String(obj.card_description ?? ''),
     profile_text: String(obj.profile_text ?? ''),
+    plot_summary: String(obj.plot_summary ?? ''),
     director: String(obj.director ?? ''),
     year: String(obj.year ?? ''),
     // Handle both poster_url/poster_path and backdrop_url/backdrop_path
@@ -1389,6 +1393,7 @@ function mergeMovies(a, b) {
     discussion_topics: union(a.discussion_topics, b.discussion_topics),
     card_description: pref(a.card_description, b.card_description),
     profile_text: pref(a.profile_text, b.profile_text),
+    plot_summary: pref(a.plot_summary, b.plot_summary),
     director: pref(a.director, b.director),
     year: pref(a.year, b.year),
     poster_url: convertTmdbPath(pref(a.poster_url, b.poster_url), 'w500'),
@@ -2009,6 +2014,13 @@ function renderMovieDetails(movie) {
     return;
   }
   
+  // Debug logging for plot summary
+  console.log('🎬 renderMovieDetails called for:', movie.title);
+  console.log('🎬 plot_summary field exists:', 'plot_summary' in movie);
+  console.log('🎬 plot_summary has content:', !!movie.plot_summary);
+  console.log('🎬 plot_summary value:', movie.plot_summary || 'Empty or missing');
+  console.log('🎬 plot_summary length:', movie.plot_summary ? movie.plot_summary.length : 0);
+  
   // Get backdrop images (all background shots)
   const backdrops = movie.backdrop_urls || [];
   if (movie.backdrop_url && !backdrops.includes(movie.backdrop_url)) {
@@ -2039,6 +2051,14 @@ function renderMovieDetails(movie) {
     ` : ''}
     
     <div class="movie-details-info">
+      ${movie.plot_summary ? `
+      <div class="movie-details-plot">
+        <div class="movie-details-meta-label">Plot Summary</div>
+        <div class="movie-details-plot-text">${movie.plot_summary}</div>
+      </div>
+      <div class="movie-details-divider"></div>
+      ` : ''}
+      
       <div class="movie-details-profile">
         ${movie.profile_text || 'No profile available.'}
       </div>
@@ -2109,6 +2129,8 @@ function renderMovieDetails(movie) {
   
   els.movieDetailsContent.innerHTML = content;
   console.log('🎬 Movie details rendered for:', movie.title);
+  console.log('🎬 Generated HTML contains plot_summary:', content.includes('Plot Summary'));
+  console.log('🎬 Full HTML preview:', content.substring(0, 500) + '...');
 }
 
 function updateFavoritesCount() {

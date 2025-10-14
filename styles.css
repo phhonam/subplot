@@ -1026,6 +1026,21 @@ hr, .divider { border: 0; height: 1px; background: var(--bg-tertiary); }
   color: var(--text-primary);
 }
 
+.movie-details-plot {
+  margin-bottom: 16px;
+}
+
+.movie-details-plot-text {
+  margin-top: 8px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-primary);
+}
+
 .movie-details-profile {
   margin-bottom: 16px;
   line-height: 1.6;
