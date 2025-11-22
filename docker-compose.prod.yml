@@ -17,6 +17,7 @@ services:
       - PYTHONPATH=/app
     volumes:
       - ./movie_profiles_merged.json:/app/movie_profiles_merged.json:ro
+      - ./hidden_movies.json:/app/hidden_movies.json
       - ./backups:/app/backups
       - ./logs:/app/logs
     restart: unless-stopped
