@@ -1,0 +1,248 @@
+{
+  "golden_dataset": {
+    "description": "Curated edge cases for prompt improvement - focusing on cinema movements, cultural context, and technical innovations",
+    "selection_date": "2025-10-18",
+    "movies": [
+      {
+        "title": "Citizen Kane",
+        "year": "1941",
+        "director": "Orson Welles",
+        "country": "USA",
+        "category": "Classic Cinema Movement Exemplars",
+        "key_challenges": [
+          "Cinema movement: Classical Hollywood (not indie)",
+          "Technical innovation: Deep focus cinematography (Gregg Toland)",
+          "Historical context: 1940s Hollywood studio system"
+        ]
+      },
+      {
+        "title": "Bicycle Thieves",
+        "year": "1948",
+        "director": "Vittorio De Sica",
+        "country": "Italy",
+        "category": "Classic Cinema Movement Exemplars",
+        "key_challenges": [
+          "Cinema movement: Italian Neorealism",
+          "Historical context: Post-war Italy, economic devastation",
+          "Technical approach: Non-professional actors, location shooting"
+        ]
+      },
+      {
+        "title": "Breathless",
+        "year": "1960",
+        "director": "Jean-Luc Godard",
+        "country": "France",
+        "category": "Classic Cinema Movement Exemplars",
+        "key_challenges": [
+          "Cinema movement: French New Wave",
+          "Technical innovation: Jump cuts, handheld camera",
+          "Cultural context: 1960s French youth culture"
+        ]
+      },
+      {
+        "title": "Another Round",
+        "year": "2020",
+        "director": "Thomas Vinterberg",
+        "country": "Denmark",
+        "category": "Contemporary International Cinema",
+        "key_challenges": [
+          "Cinema movement: Dogme 95 influence",
+          "Technical approach: Naturalistic cinematography (Sturla Brandth Grøvlen)",
+          "Cultural context: Danish drinking culture, midlife crisis themes"
+        ]
+      },
+      {
+        "title": "Parasite",
+        "year": "2019",
+        "director": "Bong Joon-ho",
+        "country": "South Korea",
+        "category": "Contemporary International Cinema",
+        "key_challenges": [
+          "Cultural context: Korean class dynamics, social inequality",
+          "Technical innovation: Production design as class commentary",
+          "Narrative structure: Genre-blending thriller/social drama"
+        ]
+      },
+      {
+        "title": "Portrait of a Lady on Fire",
+        "year": "2019",
+        "director": "Céline Sciamma",
+        "country": "France",
+        "category": "Contemporary International Cinema",
+        "key_challenges": [
+          "Feminist cinema: Female gaze, women's agency",
+          "Technical approach: Natural light, painterly compositions",
+          "Historical context: 18th century France, women's limited options"
+        ]
+      },
+      {
+        "title": "The Handmaiden",
+        "year": "2016",
+        "director": "Park Chan-wook",
+        "country": "South Korea",
+        "category": "Contemporary International Cinema",
+        "key_challenges": [
+          "Korean New Wave: Park's baroque visual style",
+          "Cultural context: Colonial Korea (1930s), Japanese occupation",
+          "Narrative structure: Multiple perspectives, erotic thriller elements"
+        ]
+      },
+      {
+        "title": "Burning",
+        "year": "2018",
+        "director": "Lee Chang-dong",
+        "country": "South Korea",
+        "category": "Contemporary International Cinema",
+        "key_challenges": [
+          "Slow cinema: Pacing, ambiguity, minimalism",
+          "Cultural context: Murakami adaptation, contemporary Korean society",
+          "Technical approach: Long takes, naturalistic acting"
+        ]
+      },
+      {
+        "title": "Cold War",
+        "year": "2018",
+        "director": "Paweł Pawlikowski",
+        "country": "Poland",
+        "category": "Contemporary International Cinema",
+        "key_challenges": [
+          "Historical context: 1950s-60s Poland, Stalinist era",
+          "Technical approach: Black & white cinematography, musical structure",
+          "Cultural context: Polish folk music vs. Western jazz"
+        ]
+      },
+      {
+        "title": "Close-Up",
+        "year": "1990",
+        "director": "Abbas Kiarostami",
+        "country": "Iran",
+        "category": "Middle Eastern & Asian Cinema",
+        "key_challenges": [
+          "Iranian New Wave: Documentary-fiction hybrid",
+          "Cultural context: Iranian cinema restrictions, art vs. reality",
+          "Narrative innovation: Re-enactment of real events"
+        ]
+      },
+      {
+        "title": "In the Mood for Love",
+        "year": "2000",
+        "director": "Wong Kar-wai",
+        "country": "Hong Kong",
+        "category": "Middle Eastern & Asian Cinema",
+        "key_challenges": [
+          "Visual style: Wong Kar-wai's color palette, Christopher Doyle cinematography",
+          "Cultural context: 1960s Hong Kong, immigrant communities",
+          "Technical approach: Handheld camera, music as narrative device"
+        ]
+      },
+      {
+        "title": "A Separation",
+        "year": "2011",
+        "director": "Asghar Farhadi",
+        "country": "Iran",
+        "category": "Middle Eastern & Asian Cinema",
+        "key_challenges": [
+          "Contemporary Iranian cinema: Moral complexity, class issues",
+          "Cultural context: Iranian legal system, family dynamics",
+          "Narrative structure: Multiple perspectives on single event"
+        ]
+      },
+      {
+        "title": "Shoplifters",
+        "year": "2018",
+        "director": "Hirokazu Kore-eda",
+        "country": "Japan",
+        "category": "Middle Eastern & Asian Cinema",
+        "key_challenges": [
+          "Social realism: Family themes, economic hardship",
+          "Cultural context: Contemporary Japan, social isolation",
+          "Technical approach: Naturalistic acting, observational style"
+        ]
+      },
+      {
+        "title": "Roma",
+        "year": "2018",
+        "director": "Alfonso Cuarón",
+        "country": "Mexico",
+        "category": "Latin American Cinema",
+        "key_challenges": [
+          "Personal history: Cuarón's childhood, class dynamics",
+          "Technical approach: Black & white, single cinematographer (Cuarón himself)",
+          "Cultural context: 1970s Mexico City, domestic workers' lives"
+        ]
+      },
+      {
+        "title": "The 400 Blows",
+        "year": "1959",
+        "director": "François Truffaut",
+        "country": "France",
+        "category": "Latin American Cinema",
+        "key_challenges": [
+          "French New Wave origins: Truffaut's autobiographical style",
+          "Cultural context: Post-war French youth, education system",
+          "Technical innovation: Location shooting, natural lighting"
+        ]
+      },
+      {
+        "title": "Holy Motors",
+        "year": "2012",
+        "director": "Leos Carax",
+        "country": "France",
+        "category": "Experimental/Avant-garde",
+        "key_challenges": [
+          "Post-cinema: Carax's surrealism, performance art",
+          "Technical approach: Multiple genres within single film",
+          "Cultural context: Digital age, identity fluidity"
+        ]
+      },
+      {
+        "title": "Inland Empire",
+        "year": "2006",
+        "director": "David Lynch",
+        "country": "USA",
+        "category": "Experimental/Avant-garde",
+        "key_challenges": [
+          "Lynch's digital aesthetic: Shot on DV, low-budget",
+          "Narrative structure: Non-linear, dream logic",
+          "Technical approach: Improvised, experimental filmmaking"
+        ]
+      },
+      {
+        "title": "Eraserhead",
+        "year": "1977",
+        "director": "David Lynch",
+        "country": "USA",
+        "category": "Experimental/Avant-garde",
+        "key_challenges": [
+          "Midnight movie: Industrial soundscape, body horror",
+          "Technical approach: Black & white, surreal imagery",
+          "Cultural context: 1970s industrial America, alienation"
+        ]
+      },
+      {
+        "title": "Stories We Tell",
+        "year": "2012",
+        "director": "Sarah Polley",
+        "country": "Canada",
+        "category": "Documentary-style Fiction",
+        "key_challenges": [
+          "Meta-documentary: Truth vs. memory, family secrets",
+          "Technical approach: Mix of archival footage and re-enactments",
+          "Cultural context: Canadian family dynamics, 1980s"
+        ]
+      },
+      {
+        "title": "Tangerine",
+        "year": "2015",
+        "director": "Sean Baker",
+        "country": "USA",
+        "category": "Documentary-style Fiction",
+        "key_challenges": [
+          "Technical innovation: Shot on iPhone, hyperrealism",
+          "Cultural context: LA trans community, Christmas Eve",
+          "Narrative approach: Real-time storytelling, authentic casting"
+        ]
+      }
+    ]
+  }
+}

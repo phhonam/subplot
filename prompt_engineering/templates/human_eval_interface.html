@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Profile Text Evaluation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .movie-selector {
+            margin-bottom: 30px;
+        }
+
+        .movie-selector h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .movie-dropdown {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+        }
+
+        .movie-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .movie-info h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .movie-meta {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .key-challenges {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .key-challenges h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .key-challenges ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .key-challenges li {
+            color: #856404;
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .key-challenges li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .profile-text {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #dee2e6;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .profile-text h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .evaluation-form {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+
+        .evaluation-form h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .rating-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .rating-section h4 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .rating-scale {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .rating-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .rating-option:hover {
+            border-color: #3498db;
+            background: #f8f9fa;
+        }
+
+        .rating-option.selected {
+            border-color: #3498db;
+            background: #e3f2fd;
+        }
+
+        .rating-option input[type="radio"] {
+            margin-bottom: 5px;
+        }
+
+        .rating-option label {
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .comments-textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        .quick-tags {
+            margin-bottom: 20px;
+        }
+
+        .quick-tags h4 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background: #e9ecef;
+            border: 2px solid #dee2e6;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .tag:hover {
+            background: #f8f9fa;
+            border-color: #adb5bd;
+        }
+
+        .tag.selected {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        .tag input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .submit-btn:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #dc3545;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #28a745;
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 Movie Profile Text Evaluation</h1>
+            <p>Evaluate the quality of generated movie profile narratives</p>
+        </div>
+
+        <div class="content">
+            <div class="movie-selector">
+                <h2>Select Movie for Evaluation</h2>
+                <select id="movieSelect" class="movie-dropdown">
+                    <option value="">Choose a movie...</option>
+                </select>
+            </div>
+
+            <div id="loadingIndicator" class="loading hidden">
+                <p>Loading movie data...</p>
+            </div>
+
+            <div id="errorMessage" class="error hidden"></div>
+            <div id="successMessage" class="success hidden"></div>
+
+            <div id="movieContent" class="hidden">
+                <div id="movieInfo"></div>
+                <div id="profileText"></div>
+                <div id="evaluationForm"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentMovie = null;
+        let selectedRatings = {};
+        let selectedTags = [];
+
+        // Load movies on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMovies();
+        });
+
+        // Movie selection handler
+        document.getElementById('movieSelect').addEventListener('change', function() {
+            const movieTitle = this.value;
+            if (movieTitle) {
+                loadMovieProfile(movieTitle);
+            } else {
+                hideMovieContent();
+            }
+        });
+
+        async function loadMovies() {
+            try {
+                showLoading();
+                const response = await fetch('/api/movies');
+                const data = await response.json();
+
+                if (data.success) {
+                    const select = document.getElementById('movieSelect');
+                    select.innerHTML = '<option value="">Choose a movie...</option>';
+                    
+                    data.movies.forEach(movie => {
+                        const option = document.createElement('option');
+                        option.value = movie.title;
+                        option.textContent = `${movie.title} (${movie.year}) - ${movie.director}`;
+                        if (!movie.has_profile) {
+                            option.textContent += ' - NO PROFILE';
+                            option.disabled = true;
+                        }
+                        select.appendChild(option);
+                    });
+                } else {
+                    showError('Failed to load movies: ' + data.error);
+                }
+            } catch (error) {
+                showError('Error loading movies: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        }
+
+        async function loadMovieProfile(movieTitle) {
+            try {
+                showLoading();
+                const response = await fetch(`/api/movie/${encodeURIComponent(movieTitle)}`);
+                const data = await response.json();
+
+                if (data.success) {
+                    currentMovie = data.movie;
+                    displayMovieInfo(data.movie);
+                    displayProfileText(data.movie);
+                    displayEvaluationForm();
+                    showMovieContent();
+                } else {
+                    showError('Failed to load movie: ' + data.error);
+                }
+            } catch (error) {
+                showError('Error loading movie: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        }
+
+        function displayMovieInfo(movie) {
+            const movieInfoDiv = document.getElementById('movieInfo');
+            movieInfoDiv.innerHTML = `
+                <h3>${movie.title} (${movie.year})</h3>
+                <div class="movie-meta">
+                    <strong>Director:</strong> ${movie.director} | 
+                    <strong>Country:</strong> ${movie.country} | 
+                    <strong>Category:</strong> ${movie.category}
+                </div>
+                <div class="key-challenges">
+                    <h4>Key Evaluation Challenges:</h4>
+                    <ul>
+                        ${movie.key_challenges.map(challenge => `<li>${challenge}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        function displayProfileText(movie) {
+            const profileTextDiv = document.getElementById('profileText');
+            if (movie.has_profile && movie.profile_text) {
+                profileTextDiv.innerHTML = `
+                    <h4>Generated Profile Text:</h4>
+                    <div class="profile-text">${movie.profile_text}</div>
+                `;
+            } else {
+                profileTextDiv.innerHTML = `
+                    <div class="error">No profile text available for this movie.</div>
+                `;
+            }
+        }
+
+        function displayEvaluationForm() {
+            const evaluationFormDiv = document.getElementById('evaluationForm');
+            evaluationFormDiv.innerHTML = `
+                <h3>Evaluation Form</h3>
+                
+                <div class="rating-section">
+                    <h4>Overall Quality</h4>
+                    <div class="rating-scale">
+                        ${generateRatingOptions('overall_quality', ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'])}
+                    </div>
+                    <textarea class="comments-textarea" id="overall_comments" placeholder="Overall comments about the profile text quality..."></textarea>
+                </div>
+
+                <div class="rating-section">
+                    <h4>Cinema Movement Identification</h4>
+                    <p>Does it name specific movements? Include historical context?</p>
+                    <div class="rating-scale">
+                        ${generateRatingOptions('cinema_movement', ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'])}
+                    </div>
+                    <textarea class="comments-textarea" id="cinema_movement_comments" placeholder="Comments about cinema movement identification..."></textarea>
+                </div>
+
+                <div class="rating-section">
+                    <h4>Socio-Cultural Context</h4>
+                    <p>Specific historical events? Cultural authenticity?</p>
+                    <div class="rating-scale">
+                        ${generateRatingOptions('socio_cultural', ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'])}
+                    </div>
+                    <textarea class="comments-textarea" id="socio_cultural_comments" placeholder="Comments about socio-cultural context..."></textarea>
+                </div>
+
+                <div class="rating-section">
+                    <h4>Formal/Technical Analysis</h4>
+                    <p>Cinematographer credits? Specific techniques mentioned?</p>
+                    <div class="rating-scale">
+                        ${generateRatingOptions('formal_analysis', ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'])}
+                    </div>
+                    <textarea class="comments-textarea" id="formal_analysis_comments" placeholder="Comments about formal/technical analysis..."></textarea>
+                </div>
+
+                <div class="rating-section">
+                    <h4>Narrative/Character Analysis</h4>
+                    <p>Specific plot elements? Character insights?</p>
+                    <div class="rating-scale">
+                        ${generateRatingOptions('narrative_analysis', ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'])}
+                    </div>
+                    <textarea class="comments-textarea" id="narrative_analysis_comments" placeholder="Comments about narrative/character analysis..."></textarea>
+                </div>
+
+                <div class="rating-section">
+                    <h4>Distinctiveness</h4>
+                    <p>What makes this film unique? Clear differentiation?</p>
+                    <div class="rating-scale">
+                        ${generateRatingOptions('distinctiveness', ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'])}
+                    </div>
+                    <textarea class="comments-textarea" id="distinctiveness_comments" placeholder="Comments about distinctiveness..."></textarea>
+                </div>
+
+                <div class="quick-tags">
+                    <h4>Common Issues (Check all that apply):</h4>
+                    <div class="tag-group">
+                        ${generateQuickTags()}
+                    </div>
+                </div>
+
+                <button class="submit-btn" onclick="submitEvaluation()">Submit Evaluation</button>
+            `;
+
+            // Add event listeners for ratings
+            setupRatingListeners();
+            setupTagListeners();
+        }
+
+        function generateRatingOptions(category, labels) {
+            return labels.map((label, index) => `
+                <div class="rating-option" data-category="${category}" data-rating="${index + 1}">
+                    <input type="radio" name="${category}" value="${index + 1}" id="${category}_${index + 1}">
+                    <label for="${category}_${index + 1}">${index + 1}<br>${label}</label>
+                </div>
+            `).join('');
+        }
+
+        function generateQuickTags() {
+            const tags = [
+                'Generic language',
+                'Missing cinema movement',
+                'No cinematographer credit',
+                'Vague cultural context',
+                'Missing historical context',
+                'Generic technical descriptions',
+                'Missing narrative specifics',
+                'No distinctiveness',
+                'Inaccurate information',
+                'Too verbose',
+                'Too brief',
+                'Good quality',
+                'Excellent analysis'
+            ];
+
+            return tags.map(tag => `
+                <div class="tag" data-tag="${tag}">
+                    <input type="checkbox" id="tag_${tag.replace(/\s+/g, '_')}">
+                    <label for="tag_${tag.replace(/\s+/g, '_')}">${tag}</label>
+                </div>
+            `).join('');
+        }
+
+        function setupRatingListeners() {
+            document.querySelectorAll('.rating-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    const rating = this.dataset.rating;
+                    
+                    // Remove selected class from siblings
+                    document.querySelectorAll(`[data-category="${category}"]`).forEach(sibling => {
+                        sibling.classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Check the radio button
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+                    
+                    selectedRatings[category] = parseInt(rating);
+                });
+            });
+        }
+
+        function setupTagListeners() {
+            document.querySelectorAll('.tag').forEach(tag => {
+                tag.addEventListener('click', function() {
+                    const tagName = this.dataset.tag;
+                    const checkbox = this.querySelector('input[type="checkbox"]');
+                    
+                    checkbox.checked = !checkbox.checked;
+                    this.classList.toggle('selected', checkbox.checked);
+                    
+                    if (checkbox.checked) {
+                        if (!selectedTags.includes(tagName)) {
+                            selectedTags.push(tagName);
+                        }
+                    } else {
+                        selectedTags = selectedTags.filter(t => t !== tagName);
+                    }
+                });
+            });
+        }
+
+        async function submitEvaluation() {
+            if (!currentMovie) {
+                showError('No movie selected');
+                return;
+            }
+
+            // Validate ratings
+            const requiredCategories = ['overall_quality', 'cinema_movement', 'socio_cultural', 'formal_analysis', 'narrative_analysis', 'distinctiveness'];
+            const missingCategories = requiredCategories.filter(cat => !selectedRatings[cat]);
+            
+            if (missingCategories.length > 0) {
+                showError(`Please rate all categories: ${missingCategories.join(', ')}`);
+                return;
+            }
+
+            // Collect comments
+            const comments = {};
+            requiredCategories.forEach(cat => {
+                const commentElement = document.getElementById(`${cat}_comments`);
+                comments[cat] = commentElement ? commentElement.value : '';
+            });
+
+            const evaluationData = {
+                movie_title: currentMovie.title,
+                overall_quality: selectedRatings.overall_quality,
+                category_ratings: {
+                    cinema_movement: selectedRatings.cinema_movement,
+                    socio_cultural: selectedRatings.socio_cultural,
+                    formal_analysis: selectedRatings.formal_analysis,
+                    narrative_analysis: selectedRatings.narrative_analysis,
+                    distinctiveness: selectedRatings.distinctiveness
+                },
+                comments: comments,
+                selected_tags: selectedTags,
+                evaluation_date: new Date().toISOString()
+            };
+
+            try {
+                const response = await fetch('/api/evaluate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(evaluationData)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showSuccess(`Evaluation submitted successfully! Total evaluations: ${data.total_evaluations}`);
+                    resetForm();
+                } else {
+                    showError('Failed to submit evaluation: ' + data.error);
+                }
+            } catch (error) {
+                showError('Error submitting evaluation: ' + error.message);
+            }
+        }
+
+        function resetForm() {
+            selectedRatings = {};
+            selectedTags = [];
+            document.querySelectorAll('.rating-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelectorAll('.tag').forEach(tag => {
+                tag.classList.remove('selected');
+            });
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.checked = false;
+            });
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            document.querySelectorAll('textarea').forEach(textarea => {
+                textarea.value = '';
+            });
+        }
+
+        function showLoading() {
+            document.getElementById('loadingIndicator').classList.remove('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingIndicator').classList.add('hidden');
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+            setTimeout(() => errorDiv.classList.add('hidden'), 5000);
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.getElementById('successMessage');
+            successDiv.textContent = message;
+            successDiv.classList.remove('hidden');
+            setTimeout(() => successDiv.classList.add('hidden'), 5000);
+        }
+
+        function showMovieContent() {
+            document.getElementById('movieContent').classList.remove('hidden');
+        }
+
+        function hideMovieContent() {
+            document.getElementById('movieContent').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

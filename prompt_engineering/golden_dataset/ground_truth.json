@@ -1,0 +1,671 @@
+{
+  "evaluation_criteria": {
+    "cinema_movement": {
+      "description": "Should correctly identify the specific cinema movement or era",
+      "weight": 1.0
+    },
+    "technical_credits": {
+      "description": "Should mention cinematographers, specific techniques, or technical innovations",
+      "weight": 1.0
+    },
+    "historical_context": {
+      "description": "Should reference specific historical events, periods, or cultural moments",
+      "weight": 1.0
+    },
+    "cultural_specificity": {
+      "description": "Should provide culturally specific context beyond generic descriptions",
+      "weight": 1.0
+    },
+    "narrative_innovation": {
+      "description": "Should identify specific narrative techniques or structural innovations",
+      "weight": 1.0
+    },
+    "visual_style": {
+      "description": "Should describe specific visual techniques rather than generic 'beautiful' language",
+      "weight": 1.0
+    }
+  },
+  "movies": {
+    "Citizen Kane": {
+      "original_title": "Citizen Kane",
+      "replacement_title": null,
+      "expected_cinema_movement": "Classical Hollywood",
+      "expected_technical_credits": [
+        "Gregg Toland (cinematographer)",
+        "deep focus cinematography",
+        "chiaroscuro lighting",
+        "innovative camera angles"
+      ],
+      "expected_historical_context": [
+        "1940s Hollywood studio system",
+        "rise of media empires",
+        "power of press in shaping public opinion"
+      ],
+      "expected_cultural_context": [
+        "Media manipulation",
+        "identity construction",
+        "American Dream critique"
+      ],
+      "expected_narrative_innovation": [
+        "Non-linear narrative structure",
+        "multiple perspectives",
+        "Rosebud mystery structure"
+      ],
+      "key_evaluation_criteria": [
+        "Should NOT describe as 'indie cinema'",
+        "Should mention Gregg Toland by name",
+        "Should reference deep focus technique",
+        "Should identify Classical Hollywood era"
+      ],
+      "category": "Classic Cinema Movement Exemplars"
+    },
+    "Bicycle Thieves": {
+      "original_title": "Bicycle Thieves",
+      "replacement_title": null,
+      "expected_cinema_movement": "Italian Neorealism",
+      "expected_technical_credits": [
+        "Non-professional actors",
+        "location shooting",
+        "natural lighting"
+      ],
+      "expected_historical_context": [
+        "Post-war Italy",
+        "economic devastation",
+        "working-class struggles"
+      ],
+      "expected_cultural_context": [
+        "Italian working class",
+        "father-son relationships",
+        "moral complexity"
+      ],
+      "expected_narrative_innovation": [
+        "Documentary-style approach",
+        "minimal plot structure",
+        "social realism"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Italian Neorealism movement",
+        "Should mention post-war context",
+        "Should reference non-professional actors",
+        "Should avoid generic 'beautiful' descriptions"
+      ],
+      "category": "Classic Cinema Movement Exemplars"
+    },
+    "Amour": {
+      "original_title": "Breathless",
+      "replacement_title": "Amour",
+      "expected_cinema_movement": "European Art Cinema",
+      "expected_technical_credits": [
+        "Long takes",
+        "minimal editing",
+        "naturalistic cinematography"
+      ],
+      "expected_historical_context": [
+        "Contemporary European cinema",
+        "aging population themes",
+        "end-of-life care"
+      ],
+      "expected_cultural_context": [
+        "French middle class",
+        "marriage and commitment",
+        "dignity in aging"
+      ],
+      "expected_narrative_innovation": [
+        "Restrained storytelling",
+        "minimal dialogue",
+        "emotional restraint"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify European art cinema tradition",
+        "Should mention Haneke's austere style",
+        "Should reference aging themes",
+        "Should avoid action-oriented language"
+      ],
+      "category": "Classic Cinema Movement Exemplars"
+    },
+    "Another Round": {
+      "original_title": "Another Round",
+      "replacement_title": null,
+      "expected_cinema_movement": "Dogme 95 influence",
+      "expected_technical_credits": [
+        "Sturla Brandth Grøvlen (cinematographer)",
+        "naturalistic cinematography",
+        "handheld camera work"
+      ],
+      "expected_historical_context": [
+        "Contemporary Denmark",
+        "midlife crisis themes",
+        "educational system"
+      ],
+      "expected_cultural_context": [
+        "Danish drinking culture",
+        "male friendship dynamics",
+        "professional dissatisfaction"
+      ],
+      "expected_narrative_innovation": [
+        "Ensemble storytelling",
+        "experimental premise",
+        "tragicomic tone"
+      ],
+      "key_evaluation_criteria": [
+        "Should mention Dogme 95 influence",
+        "Should reference Danish cultural context",
+        "Should mention cinematographer by name",
+        "Should identify midlife themes"
+      ],
+      "category": "Contemporary International Cinema"
+    },
+    "Parasite": {
+      "original_title": "Parasite",
+      "replacement_title": null,
+      "expected_cinema_movement": "Korean New Wave",
+      "expected_technical_credits": [
+        "Production design as class commentary",
+        "multi-level set design",
+        "contrasting visual styles"
+      ],
+      "expected_historical_context": [
+        "Contemporary South Korea",
+        "economic inequality",
+        "class stratification"
+      ],
+      "expected_cultural_context": [
+        "Korean class dynamics",
+        "social inequality",
+        "family loyalty vs. survival"
+      ],
+      "expected_narrative_innovation": [
+        "Genre-blending structure",
+        "social thriller elements",
+        "satirical commentary"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Korean cinema context",
+        "Should mention class commentary",
+        "Should reference Bong Joon-ho's style",
+        "Should avoid generic thriller language"
+      ],
+      "category": "Contemporary International Cinema"
+    },
+    "Portrait of a Lady on Fire": {
+      "original_title": "Portrait of a Lady on Fire",
+      "replacement_title": null,
+      "expected_cinema_movement": "Contemporary French Cinema",
+      "expected_technical_credits": [
+        "Natural light cinematography",
+        "painterly compositions",
+        "Claire Mathon (cinematographer)"
+      ],
+      "expected_historical_context": [
+        "18th century France",
+        "women's limited options",
+        "aristocratic society"
+      ],
+      "expected_cultural_context": [
+        "Female gaze",
+        "women's agency",
+        "lesbian relationships"
+      ],
+      "expected_narrative_innovation": [
+        "Feminist storytelling",
+        "visual storytelling",
+        "silent communication"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify feminist cinema elements",
+        "Should mention historical period",
+        "Should reference natural lighting",
+        "Should avoid male gaze language"
+      ],
+      "category": "Contemporary International Cinema"
+    },
+    "The Handmaiden": {
+      "original_title": "The Handmaiden",
+      "replacement_title": null,
+      "expected_cinema_movement": "Korean New Wave",
+      "expected_technical_credits": [
+        "Park Chan-wook's baroque visual style",
+        "elaborate set design",
+        "contrasting visual palettes"
+      ],
+      "expected_historical_context": [
+        "Colonial Korea (1930s)",
+        "Japanese occupation",
+        "cultural assimilation"
+      ],
+      "expected_cultural_context": [
+        "Korean-Japanese relations",
+        "colonial power dynamics",
+        "female agency"
+      ],
+      "expected_narrative_innovation": [
+        "Multiple perspective structure",
+        "erotic thriller elements",
+        "twist-heavy plotting"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify colonial context",
+        "Should mention Park's visual style",
+        "Should reference multiple perspectives",
+        "Should avoid generic thriller language"
+      ],
+      "category": "Contemporary International Cinema"
+    },
+    "Memories of Murder": {
+      "original_title": "Burning",
+      "replacement_title": "Memories of Murder",
+      "expected_cinema_movement": "Korean New Wave",
+      "expected_technical_credits": [
+        "Bong Joon-ho's early style",
+        "procedural filmmaking",
+        "realistic police work"
+      ],
+      "expected_historical_context": [
+        "1980s South Korea",
+        "military dictatorship",
+        "serial killer case"
+      ],
+      "expected_cultural_context": [
+        "Korean police culture",
+        "rural vs. urban dynamics",
+        "institutional corruption"
+      ],
+      "expected_narrative_innovation": [
+        "Police procedural structure",
+        "true crime adaptation",
+        "character-driven investigation"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify 1980s Korean context",
+        "Should mention military dictatorship",
+        "Should reference Bong's early style",
+        "Should avoid generic crime language"
+      ],
+      "category": "Contemporary International Cinema"
+    },
+    "The Lives of Others": {
+      "original_title": "Cold War",
+      "replacement_title": "The Lives of Others",
+      "expected_cinema_movement": "Contemporary German Cinema",
+      "expected_technical_credits": [
+        "Surveillance cinematography",
+        "claustrophobic framing",
+        "period-accurate production design"
+      ],
+      "expected_historical_context": [
+        "East Germany (1984)",
+        "Stasi surveillance state",
+        "cultural repression"
+      ],
+      "expected_cultural_context": [
+        "German reunification themes",
+        "artistic freedom",
+        "personal vs. political"
+      ],
+      "expected_narrative_innovation": [
+        "Surveillance thriller structure",
+        "moral complexity",
+        "character transformation"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify East German context",
+        "Should mention Stasi surveillance",
+        "Should reference moral complexity",
+        "Should avoid generic thriller language"
+      ],
+      "category": "Contemporary International Cinema"
+    },
+    "Close-Up": {
+      "original_title": "Close-Up",
+      "replacement_title": null,
+      "expected_cinema_movement": "Iranian New Wave",
+      "expected_technical_credits": [
+        "Documentary-fiction hybrid",
+        "re-enactment techniques",
+        "minimalist approach"
+      ],
+      "expected_historical_context": [
+        "Contemporary Iran",
+        "cinema restrictions",
+        "art vs. reality"
+      ],
+      "expected_cultural_context": [
+        "Iranian cinema culture",
+        "celebrity worship",
+        "class dynamics"
+      ],
+      "expected_narrative_innovation": [
+        "Meta-documentary structure",
+        "re-enactment of real events",
+        "blurring fact and fiction"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Iranian New Wave",
+        "Should mention documentary-fiction hybrid",
+        "Should reference Kiarostami's style",
+        "Should avoid generic documentary language"
+      ],
+      "category": "Middle Eastern & Asian Cinema"
+    },
+    "In the Mood for Love": {
+      "original_title": "In the Mood for Love",
+      "replacement_title": null,
+      "expected_cinema_movement": "Hong Kong New Wave",
+      "expected_technical_credits": [
+        "Christopher Doyle (cinematographer)",
+        "Wong Kar-wai's color palette",
+        "handheld camera work"
+      ],
+      "expected_historical_context": [
+        "1960s Hong Kong",
+        "immigrant communities",
+        "cultural transition"
+      ],
+      "expected_cultural_context": [
+        "Hong Kong identity",
+        "forbidden love themes",
+        "cultural displacement"
+      ],
+      "expected_narrative_innovation": [
+        "Music as narrative device",
+        "elliptical storytelling",
+        "unrequited love structure"
+      ],
+      "key_evaluation_criteria": [
+        "Should mention Christopher Doyle",
+        "Should identify Hong Kong context",
+        "Should reference 1960s setting",
+        "Should mention Wong's visual style"
+      ],
+      "category": "Middle Eastern & Asian Cinema"
+    },
+    "A Separation": {
+      "original_title": "A Separation",
+      "replacement_title": null,
+      "expected_cinema_movement": "Contemporary Iranian Cinema",
+      "expected_technical_credits": [
+        "Naturalistic cinematography",
+        "minimalist approach",
+        "realistic dialogue"
+      ],
+      "expected_historical_context": [
+        "Contemporary Iran",
+        "legal system",
+        "family dynamics"
+      ],
+      "expected_cultural_context": [
+        "Iranian family structure",
+        "moral complexity",
+        "class differences"
+      ],
+      "expected_narrative_innovation": [
+        "Multiple perspective structure",
+        "moral ambiguity",
+        "social realism"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify contemporary Iranian cinema",
+        "Should mention moral complexity",
+        "Should reference family dynamics",
+        "Should avoid generic drama language"
+      ],
+      "category": "Middle Eastern & Asian Cinema"
+    },
+    "Shoplifters": {
+      "original_title": "Shoplifters",
+      "replacement_title": null,
+      "expected_cinema_movement": "Japanese Social Realism",
+      "expected_technical_credits": [
+        "Naturalistic acting",
+        "observational style",
+        "minimalist cinematography"
+      ],
+      "expected_historical_context": [
+        "Contemporary Japan",
+        "social isolation",
+        "economic hardship"
+      ],
+      "expected_cultural_context": [
+        "Japanese family structures",
+        "social welfare system",
+        "chosen family themes"
+      ],
+      "expected_narrative_innovation": [
+        "Family drama structure",
+        "social commentary",
+        "Kore-eda's signature style"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Kore-eda's style",
+        "Should mention Japanese social context",
+        "Should reference family themes",
+        "Should avoid generic family drama language"
+      ],
+      "category": "Middle Eastern & Asian Cinema"
+    },
+    "Roma": {
+      "original_title": "Roma",
+      "replacement_title": null,
+      "expected_cinema_movement": "Contemporary Mexican Cinema",
+      "expected_technical_credits": [
+        "Alfonso Cuarón (cinematographer)",
+        "black & white cinematography",
+        "single cinematographer approach"
+      ],
+      "expected_historical_context": [
+        "1970s Mexico City",
+        "domestic workers' lives",
+        "social class dynamics"
+      ],
+      "expected_cultural_context": [
+        "Mexican middle class",
+        "indigenous representation",
+        "family dynamics"
+      ],
+      "expected_narrative_innovation": [
+        "Personal history structure",
+        "semi-autobiographical elements",
+        "visual storytelling"
+      ],
+      "key_evaluation_criteria": [
+        "Should mention Cuarón as cinematographer",
+        "Should identify 1970s Mexico context",
+        "Should reference personal history",
+        "Should avoid generic family drama language"
+      ],
+      "category": "Latin American Cinema"
+    },
+    "The 400 Blows": {
+      "original_title": "The 400 Blows",
+      "replacement_title": null,
+      "expected_cinema_movement": "French New Wave",
+      "expected_technical_credits": [
+        "Location shooting",
+        "natural lighting",
+        "handheld camera work"
+      ],
+      "expected_historical_context": [
+        "Post-war France",
+        "youth culture",
+        "education system"
+      ],
+      "expected_cultural_context": [
+        "French adolescence",
+        "family dynamics",
+        "social rebellion"
+      ],
+      "expected_narrative_innovation": [
+        "Autobiographical structure",
+        "coming-of-age elements",
+        "Truffaut's signature style"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify French New Wave",
+        "Should mention Truffaut's autobiographical style",
+        "Should reference post-war context",
+        "Should avoid generic coming-of-age language"
+      ],
+      "category": "Latin American Cinema"
+    },
+    "Oldboy": {
+      "original_title": "Holy Motors",
+      "replacement_title": "Oldboy",
+      "expected_cinema_movement": "Korean New Wave",
+      "expected_technical_credits": [
+        "Park Chan-wook's baroque style",
+        "elaborate action choreography",
+        "stylized violence"
+      ],
+      "expected_historical_context": [
+        "Contemporary South Korea",
+        "revenge themes",
+        "psychological thriller"
+      ],
+      "expected_cultural_context": [
+        "Korean masculinity",
+        "family honor",
+        "psychological complexity"
+      ],
+      "expected_narrative_innovation": [
+        "Twist-heavy structure",
+        "psychological thriller elements",
+        "moral ambiguity"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Park Chan-wook's style",
+        "Should mention psychological complexity",
+        "Should reference revenge themes",
+        "Should avoid generic action language"
+      ],
+      "category": "Experimental/Avant-garde"
+    },
+    "Mulholland Drive": {
+      "original_title": "Inland Empire",
+      "replacement_title": "Mulholland Drive",
+      "expected_cinema_movement": "Lynchian Cinema",
+      "expected_technical_credits": [
+        "David Lynch's surrealist style",
+        "dreamlike cinematography",
+        "non-linear editing"
+      ],
+      "expected_historical_context": [
+        "Contemporary Hollywood",
+        "dream factory themes",
+        "show business corruption"
+      ],
+      "expected_cultural_context": [
+        "Hollywood culture",
+        "identity and performance",
+        "surrealist themes"
+      ],
+      "expected_narrative_innovation": [
+        "Non-linear structure",
+        "dream logic",
+        "surrealist elements"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Lynch's surrealist style",
+        "Should mention dream logic",
+        "Should reference Hollywood context",
+        "Should avoid generic thriller language"
+      ],
+      "category": "Experimental/Avant-garde"
+    },
+    "Stalker": {
+      "original_title": "Eraserhead",
+      "replacement_title": "Stalker",
+      "expected_cinema_movement": "Soviet Art Cinema",
+      "expected_technical_credits": [
+        "Tarkovsky's philosophical cinematography",
+        "long takes",
+        "contemplative pacing"
+      ],
+      "expected_historical_context": [
+        "Soviet era",
+        "philosophical themes",
+        "science fiction elements"
+      ],
+      "expected_cultural_context": [
+        "Russian philosophy",
+        "existential themes",
+        "spiritual searching"
+      ],
+      "expected_narrative_innovation": [
+        "Philosophical structure",
+        "minimal dialogue",
+        "contemplative pacing"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Tarkovsky's style",
+        "Should mention philosophical themes",
+        "Should reference Soviet context",
+        "Should avoid generic sci-fi language"
+      ],
+      "category": "Experimental/Avant-garde"
+    },
+    "The Florida Project": {
+      "original_title": "Stories We Tell",
+      "replacement_title": "The Florida Project",
+      "expected_cinema_movement": "American Independent Cinema",
+      "expected_technical_credits": [
+        "Sean Baker's naturalistic style",
+        "authentic casting",
+        "documentary-style approach"
+      ],
+      "expected_historical_context": [
+        "Contemporary America",
+        "economic inequality",
+        "tourism industry"
+      ],
+      "expected_cultural_context": [
+        "American poverty",
+        "childhood innocence",
+        "family dynamics"
+      ],
+      "expected_narrative_innovation": [
+        "Child's perspective",
+        "social realism",
+        "authentic casting"
+      ],
+      "key_evaluation_criteria": [
+        "Should identify Sean Baker's style",
+        "Should mention economic inequality",
+        "Should reference child's perspective",
+        "Should avoid generic family drama language"
+      ],
+      "category": "Documentary-style Fiction"
+    },
+    "Tangerine": {
+      "original_title": "Tangerine",
+      "replacement_title": null,
+      "expected_cinema_movement": "American Independent Cinema",
+      "expected_technical_credits": [
+        "iPhone cinematography",
+        "hyperrealism",
+        "real-time storytelling"
+      ],
+      "expected_historical_context": [
+        "Contemporary Los Angeles",
+        "trans community representation",
+        "Christmas Eve setting"
+      ],
+      "expected_cultural_context": [
+        "LA trans community",
+        "friendship dynamics",
+        "marginalized communities"
+      ],
+      "expected_narrative_innovation": [
+        "iPhone filmmaking",
+        "authentic casting",
+        "real-time structure"
+      ],
+      "key_evaluation_criteria": [
+        "Should mention iPhone cinematography",
+        "Should identify trans community context",
+        "Should reference Sean Baker's innovation",
+        "Should avoid generic independent film language"
+      ],
+      "category": "Documentary-style Fiction"
+    }
+  }
+}

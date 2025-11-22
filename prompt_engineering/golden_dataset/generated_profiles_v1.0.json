@@ -1,0 +1,66 @@
+{
+  "Citizen Kane": {
+    "title": "Citizen Kane",
+    "year": "1941",
+    "director": "Orson Welles",
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "plot_summary": "Newspaper magnate Charles Foster Kane is taken from his mother as a boy and made the ward of a rich industrialist. As a result, every well-meaning, tyrannical or self-destructive move he makes for the rest of his life appears in some way to be a reaction to that deeply wounding event.",
+    "profile_text": "'Citizen Kane,' a cornerstone of cinematic history, captivates with its innovative storytelling techniques and deep psychological exploration. Orson Welles' directorial virtuosity shines through the intricate narrative structure and visually striking compositions. The film's focus on identity, media manipulation, and the impact of power reverberates through time, offering a profound reflection on the complexities of human nature and the consequences of unchecked ambition. Viewers drawn to thought-provoking narratives and visual artistry will find 'Citizen Kane' to be a compelling and enduring cinematic experience that transcends its era, cementing its status as a timeless classic in the indie film landscape.",
+    "version": "v1.0",
+    "generated_at": "2025-10-18"
+  },
+  "Tangerine": {
+    "title": "Tangerine",
+    "year": "2015",
+    "director": "Sean Baker",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "plot_summary": "It's Christmas Eve in Tinseltown and Sin-Dee is back on the block. Upon hearing that her pimp boyfriend hasn't been faithful during the 28 days she was locked up, the working girl and her best friend, Alexandra, embark on a mission to get to the bottom of the scandalous rumor. Their rip-roaring odyssey leads them through various subcultures of Los Angeles, including an Armenian family dealing with their own repercussions of infidelity.",
+    "profile_text": "\"Tangerine,\" directed by Sean Baker, stands out in the indie film landscape for its bold choice of casting transgender actresses and its unique filming technique using iPhones. The film's comedic yet dramatic tone captures the essence of found family amidst the vibrant and often harsh realities of urban life. Through the lens of two friends embarking on a quest for truth, the movie delves into themes of identity crisis and the resilience of forming connections in unconventional spaces. The visually captivating portrayal of Los Angeles's diverse subcultures adds depth to the narrative, making it a compelling watch for viewers seeking authentic storytelling and nuanced character dynamics. \"Tangerine\" resonates with audiences interested in exploring themes of friendship, identity, and the power of chosen families in the face of societal challenges.",
+    "version": "v1.0",
+    "generated_at": "2025-10-18"
+  },
+  "Close-Up": {
+    "title": "Close-Up",
+    "year": "1990",
+    "director": "Abbas Kiarostami",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "plot_summary": "This fiction-documentary hybrid uses a sensational real-life event—the arrest of a young man on charges that he fraudulently impersonated the well-known filmmaker Mohsen Makhmalbaf—as the basis for a stunning, multilayered investigation into movies, identity, artistic creation, and existence, in which the real people from the case play themselves.",
+    "profile_text": "\"Close-Up\" stands as a landmark in cinematic experimentation, pushing the boundaries of traditional filmmaking by seamlessly weaving together real-life events with fictional elements. The emotional depth of the film lies in its contemplative tone, inviting viewers to reflect on the complexities of identity and the transformative power of artistic expression. Kiarostami's masterful direction immerses the audience in a world where reality blurs with imagination, creating a truly unique viewing experience that resonates with those who appreciate the art of storytelling in its purest form. With its blend of drama and introspection, \"Close-Up\" appeals to cinephiles seeking intellectual engagement and a fresh perspective on the impact of art on both creators and audiences.",
+    "version": "v1.0",
+    "generated_at": "2025-10-18"
+  },
+  "Bicycle Thieves": {
+    "title": "Bicycle Thieves",
+    "year": "1948",
+    "director": "Vittorio De Sica",
+    "genres": [
+      "Drama"
+    ],
+    "plot_summary": "Unemployed Antonio is elated when he finally finds work hanging posters around war-torn Rome. However on his first day, his bicycle—essential to his work—gets stolen. His job is doomed unless he can find the thief. With the help of his son, Antonio combs the city, becoming desperate for justice.",
+    "profile_text": "\"Bicycle Thieves\" is a cornerstone of neorealism, capturing the essence of post-war Italian society through the lens of a stolen bicycle. The film's raw emotional depth and stark portrayal of economic struggles resonate with viewers attuned to class disparities and the resilience of the human spirit. Vittorio De Sica's direction immerses audiences in the protagonists' relentless search for justice, highlighting the film's timeless relevance in depicting the impact of poverty on familial relationships. Through its unembellished narrative and authentic performances, \"Bicycle Thieves\" stands as a poignant reflection of societal inequities and the enduring power of family bonds, making it a must-watch for cinephiles seeking emotionally resonant storytelling rooted in social realism.",
+    "version": "v1.0",
+    "generated_at": "2025-10-18"
+  },
+  "In the Mood for Love": {
+    "title": "In the Mood for Love",
+    "year": "2000",
+    "director": "Wong Kar-Wai",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "plot_summary": "In 1962 Hong Kong, neighbors Su Li-zhen (Mrs. Chan) and Chow Mo-wan (Mr. Chow) discover their spouses are having an affair. As they spend time together, they develop feelings for each other, but their relationship remains chaste and unspoken, reflecting societal constraints and their own moral compass.",
+    "profile_text": "\"In the Mood for Love,\" directed by Wong Kar-Wai, stands out in the indie film landscape for its exquisite portrayal of restrained emotions and unfulfilled yearning. The film's visual poetry, characterized by its vibrant colors and intimate framing, captures the essence of forbidden love amidst a conservative society. Viewers who appreciate slow-paced narratives that delve deep into the complexities of human emotions and societal expectations will find this film profoundly moving. Wong Kar-Wai's masterful storytelling, non-linear narrative structure, and emphasis on unspoken connections make \"In the Mood for Love\" a cinematic gem that resonates with those drawn to themes of forbidden romance and emotional isolation. With its thematic depth and visual splendor, this film remains a poignant exploration of love and longing that lingers in the hearts of its audience long after the credits roll.",
+    "version": "v1.0",
+    "generated_at": "2025-10-18"
+  }
+}

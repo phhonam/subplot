@@ -1,0 +1,34 @@
+{
+  "evaluations": [
+    {
+      "movie_title": "Tangerine",
+      "overall_quality": 3,
+      "category_ratings": {
+        "cinema_movement": 2,
+        "socio_cultural": 3,
+        "formal_analysis": 4,
+        "narrative_analysis": 1,
+        "distinctiveness": 4
+      },
+      "comments": {
+        "overall_quality": "",
+        "cinema_movement": "It doesn't capture the frantic, frenetic pacing of the entire film taking place over a single day. While it mentions LA's sub cultures, it doesn't specify which ones like the Albanian community, the donut shop owner, etc.",
+        "socio_cultural": "It captures this pretty well with the LA trans community, urban life, resilience. Give a more specific setting such as what happens in LA in the year this movie is set in or in the neighborhood. It didn't mention how the director constructs the dialogues with the cast.",
+        "formal_analysis": "",
+        "narrative_analysis": "It doesn't reference the main story line of the character confronting a cis woman and her ex boyfriend and pimp, Chester.",
+        "distinctiveness": "I understand the components of the film that it's referencing, although for someone who has not watched the film I don't know that the reference to \"connections in unconventional spaces\" refers to the locations of the film's most iconic scenes (e.g. donut shop, drive-in car wash, parking lot, motel). Still, it's distinctive enough to be enticing. "
+      },
+      "selected_tags": [
+        "Generic language",
+        "Missing cinema movement",
+        "Missing narrative specifics"
+      ],
+      "evaluation_date": "2025-10-18T20:56:22.364Z"
+    }
+  ],
+  "metadata": {
+    "created_date": "2025-10-18",
+    "version": "v1.0",
+    "total_evaluations": 1
+  }
+}

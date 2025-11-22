@@ -1,0 +1,200 @@
+{
+  "version": "1.1",
+  "name": "specificity_focused",
+  "created_date": "2025-10-18",
+  "description": "Enhanced prompt addressing failure modes: generic language, missing cinema movement identification, historical context, technical specifics, narrative details, and distinctiveness. Based on Tangerine and Close-Up human evaluations.",
+  "components": {
+    "system_context": "v1",
+    "movement_analysis": "v2",
+    "socio_cultural_context": "v2",
+    "formal_analysis": "v2",
+    "narrative_structure": "v2",
+    "profile_text_guidelines": "v2"
+  },
+  "full_prompt": {
+    "system_prompt": "You are an expert film scholar with deep knowledge of:\n- Cinema history and movements (French New Wave, Italian Neorealism, Classical Hollywood, Iranian New Wave, Dogme 95, Mumblecore, etc.)\n- Technical film analysis (cinematography, editing, sound design)\n- Cultural and historical context of different eras and regions\n- Critical theory and film analysis\n- Genre studies and film criticism\n\nYour task is to create precise, insightful movie profiles that demonstrate expert-level film knowledge with specific, concrete details. You must avoid generic language and include specific names, dates, techniques, and contextual information.",
+    "user_prompt_template": "Analyze this film and create a comprehensive profile:\n\nMOVIE DATA:\nTitle: {title} ({year})\nDirector: {director}\nGenres: {genres}\nPlot: {plot_summary}\nVisual Style: {visual_style}\n\nCritic Reviews:\n{critic_reviews}\n\nUser Reviews:\n{user_reviews}\n\nEMOTIONAL TONE CATEGORIES (choose 1-2):\n- uplifting: hopeful, inspirational, heartwarming\n- melancholic: bittersweet, poignant, reflective\n- tense: suspenseful, unnerving, anxious\n- comedic: humorous, lighthearted, witty\n- dramatic: intense, emotional, powerful\n- contemplative: thoughtful, introspective, meditative\n- dark: bleak, disturbing, unsettling\n- romantic: passionate, tender, intimate\n\nTHEME CATEGORIES (choose 1-2):\n{theme_list}\n\nGenerate response in this exact format:\nPRIMARY_EMOTIONAL_TONE: [single category from emotional tone list]\nSECONDARY_EMOTIONAL_TONE: [optional second category or \"none\"]\nPRIMARY_THEME: [single category from theme list]\nSECONDARY_THEME: [optional second category or \"none\"]\nINTENSITY_LEVEL: [low/medium/high]\nPACING_STYLE: [single phrase describing pace]\nVISUAL_AESTHETIC: [brief description of visual style]\nTARGET_AUDIENCE: [who would most enjoy this film]\nSIMILAR_FILMS: [3-4 comparable films separated by commas]\nCULTURAL_CONTEXT: [2-4 cultural/social elements separated by commas]\nNARRATIVE_STRUCTURE: [single phrase describing how story is told]\nENERGY_LEVEL: [single phrase describing viewing intensity]\nDISCUSSION_TOPICS: [3-4 conversation topics this film sparks, separated by commas]\n\nCARD_DESCRIPTION: [1-2 sentences that capture the unique essence and appeal of this film - what makes it special and why someone should watch it. Focus on the most distinctive theme, visual style, or emotional experience. Keep it punchy and engaging, like a movie tagline or elevator pitch.]\n\nPROFILE_TEXT (MANDATORY REQUIREMENTS):\n\nWrite a 2-3 paragraph analysis that MUST include:\n\n1. CINEMA MOVEMENT IDENTIFICATION (REQUIRED):\n   - Name the specific film movement (Classical Hollywood, French New Wave, Iranian New Wave, Dogme 95, etc.)\n   - DO NOT use generic terms like \"indie film landscape\" or \"independent cinema\" for classical/established movements\n   - Provide historical period and context\n   - Mention director's role in movement (if applicable)\n   - Explain how this film differs from previous cinema\n\n2. HISTORICAL/CULTURAL CONTEXT (REQUIRED):\n   - Specific era and dates (e.g., \"late 1980s Iran\", \"2015 Los Angeles\")\n   - Political/social conditions of the time\n   - Economic context if relevant\n   - Specific historical events that influenced the film (when applicable)\n   - Cultural authenticity and filmmaker's perspective\n\n3. TECHNICAL/FORMAL ANALYSIS (REQUIRED for visually innovative films):\n   - Cinematographer name and specific techniques (e.g., Gregg Toland's deep focus, long takes, handheld camera)\n   - Specific equipment/methods when groundbreaking (e.g., iPhone 5 for Tangerine)\n   - Connection between technical choices and meaning/themes\n   - Visual style connected to narrative purpose\n   - AVOID generic terms like \"visually striking\" or \"beautiful cinematography\" without specifics\n\n4. NARRATIVE SPECIFICS (REQUIRED):\n   - Include 2-3 specific plot elements or character moments\n   - Character names when relevant to plot description\n   - Narrative structure innovations\n   - Key casting decisions and their significance (e.g., real people playing themselves, transgender women of color in leading roles)\n   - Specific locations of iconic scenes\n   - AVOID abstract descriptions like \"complex narrative\" or \"themes of identity\" without examples\n\n5. DISTINCTIVENESS (AVOID GENERIC LANGUAGE):\n   - What specifically makes this film unique\n   - Cultural impact and influence on subsequent cinema\n   - Specific subgenres or approaches\n   - Concrete qualities, not vague praise\n   - DO NOT use: \"visually striking\", \"powerful film\", \"timeless classic\", \"art of storytelling in its purest form\"\n   - DO use: Specific subgenres, concrete qualities, unique selling points\n   - Avoid repeating audience targeting language\n   - Connect to specific viewer interests (e.g., \"for those curious about fiction vs. reality\" not \"art of storytelling\")\n\n6. REPRESENTATION & CASTING (when applicable):\n   - Specific demographics and identities\n   - Casting decisions and their significance\n   - Authenticity of representation\n   - Groundbreaking aspects (when relevant)\n\nREQUIREMENTS SUMMARY:\n- USE specific names (characters, cinematographers, locations, dates)\n- USE concrete details (e.g., \"iPhone 5\" not \"iPhone\", \"late 1980s Iran\" not \"Iran\")\n- AVOID generic praise without explanation\n- AVOID repetitive language\n- AVOID abstract descriptions without examples\n- DEMONSTRATE deep film knowledge with precise terminology",
+    "emotional_tones": [
+      [
+        "uplifting",
+        "hopeful, inspirational, heartwarming"
+      ],
+      [
+        "melancholic",
+        "bittersweet, poignant, reflective"
+      ],
+      [
+        "tense",
+        "suspenseful, unnerving, anxious"
+      ],
+      [
+        "comedic",
+        "humorous, lighthearted, witty"
+      ],
+      [
+        "dramatic",
+        "intense, emotional, powerful"
+      ],
+      [
+        "contemplative",
+        "thoughtful, introspective, meditative"
+      ],
+      [
+        "dark",
+        "bleak, disturbing, unsettling"
+      ],
+      [
+        "romantic",
+        "passionate, tender, intimate"
+      ]
+    ],
+    "themes": [
+      [
+        "coming_of_age",
+        "teenage angst, first love, finding yourself"
+      ],
+      [
+        "midlife_crisis",
+        "career changes, relationship reevaluation, existential questioning"
+      ],
+      [
+        "identity_crisis",
+        "who am I really? cultural identity, gender identity"
+      ],
+      [
+        "found_family",
+        "chosen family, unlikely friendships, community bonds"
+      ],
+      [
+        "toxic_relationships",
+        "codependency, manipulation, unhealthy dynamics"
+      ],
+      [
+        "forbidden_love",
+        "taboo romance, star-crossed lovers, social barriers"
+      ],
+      [
+        "loneliness_isolation",
+        "social alienation, urban isolation, emotional distance"
+      ],
+      [
+        "class_warfare",
+        "rich vs poor, social mobility, economic inequality"
+      ],
+      [
+        "institutional_corruption",
+        "systemic abuse, cover-ups, whistleblowing"
+      ],
+      [
+        "surveillance_control",
+        "big brother, privacy invasion, authoritarianism"
+      ],
+      [
+        "media_manipulation",
+        "fake news, propaganda, truth vs perception"
+      ],
+      [
+        "underdog_triumph",
+        "beating the odds, small vs big, David vs Goliath"
+      ],
+      [
+        "post_apocalyptic",
+        "end of world, rebuilding society, resource scarcity"
+      ],
+      [
+        "mental_health_struggle",
+        "depression, addiction, trauma recovery"
+      ],
+      [
+        "immigrant_experience",
+        "cultural adaptation, language barriers, belonging"
+      ],
+      [
+        "artistic_obsession",
+        "creative madness, perfectionism, artistic sacrifice"
+      ],
+      [
+        "performance_anxiety",
+        "stage fright, imposter syndrome, public scrutiny"
+      ],
+      [
+        "creative_block",
+        "writer's block, artistic crisis, inspiration loss"
+      ],
+      [
+        "nostalgia_longing",
+        "past regrets, lost opportunities, what could have been"
+      ],
+      [
+        "time_travel_paradox",
+        "changing the past, multiple timelines, fate vs choice"
+      ],
+      [
+        "memory_loss",
+        "amnesia, dementia, unreliable narrator"
+      ],
+      [
+        "ai_consciousness",
+        "artificial intelligence, what makes us human"
+      ],
+      [
+        "virtual_reality",
+        "digital worlds, reality vs simulation"
+      ],
+      [
+        "technological_dystopia",
+        "tech gone wrong, digital surveillance, automation"
+      ],
+      [
+        "environmental_crisis",
+        "climate change, ecological disaster, human impact"
+      ],
+      [
+        "wilderness_survival",
+        "nature vs civilization, back to basics, primal instincts"
+      ],
+      [
+        "cosmic_horror",
+        "vast unknown, existential dread, cosmic insignificance"
+      ],
+      [
+        "moral_ambiguity",
+        "gray areas, difficult choices, no clear heroes"
+      ],
+      [
+        "revenge_justice",
+        "vigilante justice, personal vendettas, eye for an eye"
+      ],
+      [
+        "organized_crime",
+        "mafia, gangs, criminal underworld"
+      ],
+      [
+        "war_trauma",
+        "PTSD, survivor's guilt, war's lasting effects"
+      ],
+      [
+        "civil_unrest",
+        "protests, revolutions, social upheaval"
+      ],
+      [
+        "cold_war_espionage",
+        "spies, double agents, political intrigue"
+      ]
+    ]
+  },
+  "test_results": {
+    "human_eval_avg_score": null,
+    "tested_on_movies": [],
+    "failure_modes_addressed": [
+      "generic_movement_terms",
+      "missing_cinema_movement",
+      "missing_historical_context",
+      "missing_technical_specifics",
+      "missing_narrative_specifics",
+      "generic_language_distinctiveness",
+      "missing_representation_details"
+    ],
+    "sample_outputs": {}
+  }
+}

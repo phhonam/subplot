@@ -1,0 +1,458 @@
+{
+  "evaluation_date": "2025-10-18T22:49:19.558058",
+  "model_used": "gpt-3.5-turbo",
+  "provider_used": "openai",
+  "overall_stats": {
+    "average_score": 2.6365000000000003,
+    "movies_evaluated": 20,
+    "movies_with_profiles": 20,
+    "movies_missing": 0,
+    "category_averages": {
+      "cinema_movement": 2.0,
+      "socio_cultural": 2.6900000000000004,
+      "formal_analysis": 2.68,
+      "narrative_analysis": 3.16,
+      "distinctiveness": 2.7699999999999996
+    }
+  },
+  "results": {
+    "Citizen Kane": {
+      "title": "Citizen Kane",
+      "category_scores": {
+        "cinema_movement": 2.5,
+        "socio_cultural": 3.0,
+        "formal_analysis": 3.4,
+        "narrative_analysis": 3.6,
+        "distinctiveness": 3.0
+      },
+      "overall_score": 3.0700000000000003,
+      "detected_issues": [
+        "Missing cinema movement: Classical Hollywood",
+        "Missing technical credits: Gregg Toland (cinematographer), deep focus cinematography, chiaroscuro lighting, innovative camera angles",
+        "Missing historical context: 1940s Hollywood studio system, rise of media empires, power of press in shaping public opinion"
+      ],
+      "improvement_suggestions": [
+        "Should identify Classical Hollywood",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "'Citizen Kane,' a cornerstone of cinematic history, captivates with its innovative storytelling techniques and deep psychological exploration. Orson Welles' directorial virtuosity shines through the i..."
+    },
+    "Bicycle Thieves": {
+      "title": "Bicycle Thieves",
+      "category_scores": {
+        "cinema_movement": 2.5,
+        "socio_cultural": 4.0,
+        "formal_analysis": 2.0,
+        "narrative_analysis": 3.0,
+        "distinctiveness": 4.0
+      },
+      "overall_score": 3.1499999999999995,
+      "detected_issues": [
+        "Missing cinema movement: Italian Neorealism",
+        "Missing technical credits: Non-professional actors, location shooting, natural lighting",
+        "Missing historical context: Post-war Italy, economic devastation, working-class struggles"
+      ],
+      "improvement_suggestions": [
+        "Should identify Italian Neorealism",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Bicycle Thieves\" is a cornerstone of neorealism, capturing the essence of post-war Italian society through the lens of a stolen bicycle. The film's raw emotional depth and stark portrayal of economic..."
+    },
+    "Amour": {
+      "title": "Amour",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 2.4,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 2.4,
+        "distinctiveness": 2.0
+      },
+      "overall_score": 2.26,
+      "detected_issues": [
+        "Missing cinema movement: European Art Cinema",
+        "Missing technical credits: Long takes, minimal editing, naturalistic cinematography",
+        "Missing historical context: Contemporary European cinema, aging population themes, end-of-life care"
+      ],
+      "improvement_suggestions": [
+        "Should identify European Art Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Amour,\" directed by the renowned auteur Michael Haneke, stands out in the indie film landscape for its unflinching portrayal of the challenges faced by an elderly couple as they navigate the complexi..."
+    },
+    "Another Round": {
+      "title": "Another Round",
+      "category_scores": {
+        "cinema_movement": 2.5,
+        "socio_cultural": 2.0,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 3.0,
+        "distinctiveness": 2.2
+      },
+      "overall_score": 2.4899999999999998,
+      "detected_issues": [
+        "Missing cinema movement: Dogme 95 influence",
+        "Missing technical credits: Sturla Brandth Grøvlen (cinematographer), handheld camera work",
+        "Missing historical context: Contemporary Denmark, midlife crisis themes, educational system"
+      ],
+      "improvement_suggestions": [
+        "Should identify Dogme 95 influence",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "Another Round, directed by Thomas Vinterberg, stands out in the indie film landscape for its unique blend of comedy and drama that explores the complexities of midlife crises and the search for meanin..."
+    },
+    "Parasite": {
+      "title": "Parasite",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 3.2,
+        "formal_analysis": 2.6,
+        "narrative_analysis": 3.0,
+        "distinctiveness": 2.6
+      },
+      "overall_score": 2.5900000000000003,
+      "detected_issues": [
+        "Missing cinema movement: Korean New Wave",
+        "Missing technical credits: Production design as class commentary, multi-level set design, contrasting visual styles",
+        "Missing historical context: Contemporary South Korea, economic inequality, class stratification"
+      ],
+      "improvement_suggestions": [
+        "Should identify Korean New Wave",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Parasite\" stands out in the indie film landscape for its masterful storytelling and social relevance. Director Bong Joon Ho intricately weaves a tale of deception and struggle, highlighting the stark..."
+    },
+    "Portrait of a Lady on Fire": {
+      "title": "Portrait of a Lady on Fire",
+      "category_scores": {
+        "cinema_movement": 3.5,
+        "socio_cultural": 2.0,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 3.2,
+        "distinctiveness": 3.0
+      },
+      "overall_score": 2.8800000000000003,
+      "detected_issues": [
+        "Missing cinema movement: Contemporary French Cinema",
+        "Missing technical credits: Natural light cinematography, painterly compositions, Claire Mathon (cinematographer)",
+        "Missing historical context: 18th century France, women's limited options, aristocratic society"
+      ],
+      "improvement_suggestions": [
+        "Should identify Contemporary French Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Portrait of a Lady on Fire\" stands out in the indie film landscape for its exquisite portrayal of a forbidden romance set against the backdrop of artistic creation. Director Céline Sciamma crafts a v..."
+    },
+    "The Handmaiden": {
+      "title": "The Handmaiden",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 3.6,
+        "formal_analysis": 2.0,
+        "narrative_analysis": 3.2,
+        "distinctiveness": 3.0
+      },
+      "overall_score": 2.68,
+      "detected_issues": [
+        "Missing cinema movement: Korean New Wave",
+        "Missing technical credits: Park Chan-wook's baroque visual style, elaborate set design, contrasting visual palettes",
+        "Missing historical context: Colonial Korea (1930s), cultural assimilation"
+      ],
+      "improvement_suggestions": [
+        "Should identify Korean New Wave",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"The Handmaiden,\" directed by Park Chan-wook, stands out in the indie film landscape for its masterful blend of dark, romantic themes and visually captivating storytelling. The film delves deep into t..."
+    },
+    "Memories of Murder": {
+      "title": "Memories of Murder",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 3.0,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 3.2,
+        "distinctiveness": 2.4
+      },
+      "overall_score": 2.61,
+      "detected_issues": [
+        "Missing cinema movement: Korean New Wave",
+        "Missing technical credits: Bong Joon-ho's early style, procedural filmmaking, realistic police work",
+        "Missing historical context: 1980s South Korea, military dictatorship, serial killer case"
+      ],
+      "improvement_suggestions": [
+        "Should identify Korean New Wave",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Memories of Murder\" stands out in the indie film landscape for its masterful blend of gripping tension, dark thematic exploration, and gritty visual style. Bong Joon Ho's directorial prowess shines t..."
+    },
+    "The Lives of Others": {
+      "title": "The Lives of Others",
+      "category_scores": {
+        "cinema_movement": 2.5,
+        "socio_cultural": 4.0,
+        "formal_analysis": 2.6,
+        "narrative_analysis": 3.0,
+        "distinctiveness": 3.0
+      },
+      "overall_score": 3.07,
+      "detected_issues": [
+        "Missing cinema movement: Contemporary German Cinema",
+        "Missing technical credits: Surveillance cinematography, claustrophobic framing, period-accurate production design",
+        "Missing historical context: East Germany (1984), Stasi surveillance state, cultural repression"
+      ],
+      "improvement_suggestions": [
+        "Should identify Contemporary German Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"The Lives of Others\" stands as a poignant exploration of surveillance, control, and the resilience of the human spirit amidst oppressive regimes. Florian Henckel von Donnersmarck crafts a visually ar..."
+    },
+    "Close-Up": {
+      "title": "Close-Up",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 1.6,
+        "formal_analysis": 2.6,
+        "narrative_analysis": 3.6,
+        "distinctiveness": 2.6
+      },
+      "overall_score": 2.2800000000000002,
+      "detected_issues": [
+        "Missing cinema movement: Iranian New Wave",
+        "Missing technical credits: Documentary-fiction hybrid, re-enactment techniques, minimalist approach",
+        "Missing historical context: Contemporary Iran, cinema restrictions, art vs. reality"
+      ],
+      "improvement_suggestions": [
+        "Should identify Iranian New Wave",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Close-Up\" stands as a landmark in cinematic experimentation, pushing the boundaries of traditional filmmaking by seamlessly weaving together real-life events with fictional elements. The emotional de..."
+    },
+    "In the Mood for Love": {
+      "title": "In the Mood for Love",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 2.4,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 3.2,
+        "distinctiveness": 2.0
+      },
+      "overall_score": 2.38,
+      "detected_issues": [
+        "Missing cinema movement: Hong Kong New Wave",
+        "Missing technical credits: Christopher Doyle (cinematographer), Wong Kar-wai's color palette, handheld camera work",
+        "Missing historical context: 1960s Hong Kong, immigrant communities, cultural transition"
+      ],
+      "improvement_suggestions": [
+        "Should identify Hong Kong New Wave",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"In the Mood for Love,\" directed by Wong Kar-Wai, stands out in the indie film landscape for its exquisite portrayal of restrained emotions and unfulfilled yearning. The film's visual poetry, characte..."
+    },
+    "A Separation": {
+      "title": "A Separation",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 3.0,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 3.0,
+        "distinctiveness": 3.0
+      },
+      "overall_score": 2.7,
+      "detected_issues": [
+        "Missing cinema movement: Contemporary Iranian Cinema",
+        "Missing technical credits: Naturalistic cinematography, minimalist approach, realistic dialogue",
+        "Missing historical context: Contemporary Iran, legal system"
+      ],
+      "improvement_suggestions": [
+        "Should identify Contemporary Iranian Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"A Separation\" stands out in the indie film landscape for its profound exploration of family dynamics against the backdrop of Iranian society. Director Asghar Farhadi masterfully crafts a narrative th..."
+    },
+    "Shoplifters": {
+      "title": "Shoplifters",
+      "category_scores": {
+        "cinema_movement": 2.5,
+        "socio_cultural": 2.6,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 3.0,
+        "distinctiveness": 2.4
+      },
+      "overall_score": 2.68,
+      "detected_issues": [
+        "Missing cinema movement: Japanese Social Realism",
+        "Missing technical credits: Naturalistic acting, observational style, minimalist cinematography",
+        "Missing historical context: Contemporary Japan, social isolation, economic hardship"
+      ],
+      "improvement_suggestions": [
+        "Should identify Japanese Social Realism",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Shoplifters,\" directed by Hirokazu Kore-eda, stands out in the indie film landscape for its poignant exploration of found family dynamics amidst societal struggles. The film's visual aesthetic, chara..."
+    },
+    "Roma": {
+      "title": "Roma",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 3.2,
+        "formal_analysis": 2.4,
+        "narrative_analysis": 3.0,
+        "distinctiveness": 3.4
+      },
+      "overall_score": 2.7100000000000004,
+      "detected_issues": [
+        "Missing cinema movement: Contemporary Mexican Cinema",
+        "Missing technical credits: Alfonso Cuarón (cinematographer), black & white cinematography, single cinematographer approach",
+        "Missing historical context: 1970s Mexico City, domestic workers' lives, social class dynamics"
+      ],
+      "improvement_suggestions": [
+        "Should identify Contemporary Mexican Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Roma\" stands out in the indie film landscape for its poignant exploration of found family dynamics and identity struggles set against a rich cultural tapestry. The film's visual elegance and slow, im..."
+    },
+    "The 400 Blows": {
+      "title": "The 400 Blows",
+      "category_scores": {
+        "cinema_movement": 3.5,
+        "socio_cultural": 3.0,
+        "formal_analysis": 1.6,
+        "narrative_analysis": 3.2,
+        "distinctiveness": 2.6
+      },
+      "overall_score": 2.77,
+      "detected_issues": [
+        "Missing technical credits: Location shooting, natural lighting, handheld camera work",
+        "Missing historical context: Post-war France, youth culture, education system"
+      ],
+      "improvement_suggestions": [
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"The 400 Blows,\" directed by François Truffaut, stands as a cornerstone of French New Wave cinema, renowned for its raw and authentic portrayal of youth in crisis. The film's emotional depth and visua..."
+    },
+    "Oldboy": {
+      "title": "Oldboy",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 2.0,
+        "formal_analysis": 2.0,
+        "narrative_analysis": 3.4,
+        "distinctiveness": 2.4
+      },
+      "overall_score": 2.1900000000000004,
+      "detected_issues": [
+        "Missing cinema movement: Korean New Wave",
+        "Missing technical credits: Park Chan-wook's baroque style, elaborate action choreography, stylized violence",
+        "Missing historical context: Contemporary South Korea, revenge themes, psychological thriller"
+      ],
+      "improvement_suggestions": [
+        "Should identify Korean New Wave",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Oldboy\" stands out in the indie film landscape for its unflinching exploration of revenge and identity within a dark, atmospheric setting. The film's intense emotional tone, coupled with its visually..."
+    },
+    "Mulholland Drive": {
+      "title": "Mulholland Drive",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 2.4,
+        "formal_analysis": 3.0,
+        "narrative_analysis": 4.0,
+        "distinctiveness": 3.4
+      },
+      "overall_score": 2.7800000000000002,
+      "detected_issues": [
+        "Missing cinema movement: Lynchian Cinema",
+        "Missing technical credits: David Lynch's surrealist style, dreamlike cinematography, non-linear editing",
+        "Missing historical context: Contemporary Hollywood, dream factory themes, show business corruption"
+      ],
+      "improvement_suggestions": [
+        "Should identify Lynchian Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Mulholland Drive\" is a cinematic puzzle that defies easy categorization, blending elements of thriller, drama, and mystery into a mind-bending exploration of fractured identities and Hollywood's dece..."
+    },
+    "Stalker": {
+      "title": "Stalker",
+      "category_scores": {
+        "cinema_movement": 2.5,
+        "socio_cultural": 1.4,
+        "formal_analysis": 2.4,
+        "narrative_analysis": 2.6,
+        "distinctiveness": 2.4
+      },
+      "overall_score": 2.2,
+      "detected_issues": [
+        "Missing cinema movement: Soviet Art Cinema",
+        "Missing technical credits: Tarkovsky's philosophical cinematography, long takes, contemplative pacing",
+        "Missing historical context: Soviet era, philosophical themes, science fiction elements"
+      ],
+      "improvement_suggestions": [
+        "Should identify Soviet Art Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Stalker\" is a cinematic masterpiece that delves into the depths of human desire and existential questioning against the backdrop of a visually captivating and intellectually stimulating narrative. Th..."
+    },
+    "The Florida Project": {
+      "title": "The Florida Project",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 2.6,
+        "formal_analysis": 2.6,
+        "narrative_analysis": 3.2,
+        "distinctiveness": 3.0
+      },
+      "overall_score": 2.5500000000000003,
+      "detected_issues": [
+        "Missing cinema movement: American Independent Cinema",
+        "Missing technical credits: Sean Baker's naturalistic style, authentic casting, documentary-style approach",
+        "Missing historical context: Contemporary America, economic inequality, tourism industry"
+      ],
+      "improvement_suggestions": [
+        "Should identify American Independent Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"The Florida Project\" stands out in the indie film landscape for its raw and authentic portrayal of life on the margins of society. Director Sean Baker's choice to focus on the perspective of children..."
+    },
+    "Tangerine": {
+      "title": "Tangerine",
+      "category_scores": {
+        "cinema_movement": 1.5,
+        "socio_cultural": 2.4,
+        "formal_analysis": 3.4,
+        "narrative_analysis": 3.4,
+        "distinctiveness": 3.0
+      },
+      "overall_score": 2.69,
+      "detected_issues": [
+        "Missing cinema movement: American Independent Cinema",
+        "Missing technical credits: iPhone cinematography, hyperrealism, real-time storytelling",
+        "Missing historical context: Contemporary Los Angeles, trans community representation, Christmas Eve setting"
+      ],
+      "improvement_suggestions": [
+        "Should identify American Independent Cinema",
+        "Include specific cinematographer names and techniques",
+        "Include specific historical periods and events"
+      ],
+      "profile_text_preview": "\"Tangerine,\" directed by Sean Baker, stands out in the indie film landscape for its bold choice of casting transgender actresses and its unique filming technique using iPhones. The film's comedic yet ..."
+    }
+  }
+}
