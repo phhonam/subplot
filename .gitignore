@@ -36,3 +36,14 @@ logs/
 # Temporary files
 *.tmp
 *.temp
+
+# Deployment archives
+*.tar.gz
+
+# Evaluation/test files (optional - uncomment if you don't want these in repo)
+# EVALUATION_*.md
+# test_*.py
+# test_*.html
+# debug_*.html
+# troubleshoot_*.sh
+# quick_*.sh
