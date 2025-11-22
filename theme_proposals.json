@@ -1,0 +1,806 @@
+{
+  "proposals": [
+    {
+      "id": "5987c4fe-2f04-4bf4-8798-e3a634835f9f",
+      "theme_name": "unconventional_family_dynmaics",
+      "description": "This theme explores narratives where characters form non-traditional or unexpected family bonds that challenge conventional notions of family structures.",
+      "examples": [
+        "\"The Mitchells vs. the Machines\"",
+        "\"Captain Fantastic\"",
+        "\"The Red Balloon\"",
+        "\"Instructions Not Included\"",
+        "\"Room\"",
+        "\"Midnight Cowboy\"",
+        "\"My Friends\"",
+        "\"The Big Bad Fox and Other Tales\"",
+        "\"White Heat\"",
+        "\"Alice in the Cities\"",
+        "\"The Elephant Man\"",
+        "\"Beauty and the Beast\""
+      ],
+      "reasoning": "This theme is essential to capture the diverse ways in which relationships can create familial connections beyond blood ties. These films depict characters finding belonging, support, and love in unconventional settings, highlighting the importance of chosen families and the emotional depth of these relationships. This theme offers viewers a unique perspective on family dynamics that go beyond the traditional nuclear family, resonating with audiences seeking stories of connection and belonging in unexpected places.",
+      "status": "pending",
+      "created_at": "2025-10-15T23:12:00.007840",
+      "input_type": "auto",
+      "input_data": "",
+      "matching_movies": [
+        {
+          "title": "Captain Fantastic",
+          "explanation": "This film delves deeply into unconventional family dynamics by portraying a family living off the grid in the forests of the Pacific Northwest. The father's commitment to raising his children in a non-traditional manner challenges societal norms and explores the complexities of family bonds beyond conventional structures.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "coming_of_age",
+          "plot_summary": "Deep in the forests of the Pacific Northwest, a father devoted to raising his six kids with a rigorous physical and intellectual education is forced to leave his paradise and enter the world, beginning a journey that challenges his idea of what it means to be a parent.",
+          "year": "2016",
+          "director": "Matt Ross"
+        },
+        {
+          "title": "M",
+          "explanation": "The heart of this film lies in the unique family dynamic between a mother and her son who have been confined to a single room for years. Their unbreakable bond and the challenges they face upon re-entering the outside world highlight the resilience and strength that can emerge from unconventional family circumstances.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "Midnight Cowboy",
+          "explanation": "Through the unlikely friendship between Joe Buck and Ratso Rizzo, this film explores the formation of a makeshift family unit in the harsh urban landscape of New York City. Their bond transcends traditional notions of family, showcasing the power of human connection in the face of adversity.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "Joe Buck is a wide-eyed hustler from Texas hoping to score big with wealthy New York City women; he finds a companion in Enrico \"Ratso\" Rizzo, an ailing swindler with a bum leg and a quixotic fantasy of escaping to Florida.",
+          "year": "1969",
+          "director": "John Schlesinger"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "This film follows the evolving relationship between a wandering writer and a young girl named Alice whom he reluctantly takes under his wing. Their journey together challenges both characters to confront their own vulnerabilities and dependencies, ultimately forming a bond that defies traditional family structures.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "M",
+          "explanation": "At its core, this film explores the theme of found family through the compassionate relationship between Dr. Treves and John Merrick. Despite Merrick's physical appearance and societal rejection, Dr. Treves provides him with a sense of belonging and care that goes beyond biological ties, emphasizing the importance of empathy and acceptance in unconventional family dynamics.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "While often seen as a fairy tale romance, this film also delves into the theme of unconventional family dynamics through Belle's relationship with the enchanted household objects in the Beast's castle. Their camaraderie and support for one another reflect a familial bond that transcends appearances and societal norms.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "God's Not Dead: We The People",
+          "explanation": "This film explores the complexities of fatherhood and unconventional family structures through the story of a playboy who unexpectedly becomes a single father to a young daughter. Their journey together challenges stereotypes of traditional family roles and showcases the transformative power of love and sacrifice in forming familial bonds.",
+          "current_primary_theme": "underdog_triumph",
+          "current_secondary_theme": "institutional_corruption",
+          "plot_summary": "Reverend Dave has to defend himself and a group of Christian homeschooling families after an inspection by local government officials.",
+          "year": "2021",
+          "director": "Vance Null"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "In this animated film, the Mitchells navigate both literal and figurative obstacles as they come together to save the world from a robot apocalypse. Their quirky dynamics and shared experiences highlight the strength of familial connections forged through shared challenges and mutual understanding.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        }
+      ],
+      "matching_movies_updated_at": "2025-10-15T23:15:42.760611"
+    },
+    {
+      "id": "6333bd90-930e-44d5-b346-3ee95685f506",
+      "theme_name": "existential_absurdity",
+      "description": "This theme explores narratives that delve into the absurdity of existence, showcasing characters grappling with the meaninglessness, chaos, and surreal nature of life and their place in the world.",
+      "examples": [
+        "Strange Darling",
+        "The Big Lebowski",
+        "The Room Next Door",
+        "Beauty and the Beast",
+        "Blade Runner",
+        "The Gorge",
+        "Werckmeister Harmonies",
+        "The Human Voice"
+      ],
+      "reasoning": "This theme captures a unique aspect of storytelling that goes beyond traditional existential crises or identity dilemmas. These films often present characters confronting absurd or nonsensical situations that challenge their understanding of reality and purpose. By adding this theme, users seeking films with a touch of surrealism and philosophical exploration can discover these thought-provoking narratives that navigate the complexities of existence in unconventional ways.",
+      "status": "pending",
+      "created_at": "2025-10-15T23:13:11.408262",
+      "input_type": "auto",
+      "input_data": "",
+      "matching_movies": [
+        {
+          "title": "You're Next",
+          "explanation": "This film delves deep into the absurdity of existence through its surreal and chaotic narrative, where characters grapple with the meaninglessness of their lives and their place in the world. The absurd situations and interactions highlight the existential crises faced by the characters, making it a perfect fit for the \"existential_absurdity\" theme.",
+          "current_primary_theme": "revenge_justice",
+          "current_secondary_theme": "toxic_relationships",
+          "plot_summary": "When the Davison family comes under attack during their wedding anniversary getaway, the gang of mysterious killers soon learns that one of their victims harbors a secret talent for fighting back.",
+          "year": "2013",
+          "director": "Adam Wingard"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "Beyond its fairy tale surface, this film explores themes of isolation, transformation, and the surreal nature of relationships. The Beast's existential struggle with his identity and appearance, as well as Belle's search for meaning beyond societal norms, resonate strongly with the theme of existential absurdity.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "M",
+          "explanation": "Known for its enigmatic and atmospheric storytelling, this film embodies the essence of existential absurdity through its cryptic narrative, surreal visuals, and characters grappling with the chaotic and meaningless aspects of life. The film's exploration of the human condition and the absurdity of existence align perfectly with the proposed theme.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "The Gorge",
+          "explanation": "This film's depiction of characters facing inexplicable events and navigating through a world filled with absurdity and uncertainty mirrors the theme of existential absurdity. The surreal and disorienting atmosphere created in the film resonates with viewers who seek to ponder the meaninglessness and chaos of life.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "survival",
+          "plot_summary": "Two highly trained operatives grow close from a distance after being sent to guard opposite sides of a mysterious gorge. When an evil below emerges, they must work together to survive what lies within.",
+          "year": "2025",
+          "director": "Scott Derrickson"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "Through its exploration of toxic relationships, identity crises, and the blurred lines between reality and illusion, this film presents a compelling case for fitting the \"existential_absurdity\" theme. The protagonist's journey mirrors the absurdity of life's uncertainties and the struggle to find meaning in a world filled with chaos and confusion.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "Happy Accidents",
+          "explanation": "This film's blend of romantic elements with a time-travel paradox and characters confronting their own identities aligns with the theme of existential absurdity. The narrative challenges perceptions of reality and delves into the surreal nature of existence, inviting viewers to question the meaning of their own lives.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "time_travel_paradox",
+          "plot_summary": "A comedy that pays tribute to the science fiction genre -- specifically, the sub-genre of time travel. But here the alternate reality is contemporary New York City where past and future experiences of trust, commitment and denial are cleverly put to the test. Just as Ruby is beginning to relish her first-ever healthy relationship, Sam begins muttering about being a time traveler from the year 2470.",
+          "year": "2000",
+          "director": "Brad Anderson"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "By exploring themes of identity crisis and virtual reality, this film offers a unique take on existential questioning and the surreal nature of human experiences. The protagonist's immersion in a world of uncertainty and transformation mirrors the theme of existential absurdity, prompting viewers to contemplate the complexities of existence.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "My Brother's Keeper",
+          "explanation": "Through its portrayal of war trauma and the conflicts between faith and doubt, this film delves into existential questions surrounding identity, purpose, and the absurdity of life's challenges. The characters' internal struggles and search for meaning resonate with the theme of existential absurdity, highlighting the fragile nature of human existence.",
+          "current_primary_theme": "war_trauma",
+          "current_secondary_theme": "faith_vs_doubt",
+          "plot_summary": "Returning war veteran SFC Travis Fox has one more battle to fight – PTSD. Following an improvised explosive device attack that killed his best friend and their entire Ranger platoon, Travis returns to his hometown to settle the mysterious affairs of his late parents. In searching for answers, he uncovers a new obstacle and finds support from church counselor Tiffany Robertson. Slowly beginning to rediscover his faith in God, Travis uncovers a secret hidden by his friend Donnie that threatens his newfound faith, restores his guilt, and causes him to consider the unthinkable.",
+          "year": "2021",
+          "director": "Kevan Otto"
+        },
+        {
+          "title": "Hell Hole",
+          "explanation": "This film's exploration of environmental crisis and survival isolation reflects the absurdity of existence in the face of overwhelming challenges. The characters' desperate attempts to navigate a world filled with chaos and uncertainty align with the theme of existential absurdity, emphasizing the harsh realities of human existence.",
+          "current_primary_theme": "environmental_crisis",
+          "current_secondary_theme": "survival_isolation",
+          "plot_summary": "Far away, in the desolate Serbian wilderness, a U.S.-led fracking crew uncover a dormant monster gestating inside a centuries-old French soldier. Now awakened and exposed in its most dangerously fragile state, it tears through the men on the grounds in search of a new womb.",
+          "year": "2024",
+          "director": "John Adams"
+        },
+        {
+          "title": "All About Eve",
+          "explanation": "By delving into themes of artistic obsession and toxic relationships, this film captures the absurdity of human interactions and the chaotic nature of personal desires. The characters' destructive behaviors and emotional turmoil mirror the existential crises faced by individuals trying to make sense of a world filled with uncertainties and contradictions.",
+          "current_primary_theme": "toxic_relationships",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "From the moment she glimpses her idol at the stage door, Eve Harrington is determined to take the reins of power away from the great actress Margo Channing. Eve maneuvers her way into Margo's Broadway role, becomes a sensation and even causes turmoil in the lives of Margo's director boyfriend, her playwright and his wife. Only the cynical drama critic sees through Eve, admiring her audacity and perfect pattern of deceit.",
+          "year": "1950",
+          "director": "Joseph L. Mankiewicz"
+        },
+        {
+          "title": "Slotherhouse",
+          "explanation": "Through its portrayal of underdog triumph and toxic relationships, this film offers a darkly comedic take on the absurdity of human existence. The characters' absurd actions and existential dilemmas underscore the chaotic and meaningless aspects of life, making it a fitting addition to the \"existential_absurdity\"",
+          "current_primary_theme": "toxic_relationships",
+          "current_secondary_theme": "underdog_triumph",
+          "plot_summary": "Emily Young, a senior, wants to be elected as her sorority's president. She adopts a cute sloth, thinking it can become the new mascot and help her win, until a string of fatalities implicate the sloth as the main suspect in the murders.",
+          "year": "2023",
+          "director": "Matthew Goodhue"
+        }
+      ],
+      "matching_movies_updated_at": "2025-10-15T23:14:42.652788"
+    },
+    {
+      "id": "cd2cba91-278b-4789-b0c2-3e5dd173089b",
+      "theme_name": "unfulfilled_desires",
+      "description": "This theme explores narratives where characters grapple with unmet aspirations, dreams, or longings that shape their actions and relationships throughout the story.",
+      "examples": [
+        "The Hunt",
+        "Spider-Man: Across the Spider-Verse",
+        "Coma",
+        "Eternal Sunshine of the Spotless Mind",
+        "Groundhog Day",
+        "Deep Red",
+        "Crooks in Clover",
+        "My Policeman",
+        "Embrace of the Serpent",
+        "Bright Sky",
+        "An Autumn Afternoon",
+        "Don't Blame the Kid"
+      ],
+      "reasoning": "The theme of unfulfilled desires delves into the emotional depth of characters who navigate the complexities of their unachieved hopes, whether it be personal, romantic, professional, or existential. It adds a layer of relatability and introspection for viewers seeking narratives that explore the nuanced impacts of unmet expectations and the journey towards acceptance or transformation. This theme captures a common thread among diverse films in the sample that go beyond traditional arcs of success or resolution, resonating with audiences drawn to the intricacies of human desires and their unattained fulfillment.",
+      "status": "pending",
+      "created_at": "2025-10-15T23:14:13.053296",
+      "input_type": "auto",
+      "input_data": "",
+      "matching_movies": [
+        {
+          "title": "The Godfather",
+          "explanation": "This film delves into unfulfilled desires through the concept of erasing memories of a failed relationship. Characters grapple with longing for a lost love, showcasing how unmet aspirations shape their actions and emotional landscapes.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "Groundhog Day",
+          "explanation": "Bill Murray's character in this film experiences a repetitive day, leading him to confront unfulfilled desires and existential questions. The theme of longing for change and growth underpins the narrative, making it a strong fit for the proposed theme.",
+          "current_primary_theme": "existential questioning",
+          "current_secondary_theme": "found_family",
+          "plot_summary": "A narcissistic TV weatherman, along with his attractive-but-distant producer, and his mawkish cameraman, is sent to report on Groundhog Day in the small town of Punxsutawney, where he finds himself repeating the same day over and over.",
+          "year": "1993",
+          "director": "Harold Ramis"
+        },
+        {
+          "title": "The Best Years of Our Lives",
+          "explanation": "The theme of unmet aspirations is central to this film as it explores the complexities of relationships and the longing for connection that remains unfulfilled. Characters' desires and dreams drive the narrative, shaping their interactions and decisions.",
+          "current_primary_theme": "war_trauma",
+          "current_secondary_theme": "found_family",
+          "plot_summary": "It's the hope that sustains the spirit of every GI: the dream of the day when he will finally return home. For three WWII veterans, the day has arrived. But for each man, the dream is about to become a nightmare.",
+          "year": "1946",
+          "director": "William Wyler"
+        },
+        {
+          "title": "Lawrence of Arabia",
+          "explanation": "This movie explores the protagonist's journey of unfulfilled desires as he seeks redemption and a second chance at his failed aspirations. The theme of grappling with past longings and trying to fulfill them resonates strongly throughout the story.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "war_trauma",
+          "plot_summary": "The story of British officer T.E. Lawrence's mission to aid the Arab tribes in their revolt against the Ottoman Empire during the First World War. Lawrence becomes a flamboyant, messianic figure in the cause of Arab unity but his psychological instability threatens to undermine his achievements.",
+          "year": "1962",
+          "director": "David Lean"
+        },
+        {
+          "title": "Sight",
+          "explanation": "The theme of unfulfilled desires is evident in the protagonist's struggle with memory loss and the longing to reclaim lost experiences. The narrative delves into how unmet aspirations shape one's sense of self and relationships, making it a poignant fit for the proposed theme.",
+          "current_primary_theme": "immigrant_experience",
+          "current_secondary_theme": "memory_loss",
+          "plot_summary": "Ming Wang is an impoverished Chinese prodigy who flees Communist China to become a pioneering eye surgeon in America. When tasked with restoring the sight of an orphan in India, who was blinded by her stepmother, Wang must confront the trauma of living through the violent uprising in his youth, the Cultural Revolution.",
+          "year": "2024",
+          "director": "Andrew Hyatt"
+        },
+        {
+          "title": "His Only Son",
+          "explanation": "This film delves into unfulfilled desires through the protagonist's journey of forgiveness and reconciliation with his past. The theme of longing for closure and redemption drives the emotional core of the story, resonating with the proposed theme.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "found_family",
+          "plot_summary": "By God's order, Abraham was commanded to sacrifice his son Isaac on the mountain of Moriah. While traveling to the place of the sacrifice, alongside Isaac and two servants, Abraham is flooded with vivid memories from the years he and Sarah spent longing for the son they were promised—the son he must now lay upon the altar.",
+          "year": "2023",
+          "director": "David Helling"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "The exploration of unfulfilled desires is central to this film as characters grapple with missed opportunities and the longing for a different path. The theme of regret and unmet aspirations shapes the narrative, creating a poignant reflection on human desires.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "Lawrence of Arabia",
+          "explanation": "This movie portrays characters dealing with unfulfilled desires and strained relationships, particularly focusing on the protagonist's longing for familial connection and reconciliation. The theme of unresolved aspirations and the quest for redemption underpin the emotional journey of the characters.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "war_trauma",
+          "plot_summary": "The story of British officer T.E. Lawrence's mission to aid the Arab tribes in their revolt against the Ottoman Empire during the First World War. Lawrence becomes a flamboyant, messianic figure in the cause of Arab unity but his psychological instability threatens to undermine his achievements.",
+          "year": "1962",
+          "director": "David Lean"
+        },
+        {
+          "title": "Lawrence of Arabia",
+          "explanation": "The theme of unfulfilled desires is prominent in this film as characters navigate complex relationships and hidden longings. The narrative explores how suppressed aspirations and unspoken desires impact interpersonal dynamics, making it a fitting match for the proposed theme.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "war_trauma",
+          "plot_summary": "The story of British officer T.E. Lawrence's mission to aid the Arab tribes in their revolt against the Ottoman Empire during the First World War. Lawrence becomes a flamboyant, messianic figure in the cause of Arab unity but his psychological instability threatens to undermine his achievements.",
+          "year": "1962",
+          "director": "David Lean"
+        }
+      ],
+      "matching_movies_updated_at": "2025-10-15T23:15:10.298612"
+    },
+    {
+      "id": "f7674705-a6fd-4ed2-b342-88091fa59618",
+      "theme_name": "liminal_spaces",
+      "description": "This theme explores narratives where characters navigate transitional or threshold situations, often encountering ambiguity, transformation, and disorientation in their surroundings or identities.",
+      "examples": [
+        "Pink Floyd: The Wall",
+        "Alice in the Cities",
+        "The Great Escape",
+        "Midnight Cowboy",
+        "The Shining",
+        "Just Mercy",
+        "Sullivan's Travels",
+        "Apocalypse Now",
+        "Rear Window",
+        "The Notebook"
+      ],
+      "reasoning": "The theme of liminal spaces captures a unique aspect of storytelling where characters find themselves in in-between states, whether physically, emotionally, or psychologically. These narratives delve into the challenges, growth, and revelations that occur when characters are neither fully in one state nor the other, offering a rich exploration of transformation and self-discovery. This theme provides a distinct lens through which viewers can explore films that focus on the liminality of human experiences and environments, offering a nuanced perspective on transitions and uncertainties in storytelling.",
+      "status": "pending",
+      "created_at": "2025-10-15T23:16:11.241902",
+      "input_type": "auto",
+      "input_data": "",
+      "matching_movies": [
+        {
+          "title": "Pink Floyd: The Wall",
+          "explanation": "The Wall**: This film delves into the liminal spaces of the protagonist's mind, blurring the lines between reality and fantasy. The narrative explores themes of transformation, disorientation, and existential crisis, as the character navigates through his internal thresholds and uncertainties.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "mental_health_struggle",
+          "plot_summary": "A troubled rock star descends into madness in the midst of his physical and social isolation from everyone.",
+          "year": "1982",
+          "director": "Alan Parker"
+        },
+        {
+          "title": "The Shining",
+          "explanation": "In this classic horror film, the characters find themselves in a remote and isolated hotel, creating a sense of liminality and disorientation. The psychological descent of the protagonist into madness mirrors a transformative journey through ambiguous and eerie spaces, both physical and mental.",
+          "current_primary_theme": "psychological_horror",
+          "current_secondary_theme": "family_dysfunction",
+          "plot_summary": "Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren't prepared for the madness that lurks within.",
+          "year": "1980",
+          "director": "Stanley Kubrick"
+        },
+        {
+          "title": "Apocalypse Now",
+          "explanation": "This war film immerses the audience in the chaotic and morally ambiguous world of the Vietnam War. The characters move through landscapes of destruction and uncertainty, facing inner turmoil and external challenges that represent profound thresholds and transformations.",
+          "current_primary_theme": "war_trauma",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, \"does not exist, nor will it ever exist.\" His goal is to locate - and eliminate - a mysterious Green Beret Colonel named Walter Kurtz, who has been leading his personal army on illegal guerrilla missions into enemy territory.",
+          "year": "1979",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "Rear Window",
+          "explanation": "Through the lens of a confined apartment and the voyeuristic gaze of the protagonist, this Hitchcock thriller explores themes of surveillance, control, and psychological tension. The liminal space of the window frames the narrative, blurring boundaries between observer and observed, reality and perception.",
+          "current_primary_theme": "surveillance_control",
+          "current_secondary_theme": "psychological_thriller",
+          "plot_summary": "A wheelchair-bound photographer spies on his neighbors from his apartment window and becomes convinced one of them has committed murder.",
+          "year": "1954",
+          "director": "Alfred Hitchcock"
+        },
+        {
+          "title": "Sullivan's Travels",
+          "explanation": "This film follows a filmmaker's quest for deeper meaning and connection through a journey of self-discovery. The protagonist's search for authenticity and purpose mirrors a transitional phase where he grapples with his identity and societal expectations, embodying the essence of liminal spaces.",
+          "current_primary_theme": "artistic_obsession",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "Successful movie director John L. Sullivan, convinced he won't be able to film his ambitious masterpiece until he has suffered, dons a hobo disguise and sets off on a journey, aiming to \"know trouble\" first-hand. When all he finds is a train ride back to Hollywood and a beautiful blonde companion, he redoubles his efforts, managing to land himself in more trouble than he bargained for when he loses his memory and ends up a prisoner on a chain gang.",
+          "year": "1941",
+          "director": "Preston Sturges"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "Wim Wenders' film captures the essence of liminality through the protagonist's aimless journey with a young girl. As they travel through unfamiliar landscapes, both physical and emotional, they confront ambiguity, transformation, and the search for belonging in a world of transient encounters.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "Midnight Cowboy",
+          "explanation": "The story of a naive Texan hustler and a conman in New York City embodies themes of transition, identity crisis, and the search for connection. The characters navigate through the gritty urban landscape, encountering disorientation and transformation as they grapple with their dreams and realities.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "Joe Buck is a wide-eyed hustler from Texas hoping to score big with wealthy New York City women; he finds a companion in Enrico \"Ratso\" Rizzo, an ailing swindler with a bum leg and a quixotic fantasy of escaping to Florida.",
+          "year": "1969",
+          "director": "John Schlesinger"
+        },
+        {
+          "title": "Sunset Boulevard",
+          "explanation": "This classic noir film delves into the dark underbelly of Hollywood, portraying faded glamour and shattered dreams. The characters exist in a state of limbo between past glory and present decay, embodying themes of transition, identity crisis, and the haunting allure of the past.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "toxic_relationships",
+          "plot_summary": "A hack screenwriter writes a screenplay for a former silent film star who has faded into Hollywood obscurity.",
+          "year": "1950",
+          "director": "Billy Wilder"
+        },
+        {
+          "title": "1",
+          "explanation": "A Space Odyssey**: Stanley Kubrick's sci-fi masterpiece explores themes of evolution, consciousness, and the unknown. The characters traverse through cosmic realms and encounter enigmatic thresholds that challenge their perceptions of reality, reflecting the liminal spaces between humanity and the infinite.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "found_family",
+          "plot_summary": "",
+          "year": "2021",
+          "director": "KAIBASHIRA"
+        },
+        {
+          "title": "The Graduate",
+          "explanation": "This coming-of-age film follows a young man's journey of self-discovery and rebellion against societal norms. The protagonist's navigation through uncertain relationships and existential dilemmas embodies themes of transition, disorientation, and the quest for authenticity in a world of superficiality.",
+          "current_primary_theme": "Forbidden Love",
+          "current_secondary_theme": "Coming of Age",
+          "plot_summary": "A disillusioned college graduate finds himself torn between his older lover and her daughter.",
+          "year": "1967",
+          "director": "Mike Nichols"
+        }
+      ],
+      "matching_movies_updated_at": "2025-10-15T23:16:27.410072"
+    },
+    {
+      "id": "5d5142ac-6770-435b-9e89-17c52901572c",
+      "theme_name": "unspoken_connections",
+      "description": "This theme explores narratives where characters share deep emotional connections or bonds that are left unspoken or unacknowledged, adding layers of complexity and depth to their relationships.",
+      "examples": [
+        "La Jetée",
+        "La La Land",
+        "Mary and Max",
+        "The Lost Weekend",
+        "Gran Turismo",
+        "The Theory of Everything",
+        "It's Such a Beautiful Day",
+        "Wild Strawberries",
+        "The Taste of Things",
+        "The Pianist",
+        "Dreams"
+      ],
+      "reasoning": "Unspoken connections are a common thread in these films where characters' emotions, desires, or vulnerabilities are subtly conveyed through non-verbal cues, gestures, or shared experiences. This theme delves into the nuanced dynamics of relationships that go beyond dialogue, allowing viewers to explore the unspoken depths of human connection and understanding. It adds a layer of subtlety and emotional resonance that can resonate with audiences seeking films with intricate and profound interpersonal relationships.",
+      "status": "pending",
+      "created_at": "2025-10-15T23:18:55.976835",
+      "input_type": "auto",
+      "input_data": "",
+      "matching_movies": [
+        {
+          "title": "Singin' in the Rain",
+          "explanation": "This film beautifully captures the unspoken connections between its two main characters, Bob and Charlotte, as they navigate feelings of isolation and longing in a foreign land. Through subtle glances, shared experiences, and moments of quiet understanding, the film delves into the complexities of human connection that often remain unacknowledged.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "romantic",
+          "plot_summary": "In 1927 Hollywood, a silent film star falls for a chorus girl just as he and his paranoid screen partner struggle to make the difficult transition to talking pictures.",
+          "year": "1952",
+          "director": "Stanley Donen"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "In this unique exploration of memory and relationships, the characters Joel and Clementine share a deep emotional bond that transcends the erasure of memories. Their unspoken connection is palpable throughout the film, highlighting the intricacies of love, loss, and the enduring nature of emotional ties.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "Set in 1960s Hong Kong, this visually stunning film portrays the restrained yet profound bond between two neighbors who suspect their spouses are having an affair. The unspoken emotions, longing glances, and shared silences between the characters convey a deep connection that is never explicitly acknowledged but deeply felt.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "Her",
+          "explanation": "Through the unconventional relationship between a man and an artificial intelligence operating system, \"Her\" explores the complexities of emotional intimacy and unspoken connections. The film delves into the uncharted territory of human-AI relationships, where deep emotional bonds develop through conversations, shared experiences, and moments of vulnerability that transcend verbal communication.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "loneliness_isolation",
+          "plot_summary": "In the not so distant future, Theodore, a lonely writer, purchases a newly developed operating system designed to meet the user's every need. To Theodore's surprise, a romantic relationship develops between him and his operating system. This unconventional love story blends science fiction and romance in a sweet tale that explores the nature of love and the ways that technology isolates and connects us all.",
+          "year": "2013",
+          "director": "Spike Jonze"
+        },
+        {
+          "title": "Before Sunrise",
+          "explanation": "In this romantic drama, Jesse and Celine spend a fleeting night together in Vienna, forming a deep connection that is tinged with the knowledge that their time together is limited. The unspoken emotions, shared confidences, and poignant conversations between the characters highlight the transient yet profound nature of human connections.",
+          "current_primary_theme": "forbidden_love",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "An unexpected meeting on a train leads two travelers to spend an evening wandering through Vienna. As the night unfolds, they share stories and conversations about life and love, exploring new ideas while a quiet intimacy grows between them, knowing it may be their only night together.",
+          "year": "1995",
+          "director": "Richard Linklater"
+        },
+        {
+          "title": "Ghost Game",
+          "explanation": "Through the lens of a ghost observing his former partner in a house they once shared, this contemplative film delves into themes of grief, loss, and the lingering presence of unspoken connections. The silent protagonist's yearning for connection and the unacknowledged emotions that permeate the narrative evoke a sense of haunting beauty.",
+          "current_primary_theme": "toxic_relationships",
+          "current_secondary_theme": "psychological_horror",
+          "plot_summary": "As part of an internet challenge to live undetected in a stranger’s home, a daring couple target an infamous haunted house and endure a series of chilling incidents as they witness a family descending into madness.",
+          "year": "2024",
+          "director": "Jill Gevargizian"
+        },
+        {
+          "title": "M",
+          "explanation": "Through three pivotal stages in the life of protagonist Chiron, \"Moonlight\" explores themes of identity, masculinity, and unspoken desires. The film portrays the unspoken connections, hidden emotions, and nuanced relationships that shape Chiron's journey of self-discovery and acceptance in a world where vulnerability is often silenced.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "Before Sunset",
+          "explanation": "The second installment in Richard Linklater's \"Before\" trilogy, this film revisits Jesse and Celine nine years after their initial encounter. Through their intimate conversations, shared reminiscences, and unspoken longing, \"Before Sunset\" delves into the unresolved emotions, missed opportunities, and enduring connection between the characters.",
+          "current_primary_theme": "forbidden_love",
+          "current_secondary_theme": "nostalgia_longing",
+          "plot_summary": "Nine years later, Jesse travels across Europe giving readings from a book he wrote about the night he spent in Vienna with Celine. After his reading in Paris, Celine finds him, and they spend part of the day together before Jesse has to again leave for a flight. They are both in relationships now, and Jesse has a son, but as their strong feelings for each other start to return, both confess a longing for more.",
+          "year": "2004",
+          "director": "Richard Linklater"
+        },
+        {
+          "title": "M",
+          "explanation": "This groundbreaking film portrays the clandestine love affair between two cowboys, Ennis and Jack, over several decades. The unspoken bond, forbidden nature of their relationship, and the silent understanding that defines their connection in the",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        }
+      ],
+      "matching_movies_updated_at": "2025-10-15T23:19:08.027842"
+    },
+    {
+      "id": "58262711-1ba2-45c6-860c-8b1e47185392",
+      "theme_name": "tragicomic_struggle",
+      "description": "Films that blend elements of sadness and comedy in exploring personal or societal challenges.",
+      "examples": [
+        "\"Eternal Sunshine of the Spotless Mind\"",
+        "\"Little Miss Sunshine\"",
+        "\"The Royal Tenenbaums\"",
+        "\"Adaptation\"",
+        "\"Synecdoche",
+        "New York\"",
+        "\"Being John Malkovich\"",
+        "\"Birdman\"",
+        "\"Lost in Translation\""
+      ],
+      "reasoning": "This theme fills a gap by focusing on films that deftly balance tragic and comedic elements, providing a unique viewing experience that resonates with audiences seeking complex emotional journeys. While existing themes touch on sadness or comedy individually, this theme specifically highlights the nuanced interplay between the two, offering a distinct perspective on human struggles and societal issues.",
+      "status": "pending",
+      "created_at": "2025-10-15T23:19:36.608866",
+      "input_type": "description",
+      "input_data": "sad but also comedy",
+      "matching_movies": [
+        {
+          "title": "New Gods: Nezha Reborn",
+          "explanation": "With its surreal and introspective exploration of life, death, and artistic ambition, this film embodies the blend of melancholy and dark humor in facing existential crises and the complexities of human relationships.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "found_family",
+          "plot_summary": "While living as an ordinary deliveryman and motor racing fan, Nezha encounters old nemeses and must rediscover his powers to protect his loved ones.",
+          "year": "2021",
+          "director": "Zhao Ji"
+        },
+        {
+          "title": "M",
+          "explanation": "Through its satirical take on celebrity, ego, and the pursuit of artistic validation, this film encapsulates the internal and external struggles of the characters, layering comedy with profound themes of identity and self-worth.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "Singin' in the Rain",
+          "explanation": "This film beautifully captures the bittersweet moments of connection and isolation, blending humor with poignant reflections on loneliness, cultural dislocation, and the search for meaning in life.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "romantic",
+          "plot_summary": "In 1927 Hollywood, a silent film star falls for a chorus girl just as he and his paranoid screen partner struggle to make the difficult transition to talking pictures.",
+          "year": "1952",
+          "director": "Stanley Donen"
+        },
+        {
+          "title": "M",
+          "explanation": "By combining elements of absurdity, identity crisis, and existential musings, this film offers a unique and darkly comedic exploration of the complexities of human desires, relationships, and the quest for fulfillment.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "M",
+          "explanation": "Through its quirky characters and dysfunctional family dynamics, this film navigates themes of love, loss, and redemption with a balance of humor and heartache, showcasing the inherent struggles of personal growth and acceptance.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "This film's blend of romance, memory, and emotional turmoil creates a poignant and darkly comedic portrayal of heartbreak, regret, and the human desire to escape pain while also cherishing the beauty of shared experiences.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "M",
+          "explanation": "The juxtaposition of humor and poignant moments in this film, as a family embarks on a road trip to fulfill a young girl's dream, encapsulates themes of resilience, acceptance, and finding joy in the midst of life's challenges.",
+          "current_primary_theme": "institutional_corruption",
+          "current_secondary_theme": "moral_ambiguity",
+          "plot_summary": "In this classic German thriller, Hans Beckert, a serial killer who preys on children, becomes the focus of a massive Berlin police manhunt. Beckert's heinous crimes are so repellant and disruptive to city life that he is even targeted by others in the seedy underworld network. With both cops and criminals in pursuit, the murderer soon realizes that people are on his trail, sending him into a tense, panicked attempt to escape justice.",
+          "year": "1931",
+          "director": "Fritz Lang"
+        },
+        {
+          "title": "Sunset Boulevard",
+          "explanation": "This classic film noir infuses elements of tragedy and dark humor as it explores faded fame, delusion, and the haunting effects of lost dreams, portraying a character's desperate struggle for relevance and recognition.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "toxic_relationships",
+          "plot_summary": "A hack screenwriter writes a screenplay for a former silent film star who has faded into Hollywood obscurity.",
+          "year": "1950",
+          "director": "Billy Wilder"
+        },
+        {
+          "title": "Nashville",
+          "explanation": "With its ensemble cast and interconnected storylines, this film captures the chaotic blend of politics, entertainment, and personal dramas in a satirical yet heartfelt manner, highlighting the struggles and aspirations of its diverse characters.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "media_manipulation",
+          "plot_summary": "The intersecting stories of twenty-four characters—from country star to wannabe to reporter to waitress—connect to the music business in Nashville, Tennessee.",
+          "year": "1975",
+          "director": "Robert Altman"
+        },
+        {
+          "title": "The Apartment",
+          "explanation": "This film skillfully intertwines themes of loneliness, ambition, and moral dilemmas with a tinge of dark humor, portraying the protagonist's journey of self-discovery and redemption amidst the complexities of corporate life and human relationships.",
+          "current_primary_theme": "identity_crisis",
+          "current_secondary_theme": "forbidden_love",
+          "plot_summary": "Bud Baxter is a minor clerk in a huge New York insurance company, until he discovers a quick way to climb the corporate ladder. He lends out his apartment to the executives as a place to take their mistresses. Although he often has to deal with the aftermath of their visits, one night he's left with a major problem to solve.",
+          "year": "1960",
+          "director": "Billy Wilder"
+        },
+        {
+          "title": "Brick",
+          "explanation": "Through its neo-noir style and intricate plotting, this film presents a dark and humorous take on high school life, crime, and loyalty, showcasing a protagonist's relentless pursuit of truth and justice in a world filled with deception and danger.",
+          "current_primary_theme": "toxic_relationships",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "A teenage loner pushes his way into the underworld of a high school crime ring to investigate the disappearance of his ex-girlfriend.",
+          "year": "2006",
+          "director": "Rian Johnson"
+        },
+        {
+          "title": "Mandy",
+          "explanation": "Combining revenge, surrealism, and horror elements, this film offers a visually striking and emotionally intense experience that delves into themes of loss, grief, and the transformative power of love in the face of overwhelming darkness.",
+          "current_primary_theme": "revenge_justice",
+          "current_secondary_theme": "cosmic_horror",
+          "plot_summary": "The Shadow Mountains, 1983. Red and Mandy lead a loving and peaceful existence; but when their pine-scented haven is savagely destroyed, Red is catapulted into a phantasmagoric journey filled with bloody vengeance and laced with fire.",
+          "year": "2018",
+          "director": "Panos Cosmatos"
+        },
+        {
+          "title": "Half Brothers",
+          "explanation": "This film's exploration of family bonds, cultural differences, and the immigrant experience is infused with humor and heart, showcasing the struggles and triumphs of two half-brothers as they navigate their shared past and uncertain future.",
+          "current_primary_theme": "found_family",
+          "current_secondary_theme": "immigrant_experience",
+          "plot_summary": "Mexican aviation exec Renato is shocked to learn that he has an American half-brother he never knew about: free-spirited Asher. They are forced on a road trip together, tracing the path their father took from Mexico to the U.S.",
+          "year": "2020",
+          "director": "Luke Greenfield"
+        },
+        {
+          "title": "The Last Picture Show",
+          "explanation": "Through its blend of humor, nostalgia, and underdog spirit, this film follows a group of retirees as they embark on a final rodeo adventure, highlighting themes of friendship, resilience, and the pursuit of dreams in the twilight of life.",
+          "current_primary_theme": "coming_of_age",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "High school seniors and best friends, Sonny and Duane, live in a dying Texas town. The handsome Duane is dating a local beauty, while Sonny is having an affair with the coach's wife. As graduation nears and both boys contemplate their futures, Duane eyes the army and Sonny takes over a local business. Each struggles to figure out if he can escape this dead-end town and build a better life somewhere else.",
+          "year": "1971",
+          "director": "Peter Bogdanovich"
+        }
+      ],
+      "matching_movies_updated_at": "2025-10-15T23:19:48.526695"
+    },
+    {
+      "id": "c83a6a56-f501-4cc2-bd8f-25aa556049aa",
+      "theme_name": "authenticity_representation",
+      "description": "Explores the portrayal of real-life experiences and challenges in a truthful, unfiltered manner.",
+      "examples": [
+        "realness",
+        "documentary",
+        "comedy",
+        "American Movie",
+        "Exit Through the Gift Shop",
+        "F for Fake",
+        "The Act of Killing",
+        "20 Feet from Stardom",
+        "Borat"
+      ],
+      "reasoning": "This theme delves into how films capture genuine human experiences, blurring the lines between reality and fiction. While related to documentary filmmaking, it extends beyond mere factual representation to encompass the authenticity of emotions, perspectives, and narratives depicted in various genres, not limited to traditional documentaries. This theme is crucial for viewers seeking films that offer a raw, unvarnished look at the complexities of life and storytelling.",
+      "status": "pending",
+      "created_at": "2025-10-18T22:40:58.962237",
+      "input_type": "movies",
+      "input_data": "realness documentary comedy",
+      "matching_movies": [
+        {
+          "title": "American Graffiti",
+          "explanation": "This documentary film epitomizes authenticity and representation by following the struggles and aspirations of a filmmaker trying to bring his vision to life. It showcases the raw, unfiltered journey of pursuing one's passion and the real-life challenges faced in the pursuit of artistic expression.",
+          "current_primary_theme": "coming_of_age",
+          "current_secondary_theme": "found_family",
+          "plot_summary": "A couple of high school graduates spend one final night cruising the strip with their buddies before they go off to college.",
+          "year": "1973",
+          "director": "George Lucas"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "This documentary challenges the notions of authenticity and representation in the art world by blurring the lines between reality and fiction. It explores the concept of true artistic expression versus commercialization, questioning the authenticity of art and the representation of artists in society.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        },
+        {
+          "title": "The Feeling That the Time for Doing Something Has Passed",
+          "explanation": "Directed by Orson Welles, this film delves into the themes of authenticity and representation through the world of art forgery and illusion. It raises questions about the nature of truth, authenticity, and the blurred lines between reality and fiction in the realm of art and creativity.",
+          "current_primary_theme": "toxic_relationships",
+          "current_secondary_theme": "identity_crisis",
+          "plot_summary": "A mosaic-style comedy following the life of a woman as time passes in her long-term casual BDSM relationship, low-level corporate job, and quarrelsome Jewish family.",
+          "year": "2024",
+          "director": "Joanna Arnow"
+        },
+        {
+          "title": "The Godfather",
+          "explanation": "This documentary confronts the audience with the brutal reality of genocide in Indonesia by allowing the perpetrators to reenact their crimes. It presents a chillingly authentic portrayal of historical events and challenges viewers to consider the representation of violence and memory in cinema.",
+          "current_primary_theme": "organized_crime",
+          "current_secondary_theme": "family_bonds",
+          "plot_summary": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+          "year": "1972",
+          "director": "Francis Ford Coppola"
+        }
+      ],
+      "matching_movies_updated_at": "2025-10-18T22:42:07.151039"
+    },
+    {
+      "id": "72ece891-e134-46c7-a37c-76a1e5da7e13",
+      "theme_name": "eerie_encounters",
+      "description": "Delving into unsettling, otherworldly interactions that challenge perceptions and evoke a sense of unease.",
+      "examples": [
+        "\"The Witch",
+        "\" \"Hereditary",
+        "\" \"Midsommar",
+        "\" \"The Babadook",
+        "\" \"It Follows",
+        "\" \"The Lighthouse",
+        "\" \"Under the Skin\""
+      ],
+      "reasoning": "While existing themes touch on horror, the eerie_encounters theme specifically focuses on the atmospheric, psychological, and supernatural aspects of non-conventional horror films. These movies share a common thread of eerie, uncanny experiences that go beyond traditional scares, often exploring themes of isolation, transformation, and the unknown. By highlighting this theme, users can discover films that offer a distinct blend of dread, mystery, and psychological depth in the horror genre.",
+      "status": "pending",
+      "created_at": "2025-10-19T11:45:30.028165",
+      "input_type": "movies",
+      "input_data": "Non conventional horror movies"
+    },
+    {
+      "id": "9a607e11-8140-48bc-9579-2c00f8d4b24b",
+      "theme_name": "unconventional_horror",
+      "description": "Films that subvert traditional horror tropes and themes to deliver unique, unconventional scares and storytelling.",
+      "examples": [
+        "\"The Witch\"",
+        "\"Hereditary\"",
+        "\"Midsommar\"",
+        "\"The Babadook\"",
+        "\"It Follows\"",
+        "\"Get Out\"",
+        "\"A Quiet Place\"",
+        "\"The Lighthouse\""
+      ],
+      "reasoning": "This theme is needed to highlight horror films that defy genre conventions and offer audiences a fresh perspective on the genre. While existing categories like \"cosmic_horror\" and \"moral_ambiguity\" touch on certain aspects of unconventional horror, this new category specifically focuses on films that challenge traditional horror narratives, aesthetics, and scares. By including this theme, users interested in horror films that break the mold can easily discover these innovative and boundary-pushing works.",
+      "status": "pending",
+      "created_at": "2025-10-19T11:45:41.108560",
+      "input_type": "description",
+      "input_data": "Non conventional horror movies",
+      "matching_movies": [],
+      "matching_movies_updated_at": "2025-10-19T11:46:16.796277"
+    }
+  ]
+}

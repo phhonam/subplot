@@ -1,0 +1,157 @@
+MOVIE PROFILE EVALUATION WORKFLOW
+=====================================
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           MOVIE PROFILE EVALUATION WORKFLOW                     │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+INPUT STAGE
+───────────
+┌─────────────┐    ┌──────────────────────┐    ┌─────────────────────────────┐
+│ Movie Data  │───▶│ Profile Generation   │───▶│ Ground Truth Generation     │
+│ • Title     │    │ (Current LLM System) │    │ (Expert-level Reference)    │
+│ • Director  │    │                      │    │                            │
+│ • Plot      │    │                      │    │                            │
+│ • Genres    │    │                      │    │                            │
+└─────────────┘    └──────────────────────┘    └─────────────────────────────┘
+                                                          │
+                                                          ▼
+MULTI-AGENT EVALUATION STAGE
+────────────────────────────
+                    ┌─────────────────────────────────────────┐
+                    │            LLM Judge System             │
+                    │         5 Specialized Agents           │
+                    └─────────────────────────────────────────┘
+                                          │
+                    ┌─────────────────────┼─────────────────────┐
+                    ▼                     ▼                     ▼
+        ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐
+        │ Cinema Movement     │  │ Socio-Cultural      │  │ Formal Analysis     │
+        │ Agent (20%)         │  │ Agent (25%)         │  │ Agent (20%)         │
+        │ • Movement ID       │  │ • Historical Context│  │ • Technical Details │
+        │ • Techniques        │  │ • Social Issues     │  │ • Visual Style      │
+        │ • Genre Contrib.    │  │ • Cultural Auth.    │  │ • Innovations       │
+        └─────────────────────┘  └─────────────────────┘  └─────────────────────┘
+                    │                     │                     │
+                    └─────────────────────┼─────────────────────┘
+                                          ▼
+                    ┌─────────────────────┼─────────────────────┐
+                    ▼                     ▼                     ▼
+        ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐
+        │ Narrative Analysis  │  │ Distinctiveness     │  │ Score Aggregation   │
+        │ Agent (15%)         │  │ Agent (20%)         │  │ (Weighted Average)  │
+        │ • Story Structure   │  │ • Unique Elements   │  │                      │
+        │ • Character Dev.    │  │ • Influence         │  │                      │
+        │ • Narrative Choice  │  │ • Cultural Impact   │  │                      │
+        └─────────────────────┘  └─────────────────────┘  └─────────────────────┘
+                                                          │
+                                                          ▼
+QUALITY ASSURANCE STAGE
+───────────────────────
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                                Score ≥ 3.0?                                    │
+└─────────────────────────────────────────────────────────────────────────────────┘
+                                   │
+                           ┌───────┴───────┐
+                           ▼               ▼
+                  ┌─────────────┐  ┌─────────────┐
+                  │    PASS     │  │    FAIL     │
+                  │             │  │             │
+                  │ Continue    │  │ Flag for    │
+                  │ Validation  │  │ Improvement │
+                  └─────────────┘  └─────────────┘
+                           │               │
+                           ▼               ▼
+                  ┌─────────────┐  ┌─────────────┐
+                  │ Multi-Model │  │ Analysis    │
+                  │ Validation  │  │ Report      │
+                  │             │  │             │
+                  │ Consistency │  │ Weak Areas  │
+                  │ Check       │  │ Identified  │
+                  └─────────────┘  └─────────────┘
+                           │               │
+                           ▼               ▼
+                  ┌─────────────┐  ┌─────────────┐
+                  │ Benchmark   │  │ Prompt      │
+                  │ Testing     │  │ Engineering │
+                  │             │  │             │
+                  │ vs. Known   │  │ Model       │
+                  │ Films       │  │ Updates     │
+                  └─────────────┘  └─────────────┘
+                           │               │
+                           ▼               │
+                  ┌─────────────┐          │
+                  │ Consistency │          │
+                  │ > 0.8?      │          │
+                  └─────────────┘          │
+                           │               │
+                   ┌───────┴───────┐       │
+                   ▼               ▼       │
+            ┌─────────────┐  ┌─────────────┐│
+            │    PASS     │  │    FAIL     ││
+            │             │  │             ││
+            │ Approved    │  │ Manual      ││
+            │ Profile     │  │ Review      ││
+            └─────────────┘  └─────────────┘│
+                           │               │
+                           ▼               │
+                  ┌─────────────┐          │
+                  │ Deploy to   │          │
+                  │ Production  │          │
+                  │ System      │          │
+                  └─────────────┘          │
+                                          │
+                                          ▼
+                                 ┌─────────────┐
+                                 │ Re-evaluate │
+                                 │ Iterative   │
+                                 │ Improvement │
+                                 └─────────────┘
+                                          │
+                                          ▼
+                                 ┌─────────────┐
+                                 │ Back to     │
+                                 │ Evaluation  │
+                                 │ Stage       │
+                                 └─────────────┘
+
+BATCH PROCESSING WORKFLOW
+─────────────────────────
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│ Load Movie  │─▶│ Sample      │─▶│ Parallel    │─▶│ Aggregate   │
+│ Dataset     │  │ Selection   │  │ Evaluation  │  │ Results     │
+└─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘
+                                                           │
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│ Monitor     │◀─│ Deploy      │◀─│ Measure     │◀─│ Generate    │
+│ Production  │  │ Updates     │  │ Improvement │  │ Reports     │
+└─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘
+                                                           │
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│ Further     │◀─│ Improvement │◀─│ Update      │◀─│ Identify    │
+│ Analysis    │  │ > 10%?      │  │ System      │  │ Patterns    │
+└─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘
+
+SUCCESS METRICS
+───────────────
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ Quality Metrics          │ Operational Metrics      │ Business Impact            │
+│ • Avg Score ≥ 4.0/5.0    │ • Processing ≥ 100/hr    │ • Improved Engagement     │
+│ • Consistency ≥ 0.8      │ • Error Rate < 5%        │ • Reduced Generic Content │
+│ • Benchmark ≥ 0.85       │ • Uptime ≥ 99%           │ • Consistent Quality      │
+│ • No Cat. < 3.0          │ • Cost < $0.05/eval      │ • Better Recommendations  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+IMPLEMENTATION TIMELINE
+───────────────────────
+Week 1-2:    Setup & Testing ────▶ Initial deployment, benchmark validation
+Week 3-4:    Batch Evaluation ──▶ Evaluate existing profiles, identify patterns
+Month 2:     Iteration & Improvement ──▶ Prompt engineering, re-evaluation
+Month 3+:    Production & Monitoring ──▶ Full deployment, continuous optimization
+
+KEY INTEGRATION POINTS
+──────────────────────
+• Current Movie Profiles ──▶ Evaluation Pipeline ──▶ Improved Profiles ──▶ Rec Engine
+• Evaluation Results ──▶ Analytics Dashboard ──▶ Alert System ──▶ Improvement Pipeline
+• API Endpoints for real-time evaluation and batch processing
+• Monitoring integration with existing recommendation system

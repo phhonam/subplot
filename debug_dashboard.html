@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Profile Evaluation Dashboard - Debug</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+        .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .content-area {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .movie-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            margin-bottom: 20px;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .success {
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .debug-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        .movie-info {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .movie-poster {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 Movie Profile Evaluation Dashboard - Debug</h1>
+            <p>Debugging movie profile loading issues</p>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h3>🔍 Debug Controls</h3>
+                
+                <div class="debug-info" id="debugInfo">
+                    <strong>Debug Info:</strong><br>
+                    <span id="debugStatus">Initializing...</span>
+                </div>
+                
+                <h4>📽️ Select Movie</h4>
+                <select id="movieSelect" class="movie-select">
+                    <option value="">Choose a movie to evaluate...</option>
+                </select>
+                
+                <button id="loadMoviesBtn" class="btn btn-primary">
+                    🔄 Reload Movies
+                </button>
+                
+                <button id="testMovieBtn" class="btn btn-primary" disabled>
+                    🎯 Test Movie Profile
+                </button>
+                
+                <button id="testEvalBtn" class="btn btn-primary" disabled>
+                    🧠 Test LLM Evaluation
+                </button>
+            </div>
+
+            <div class="content-area" id="contentArea">
+                <div class="loading" id="initialLoading">
+                    <div class="spinner"></div>
+                    <p>Loading movie database...</p>
+                </div>
+                
+                <div id="movieContent" style="display: none;">
+                    <!-- Movie info and evaluation results will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let movies = [];
+        let selectedMovie = null;
+        
+        // DOM elements
+        const movieSelect = document.getElementById('movieSelect');
+        const loadMoviesBtn = document.getElementById('loadMoviesBtn');
+        const testMovieBtn = document.getElementById('testMovieBtn');
+        const testEvalBtn = document.getElementById('testEvalBtn');
+        const contentArea = document.getElementById('contentArea');
+        const movieContent = document.getElementById('movieContent');
+        const initialLoading = document.getElementById('initialLoading');
+        const debugStatus = document.getElementById('debugStatus');
+        const debugInfo = document.getElementById('debugInfo');
+        
+        // Initialize the application
+        async function init() {
+            updateDebugStatus('Initializing application...');
+            try {
+                await loadMovies();
+                setupEventListeners();
+                initialLoading.style.display = 'none';
+                updateDebugStatus('Application initialized successfully');
+            } catch (error) {
+                updateDebugStatus('Initialization failed: ' + error.message);
+                showError('Failed to initialize: ' + error.message);
+            }
+        }
+        
+        function updateDebugStatus(message) {
+            debugStatus.textContent = message;
+            console.log('Debug:', message);
+        }
+        
+        // Load movies from API
+        async function loadMovies() {
+            updateDebugStatus('Loading movies from API...');
+            try {
+                const response = await fetch('/api/movies');
+                updateDebugStatus('API response received');
+                
+                const data = await response.json();
+                updateDebugStatus(`API returned: ${data.success ? 'success' : 'error'}`);
+                
+                if (data.success) {
+                    movies = data.movies;
+                    updateMovieSelect();
+                    updateDebugStatus(`Loaded ${movies.length} movies`);
+                } else {
+                    throw new Error(data.error);
+                }
+            } catch (error) {
+                updateDebugStatus('Failed to load movies: ' + error.message);
+                throw new Error('Failed to load movies: ' + error.message);
+            }
+        }
+        
+        // Update movie select dropdown
+        function updateMovieSelect() {
+            updateDebugStatus('Updating movie dropdown...');
+            movieSelect.innerHTML = '<option value="">Choose a movie to evaluate...</option>';
+            
+            movies.forEach(movie => {
+                const option = document.createElement('option');
+                option.value = movie.title;
+                option.textContent = `${movie.title} (${movie.year}) - ${movie.director}`;
+                movieSelect.appendChild(option);
+            });
+            
+            updateDebugStatus(`Added ${movies.length} movies to dropdown`);
+        }
+        
+        // Setup event listeners
+        function setupEventListeners() {
+            movieSelect.addEventListener('change', handleMovieSelect);
+            loadMoviesBtn.addEventListener('click', async () => {
+                updateDebugStatus('Reloading movies...');
+                try {
+                    await loadMovies();
+                    showSuccess('Movies reloaded successfully');
+                } catch (error) {
+                    showError('Failed to reload movies: ' + error.message);
+                }
+            });
+            testMovieBtn.addEventListener('click', handleTestMovie);
+            testEvalBtn.addEventListener('click', handleTestEvaluation);
+        }
+        
+        // Handle movie selection
+        function handleMovieSelect() {
+            selectedMovie = movieSelect.value;
+            testMovieBtn.disabled = !selectedMovie;
+            testEvalBtn.disabled = !selectedMovie;
+            
+            updateDebugStatus(`Selected movie: ${selectedMovie || 'none'}`);
+            
+            if (selectedMovie) {
+                loadMovieDetails(selectedMovie);
+            } else {
+                movieContent.style.display = 'none';
+            }
+        }
+        
+        // Load movie details
+        async function loadMovieDetails(movieTitle) {
+            updateDebugStatus(`Loading details for: ${movieTitle}`);
+            try {
+                showLoading('Loading movie details...');
+                
+                const response = await fetch(`/api/movie/${encodeURIComponent(movieTitle)}`);
+                updateDebugStatus(`Movie details API response: ${response.status}`);
+                
+                const data = await response.json();
+                updateDebugStatus(`Movie details data: ${data.success ? 'success' : 'error'}`);
+                
+                if (data.success) {
+                    displayMovieDetails(data.movie);
+                    updateDebugStatus('Movie details displayed successfully');
+                } else {
+                    throw new Error(data.error);
+                }
+            } catch (error) {
+                updateDebugStatus('Failed to load movie details: ' + error.message);
+                showError('Failed to load movie details: ' + error.message);
+            }
+        }
+        
+        // Display movie details
+        function displayMovieDetails(movie) {
+            updateDebugStatus('Displaying movie details...');
+            
+            const posterUrl = movie.poster_url || 'https://via.placeholder.com/200x300?text=No+Poster';
+            
+            movieContent.innerHTML = `
+                <div class="movie-info">
+                    <img src="${posterUrl}" alt="${movie.title}" class="movie-poster">
+                    <div class="movie-details">
+                        <h2>${movie.title}</h2>
+                        <div class="movie-meta">
+                            <strong>${movie.year}</strong> • ${movie.director} • ${movie.genres.join(', ')}
+                        </div>
+                        <div class="movie-description">
+                            <p><strong>Plot:</strong> ${movie.plot_summary || 'No plot summary available'}</p>
+                            <p><strong>Profile Text:</strong> ${movie.profile_text || 'No profile text available'}</p>
+                        </div>
+                        <div class="debug-info">
+                            <strong>Debug Info:</strong><br>
+                            Has plot: ${movie.plot_summary ? 'Yes' : 'No'}<br>
+                            Has profile_text: ${movie.profile_text ? 'Yes' : 'No'}<br>
+                            Has poster: ${movie.poster_url ? 'Yes' : 'No'}<br>
+                            Profile text length: ${movie.profile_text ? movie.profile_text.length : 0} characters
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="evaluationResults" style="display: none;">
+                    <!-- Evaluation results will be loaded here -->
+                </div>
+            `;
+            
+            movieContent.style.display = 'block';
+            updateDebugStatus('Movie details displayed');
+        }
+        
+        // Test movie profile loading
+        async function handleTestMovie() {
+            if (!selectedMovie) return;
+            
+            updateDebugStatus(`Testing movie profile for: ${selectedMovie}`);
+            showLoading('Testing movie profile loading...');
+            
+            try {
+                const response = await fetch(`/api/movie/${encodeURIComponent(selectedMovie)}`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    showSuccess(`Movie profile loaded successfully!<br>
+                        Title: ${data.movie.title}<br>
+                        Director: ${data.movie.director}<br>
+                        Has plot: ${data.movie.plot_summary ? 'Yes' : 'No'}<br>
+                        Has profile text: ${data.movie.profile_text ? 'Yes' : 'No'}<br>
+                        Profile text length: ${data.movie.profile_text ? data.movie.profile_text.length : 0} characters`);
+                } else {
+                    showError('Movie profile test failed: ' + data.error);
+                }
+            } catch (error) {
+                showError('Movie profile test error: ' + error.message);
+            }
+        }
+        
+        // Test LLM evaluation
+        async function handleTestEvaluation() {
+            if (!selectedMovie) return;
+            
+            updateDebugStatus(`Testing LLM evaluation for: ${selectedMovie}`);
+            showLoading('Testing LLM evaluation... This may take a moment.');
+            
+            try {
+                const response = await fetch(`/api/evaluate/${encodeURIComponent(selectedMovie)}`, {
+                    method: 'POST'
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    const eval = data.evaluation;
+                    showSuccess(`LLM evaluation test successful!<br>
+                        Movie: ${eval.movie_title}<br>
+                        Overall Score: ${eval.overall_score.toFixed(2)}<br>
+                        Categories: ${Object.keys(eval.category_scores).length}<br>
+                        Has ground truth: ${eval.ground_truth ? 'Yes' : 'No'}<br>
+                        Has generated profile: ${eval.generated_profile ? 'Yes' : 'No'}`);
+                } else {
+                    showError('LLM evaluation test failed: ' + data.error);
+                }
+            } catch (error) {
+                showError('LLM evaluation test error: ' + error.message);
+            }
+        }
+        
+        // Utility functions
+        function showLoading(message) {
+            contentArea.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+        
+        function showError(message) {
+            contentArea.innerHTML = `
+                <div class="error">
+                    <strong>Error:</strong> ${message}
+                </div>
+            `;
+        }
+        
+        function showSuccess(message) {
+            contentArea.innerHTML = `
+                <div class="success">
+                    <strong>Success:</strong> ${message}
+                </div>
+            `;
+        }
+        
+        // Initialize the application
+        init();
+    </script>
+</body>
+</html>
