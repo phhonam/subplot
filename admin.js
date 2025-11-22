@@ -1,7 +1,7 @@
 // Admin Panel JavaScript
 class MovieAdminPanel {
     constructor() {
-        this.apiBase = 'http://127.0.0.1:8003';
+        this.apiBase = window.location.origin + '/api';
         this.authToken = localStorage.getItem('admin_token');
         this.movies = [];
         this.filteredMovies = [];
@@ -12,6 +12,7 @@ class MovieAdminPanel {
         this.currentPage = 1;
         this.itemsPerPage = 50;
         this.scrapedMovies = [];
+        this.redirecting = false; // Flag to prevent redirect loops
         
         this.init();
     }
@@ -24,11 +25,17 @@ class MovieAdminPanel {
         }
         
         this.setupEventListeners();
+        // Load dashboard data since it's the default page
         this.loadDashboard();
         this.log('Admin panel initialized', 'info');
     }
 
     redirectToLogin() {
+        // Prevent redirect loops
+        if (this.redirecting || window.location.pathname.includes('admin_login.html')) {
+            return;
+        }
+        this.redirecting = true;
         window.location.href = 'admin_login.html';
     }
 
@@ -138,6 +145,9 @@ class MovieAdminPanel {
                 break;
             case 'movies':
                 this.loadMovies();
+                break;
+            case 'themeManagement':
+                loadThemeManagementData();
                 break;
             case 'scraping':
                 this.loadScrapingPage();
@@ -2271,3 +2281,753 @@ document.addEventListener('DOMContentLoaded', () => {
         loadThemeCarouselSettings();
     }, 100);
 });
+
+// Theme Management Functions
+let currentThemes = [];
+let themeProposals = [];
+let currentProposalFilter = 'all';
+
+// Initialize theme management when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Set up input type change handlers
+    const inputTypeRadios = document.querySelectorAll('input[name="inputType"]');
+    inputTypeRadios.forEach(radio => {
+        radio.addEventListener('change', handleInputTypeChange);
+    });
+    
+    // Set initial state
+    handleInputTypeChange();
+});
+
+function handleInputTypeChange() {
+    const selectedRadio = document.querySelector('input[name="inputType"]:checked');
+    if (!selectedRadio) {
+        console.error('No radio button selected');
+        return;
+    }
+    
+    const selectedType = selectedRadio.value;
+    console.log('Input type changed to:', selectedType);
+    
+    // Get elements
+    const movieGroup = document.getElementById('movieExamplesGroup');
+    const descriptionGroup = document.getElementById('descriptionGroup');
+    const autoGroup = document.getElementById('autoDiscoverGroup');
+    
+    if (!movieGroup || !descriptionGroup || !autoGroup) {
+        console.error('Form groups not found:', { movieGroup, descriptionGroup, autoGroup });
+        return;
+    }
+    
+    // Hide all input groups
+    movieGroup.classList.add('hidden');
+    descriptionGroup.classList.add('hidden');
+    autoGroup.classList.add('hidden');
+    
+    // Show relevant group
+    if (selectedType === 'movies') {
+        movieGroup.classList.remove('hidden');
+        console.log('Showing movie examples group');
+    } else if (selectedType === 'description') {
+        descriptionGroup.classList.remove('hidden');
+        console.log('Showing description group');
+    } else if (selectedType === 'auto') {
+        autoGroup.classList.remove('hidden');
+        console.log('Showing auto discover group');
+    }
+}
+
+async function generateThemeProposal() {
+    const inputType = document.querySelector('input[name="inputType"]:checked').value;
+    let inputData = '';
+    
+    // Get input data based on type
+    if (inputType === 'movies') {
+        inputData = document.getElementById('movieExamples').value.trim();
+        if (!inputData) {
+            alert('Please enter movie examples');
+            return;
+        }
+    } else if (inputType === 'description') {
+        inputData = document.getElementById('themeDescription').value.trim();
+        if (!inputData) {
+            alert('Please enter a description');
+            return;
+        }
+    }
+    
+    // Show loading state
+    const btn = document.getElementById('proposeThemeBtn');
+    const text = document.getElementById('proposeThemeText');
+    const loading = document.getElementById('proposeThemeLoading');
+    
+    btn.disabled = true;
+    text.classList.add('hidden');
+    loading.classList.remove('hidden');
+    
+    try {
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/propose`, {
+            method: 'POST',
+            headers: adminPanel.getAuthHeaders(),
+            body: JSON.stringify({
+                input_type: inputType,
+                input_data: inputData
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const proposal = await response.json();
+        adminPanel.log(`Generated theme proposal: ${proposal.theme_name}`, 'success');
+        
+        // Clear form
+        document.getElementById('movieExamples').value = '';
+        document.getElementById('themeDescription').value = '';
+        
+        // Reload proposals
+        await loadThemeProposals();
+        
+        // Show success notification with movie matching
+        showNotification({
+            type: 'success',
+            title: 'Theme Proposal Generated!',
+            content: `Theme: ${proposal.theme_name}<br>Description: ${proposal.description}`,
+            actions: [
+                {
+                    text: 'View Details & Movies',
+                    class: 'primary',
+                    onclick: () => viewProposalDetails(proposal.id)
+                }
+            ]
+        });
+        
+    } catch (error) {
+        adminPanel.log(`Failed to generate theme proposal: ${error.message}`, 'error');
+        
+        // Handle duplicate theme error specifically
+        if (error.message.includes('similar theme') || error.message.includes('already exists')) {
+            showNotification({
+                type: 'error',
+                title: 'Duplicate Theme Detected',
+                content: `A similar theme already exists in the proposals queue. Try generating a different theme or check existing proposals.`,
+                actions: [
+                    {
+                        text: 'View Existing Proposals',
+                        class: 'primary',
+                        onclick: () => {
+                            // Switch to proposals tab
+                            document.querySelector('[data-page="themeManagement"]').click();
+                            // Scroll to proposals section
+                            setTimeout(() => {
+                                document.getElementById('proposalsTableBody').scrollIntoView({ behavior: 'smooth' });
+                            }, 100);
+                        }
+                    }
+                ]
+            });
+        } else {
+            showNotification({
+                type: 'error',
+                title: 'Theme Proposal Failed',
+                content: `Failed to generate theme proposal: ${error.message}`
+            });
+        }
+    } finally {
+        // Reset button state
+        btn.disabled = false;
+        text.classList.remove('hidden');
+        loading.classList.add('hidden');
+    }
+}
+
+async function loadCurrentThemes() {
+    try {
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/current`, {
+            headers: adminPanel.getAuthHeaders()
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        currentThemes = data.themes;
+        
+        // Update count
+        document.getElementById('themeCount').textContent = data.count;
+        
+        // Render themes
+        renderCurrentThemes();
+        
+    } catch (error) {
+        adminPanel.log(`Failed to load current themes: ${error.message}`, 'error');
+    }
+}
+
+function renderCurrentThemes() {
+    const container = document.getElementById('currentThemesGrid');
+    const searchTerm = document.getElementById('themeSearch').value.toLowerCase();
+    
+    const filteredThemes = currentThemes.filter(theme => 
+        theme.name.toLowerCase().includes(searchTerm) ||
+        theme.display_name.toLowerCase().includes(searchTerm)
+    );
+    
+    container.innerHTML = filteredThemes.map(theme => `
+        <div class="theme-card">
+            <div class="theme-card-content">
+                <h4>${theme.display_name}</h4>
+            </div>
+            <div class="theme-card-actions">
+                <button class="btn-delete" onclick="deleteCurrentTheme('${theme.name}')" title="Delete theme">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3,6 5,6 21,6"></polyline>
+                        <path d="M19,6v14a2,2 0 0,1 -2,2H7a2,2 0 0,1 -2,-2V6m3,0V4a2,2 0 0,1 2,-2h4a2,2 0 0,1 2,2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    Delete
+                </button>
+            </div>
+        </div>
+    `).join('');
+}
+
+function filterCurrentThemes() {
+    renderCurrentThemes();
+}
+
+async function deleteCurrentTheme(themeName) {
+    if (!confirm(`Are you sure you want to permanently delete the theme "${themeName}"? This action cannot be undone and will affect all movies using this theme.`)) {
+        return;
+    }
+    
+    try {
+        adminPanel.log(`Deleting theme: ${themeName}`, 'info');
+        
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/current/${encodeURIComponent(themeName)}`, {
+            method: 'DELETE',
+            headers: adminPanel.getAuthHeaders()
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({ detail: 'Unknown error' }));
+            throw new Error(errorData.detail || `HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const result = await response.json();
+        
+        adminPanel.log(`Deleted theme: ${themeName}`, 'success');
+        
+        // Reload current themes to update the display
+        await loadCurrentThemes();
+        
+        showNotification({
+            type: 'success',
+            title: 'Theme Deleted!',
+            content: `Theme "${themeName}" has been permanently deleted from the system.`
+        });
+        
+    } catch (error) {
+        adminPanel.log(`Failed to delete theme: ${error.message}`, 'error');
+        showNotification({
+            type: 'error',
+            title: 'Delete Failed',
+            content: `Could not delete theme: ${error.message}`
+        });
+    }
+}
+
+async function loadThemeProposals() {
+    try {
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/proposals`, {
+            headers: adminPanel.getAuthHeaders()
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        themeProposals = data.proposals || [];
+        
+        // Render proposals
+        renderThemeProposals();
+        
+    } catch (error) {
+        adminPanel.log(`Failed to load theme proposals: ${error.message}`, 'error');
+    }
+}
+
+function renderThemeProposals() {
+    const tbody = document.getElementById('proposalsTableBody');
+    
+    const filteredProposals = themeProposals.filter(proposal => 
+        currentProposalFilter === 'all' || proposal.status === currentProposalFilter
+    );
+    
+    tbody.innerHTML = filteredProposals.map(proposal => `
+        <tr>
+            <td><strong>${proposal.theme_name}</strong></td>
+            <td>${proposal.description}</td>
+            <td><span class="status-badge ${proposal.status}">${proposal.status}</span></td>
+            <td>${new Date(proposal.created_at).toLocaleDateString()}</td>
+            <td>
+                ${proposal.status === 'pending' ? `
+                    <button class="btn btn-success btn-sm" onclick="approveThemeProposal('${proposal.id}')">Approve</button>
+                    <button class="btn btn-danger btn-sm" onclick="rejectThemeProposal('${proposal.id}')">Reject</button>
+                ` : ''}
+                <button class="btn btn-secondary btn-sm" onclick="viewProposalDetails('${proposal.id}')">View Details</button>
+            </td>
+        </tr>
+    `).join('');
+}
+
+function filterProposals(status) {
+    currentProposalFilter = status;
+    
+    // Update active tab
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    
+    renderThemeProposals();
+}
+
+async function approveThemeProposal(proposalId) {
+    if (!confirm('Are you sure you want to approve this theme proposal? This will add it to the system.')) {
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/approve`, {
+            method: 'POST',
+            headers: adminPanel.getAuthHeaders(),
+            body: JSON.stringify({
+                proposal_id: proposalId
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const result = await response.json();
+        adminPanel.log(`Approved theme proposal: ${result.theme_name}`, 'success');
+        
+        // Reload data
+        await loadThemeProposals();
+        await loadCurrentThemes();
+        
+        showNotification({
+            type: 'success',
+            title: 'Theme Approved!',
+            content: `Theme "${result.theme_name}" has been approved and added to the system.`
+        });
+        
+    } catch (error) {
+        adminPanel.log(`Failed to approve theme proposal: ${error.message}`, 'error');
+        showNotification({
+            type: 'error',
+            title: 'Approval Failed',
+            content: `Failed to approve theme proposal: ${error.message}`
+        });
+    }
+}
+
+async function rejectThemeProposal(proposalId) {
+    if (!confirm('Are you sure you want to reject this theme proposal?')) {
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/reject`, {
+            method: 'POST',
+            headers: adminPanel.getAuthHeaders(),
+            body: JSON.stringify({
+                proposal_id: proposalId
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        adminPanel.log(`Rejected theme proposal: ${proposalId}`, 'info');
+        
+        // Reload proposals
+        await loadThemeProposals();
+        
+    } catch (error) {
+        adminPanel.log(`Failed to reject theme proposal: ${error.message}`, 'error');
+        showNotification({
+            type: 'error',
+            title: 'Rejection Failed',
+            content: `Failed to reject theme proposal: ${error.message}`
+        });
+    }
+}
+
+async function viewProposalDetails(proposalId) {
+    const proposal = themeProposals.find(p => p.id === proposalId);
+    if (!proposal) return;
+    
+    // Use stored matching movies (generated when theme was created)
+    const matchingMovies = proposal.matching_movies || [];
+    
+    // Create bound functions to ensure proposalId is captured
+    const boundRegenerateMatchingMovies = () => regenerateMatchingMovies(proposalId);
+    const boundApproveThemeProposal = () => {
+        approveThemeProposal(proposalId);
+        closeNotificationSidebar();
+    };
+    const boundRejectThemeProposal = () => {
+        rejectThemeProposal(proposalId);
+        closeNotificationSidebar();
+    };
+    const boundDeleteThemeProposal = () => deleteThemeProposal(proposalId);
+    
+    // Show detailed sidebar with matching movies
+    showNotificationSidebar({
+        title: `Theme: ${proposal.theme_name}`,
+        content: `
+            <div class="proposal-details">
+                <p><strong>Description:</strong> ${proposal.description}</p>
+                <p><strong>Status:</strong> <span class="status-badge ${proposal.status}">${proposal.status}</span></p>
+                <p><strong>Created:</strong> ${new Date(proposal.created_at).toLocaleString()}</p>
+                <p><strong>Input Type:</strong> ${proposal.input_type}</p>
+                ${proposal.input_data ? `<p><strong>Input Data:</strong> ${proposal.input_data}</p>` : ''}
+                
+                <div class="proposal-examples">
+                    <h5>Example Movies:</h5>
+                    <ul>
+                        ${proposal.examples.map(movie => `<li>${movie}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <p><strong>Reasoning:</strong> ${proposal.reasoning}</p>
+                
+                ${matchingMovies.length > 0 ? `
+                    <div class="matching-movies">
+                        <h5>Movies That Would Fit This Theme (${matchingMovies.length} found):</h5>
+                        ${matchingMovies.map(movie => `
+                            <div class="movie-match">
+                                <h6>${movie.title} (${movie.year})</h6>
+                                <div class="movie-match-meta">
+                                    Director: ${movie.director} | 
+                                    Current: ${movie.current_primary_theme}${movie.current_secondary_theme !== 'none' ? `, ${movie.current_secondary_theme}` : ''}
+                                </div>
+                                <div class="movie-match-explanation"><strong>Why it fits:</strong> ${movie.explanation}</div>
+                                <div class="movie-match-plot"><strong>Plot:</strong> ${movie.plot_summary}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : '<p><em>Matching movies not yet generated. Click "Generate Matching Movies" to find movies that fit this theme.</em></p>'}
+            </div>
+        `,
+        actions: [
+            ...(matchingMovies.length === 0 ? [{
+                text: 'Generate Matching Movies',
+                class: 'secondary',
+                onclick: boundRegenerateMatchingMovies,
+                id: `generate-movies-${proposalId}`
+            }] : []),
+            ...(proposal.status === 'pending' ? [
+                {
+                    text: 'Approve',
+                    class: 'primary',
+                    onclick: boundApproveThemeProposal
+                },
+                {
+                    text: 'Reject',
+                    onclick: boundRejectThemeProposal
+                }
+            ] : []),
+            {
+                text: 'Delete',
+                class: 'danger',
+                onclick: boundDeleteThemeProposal
+            }
+        ]
+    });
+}
+
+async function regenerateMatchingMovies(proposalId) {
+    let loadingNotification = null;
+    
+    try {
+        // Disable the generate button
+        const generateButton = document.getElementById(`generate-movies-${proposalId}`);
+        if (generateButton) {
+            generateButton.disabled = true;
+            generateButton.textContent = 'Generating...';
+        }
+        
+        // Show loading notification
+        loadingNotification = showNotification({
+            type: 'info',
+            title: 'Generating Matching Movies...',
+            content: 'Analyzing database and finding movies that would fit this theme. This may take 30-60 seconds...',
+            persistent: true
+        });
+        
+        adminPanel.log('Starting matching movies generation...', 'info');
+        
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/regenerate-matching-movies/${proposalId}`, {
+            method: 'POST',
+            headers: adminPanel.getAuthHeaders()
+        });
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`HTTP ${response.status}: ${errorText}`);
+        }
+        
+        const result = await response.json();
+        adminPanel.log(`Generated ${result.total_matches} matching movies`, 'success');
+        
+        // Remove loading notification
+        if (loadingNotification) {
+            removeNotification(loadingNotification);
+            loadingNotification = null;
+        }
+        
+        // Show success notification
+        showNotification({
+            type: 'success',
+            title: 'Matching Movies Generated!',
+            content: `Found ${result.total_matches} movies that would fit the theme "${result.theme_name}".`
+        });
+        
+        // Reload proposals to get updated data
+        await loadThemeProposals();
+        
+        // Close current sidebar and reopen with updated data
+        closeNotificationSidebar();
+        setTimeout(() => {
+            viewProposalDetails(proposalId);
+        }, 200);
+        
+    } catch (error) {
+        adminPanel.log(`Failed to regenerate matching movies: ${error.message}`, 'error');
+        
+        // Re-enable the generate button
+        const generateButton = document.getElementById(`generate-movies-${proposalId}`);
+        if (generateButton) {
+            generateButton.disabled = false;
+            generateButton.textContent = 'Generate Matching Movies';
+        }
+        
+        // Remove loading notification if it exists
+        if (loadingNotification) {
+            removeNotification(loadingNotification);
+        }
+        
+        showNotification({
+            type: 'error',
+            title: 'Failed to Generate Movies',
+            content: `Could not generate matching movies: ${error.message}`
+        });
+    }
+}
+
+async function deleteThemeProposal(proposalId) {
+    console.log('deleteThemeProposal called with ID:', proposalId);
+    
+    const proposal = themeProposals.find(p => p.id === proposalId);
+    if (!proposal) {
+        console.error('Proposal not found:', proposalId);
+        return;
+    }
+    
+    console.log('Found proposal:', proposal.theme_name);
+    
+    if (!confirm(`Are you sure you want to permanently delete the theme proposal "${proposal.theme_name}"? This action cannot be undone.`)) {
+        console.log('User cancelled deletion');
+        return;
+    }
+    
+    try {
+        console.log('Making DELETE request to:', `${adminPanel.apiBase}/admin/themes/proposals/${proposalId}`);
+        console.log('Auth headers:', adminPanel.getAuthHeaders());
+        
+        const response = await fetch(`${adminPanel.apiBase}/admin/themes/proposals/${proposalId}`, {
+            method: 'DELETE',
+            headers: adminPanel.getAuthHeaders()
+        });
+        
+        console.log('Response status:', response.status);
+        console.log('Response ok:', response.ok);
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Error response:', errorText);
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const result = await response.json();
+        console.log('Delete result:', result);
+        adminPanel.log(`Deleted theme proposal: ${proposal.theme_name}`, 'info');
+        
+        // Show success notification
+        showNotification({
+            type: 'success',
+            title: 'Theme Proposal Deleted',
+            content: result.message
+        });
+        
+        // Close sidebar and reload proposals
+        closeNotificationSidebar();
+        await loadThemeProposals();
+        
+    } catch (error) {
+        console.error('Delete theme proposal error:', error);
+        adminPanel.log(`Failed to delete theme proposal: ${error.message}`, 'error');
+        showNotification({
+            type: 'error',
+            title: 'Failed to Delete Proposal',
+            content: `Could not delete theme proposal: ${error.message}`
+        });
+    }
+}
+
+// Load theme management data when page is shown
+function loadThemeManagementData() {
+    loadCurrentThemes();
+    loadThemeProposals();
+}
+
+// Dashboard Notification System
+function showNotification(options) {
+    const container = document.getElementById('notificationContainer');
+    if (!container) return null;
+    
+    const notification = document.createElement('div');
+    notification.className = `notification ${options.type || 'info'}`;
+    
+    const notificationId = Date.now() + Math.random();
+    notification.dataset.id = notificationId;
+    
+    const actionsHtml = options.actions ? `
+        <div class="notification-actions">
+            ${options.actions.map(action => `
+                <button class="notification-btn ${action.class || ''}" onclick="(${action.onclick.toString()})()">
+                    ${action.text}
+                </button>
+            `).join('')}
+        </div>
+    ` : '';
+    
+    notification.innerHTML = `
+        <div class="notification-header">
+            <h4 class="notification-title">${options.title || 'Notification'}</h4>
+            <button class="notification-close" onclick="removeNotification('${notificationId}')">&times;</button>
+        </div>
+        <div class="notification-content">${options.content || ''}</div>
+        ${actionsHtml}
+    `;
+    
+    container.appendChild(notification);
+    
+    // Auto-remove after 5 seconds unless persistent
+    if (!options.persistent) {
+        setTimeout(() => {
+            removeNotification(notificationId);
+        }, 5000);
+    }
+    
+    return notificationId;
+}
+
+function removeNotification(notificationId) {
+    const container = document.getElementById('notificationContainer');
+    if (!container) return;
+    
+    if (notificationId) {
+        const notification = container.querySelector(`[data-id="${notificationId}"]`);
+        if (notification) {
+            notification.remove();
+        }
+    } else {
+        // Remove all notifications
+        container.innerHTML = '';
+    }
+}
+
+// Sidebar Notification System
+function showNotificationSidebar(options) {
+    // Remove any existing sidebar
+    closeNotificationSidebar();
+    
+    const sidebar = document.createElement('div');
+    sidebar.className = 'notification-sidebar';
+    sidebar.id = 'notificationSidebar';
+    
+    // Store actions for later assignment
+    const actionFunctions = [];
+    
+    const actionsHtml = options.actions ? `
+        <div class="notification-sidebar-actions">
+            ${options.actions.map((action, index) => {
+                actionFunctions.push(action.onclick);
+                return `
+                    <button class="btn ${action.class === 'primary' ? 'btn-primary' : action.class === 'danger' ? 'btn-danger' : 'btn-secondary'}" data-action-index="${index}">
+                        ${action.text}
+                    </button>
+                `;
+            }).join('')}
+        </div>
+    ` : '';
+    
+    sidebar.innerHTML = `
+        <div class="notification-sidebar-header">
+            <h3 class="notification-sidebar-title">${options.title || 'Details'}</h3>
+            <button class="notification-sidebar-close" onclick="closeNotificationSidebar()">&times;</button>
+        </div>
+        <div class="notification-sidebar-content">
+            ${options.content || ''}
+        </div>
+        ${actionsHtml}
+    `;
+    
+    document.body.appendChild(sidebar);
+    
+    // Assign click handlers to action buttons
+    if (options.actions) {
+        options.actions.forEach((action, index) => {
+            const button = sidebar.querySelector(`[data-action-index="${index}"]`);
+            if (button && action.onclick) {
+                button.addEventListener('click', action.onclick);
+            }
+        });
+    }
+    
+    // Add backdrop click to close
+    const backdrop = document.createElement('div');
+    backdrop.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    `;
+    backdrop.onclick = closeNotificationSidebar;
+    document.body.appendChild(backdrop);
+}
+
+function closeNotificationSidebar() {
+    const sidebar = document.getElementById('notificationSidebar');
+    const backdrop = document.querySelector('div[style*="rgba(0, 0, 0, 0.3)"]');
+    
+    if (sidebar) {
+        sidebar.remove();
+    }
+    if (backdrop) {
+        backdrop.remove();
+    }
+}

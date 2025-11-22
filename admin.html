@@ -680,6 +680,465 @@
                 max-height: 300px;
             }
         }
+
+        /* Theme Management Styles */
+        .pill-group {
+            display: flex !important;
+            gap: 8px !important;
+            margin-bottom: 20px !important;
+            flex-wrap: wrap !important;
+        }
+
+        .pill-option {
+            position: relative !important;
+        }
+
+        .pill-option input[type="radio"] {
+            position: absolute !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        .pill-option label {
+            display: inline-block !important;
+            padding: 8px 16px !important;
+            background: #f3f4f6 !important;
+            border: 2px solid #e5e7eb !important;
+            border-radius: 20px !important;
+            color: #374151 !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            margin: 0 !important;
+        }
+
+        .pill-option input[type="radio"]:checked + label {
+            background: #ff5c5c !important;
+            border-color: #ff5c5c !important;
+            color: white !important;
+        }
+
+        .pill-option label:hover {
+            background: #e5e7eb !important;
+            border-color: #d1d5db !important;
+        }
+
+        .pill-option input[type="radio"]:checked + label:hover {
+            background: #e53e3e !important;
+            border-color: #e53e3e !important;
+        }
+
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .theme-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100px;
+            transition: all 0.2s;
+        }
+
+        .theme-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: #d1d5db;
+        }
+
+        .theme-card-content {
+            flex-grow: 1;
+        }
+
+        .theme-card-content h4 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .theme-card-content p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-family: 'Courier New', monospace;
+        }
+
+        .theme-card-actions {
+            margin-top: 12px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-delete {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-delete:hover {
+            background: #b91c1c;
+            transform: translateY(-1px);
+        }
+
+        .btn-delete svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-tab {
+            padding: 8px 16px;
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            color: #6b7280;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-tab:hover {
+            background: #f9fafb;
+            color: #111827;
+        }
+
+        .filter-tab.active {
+            background: #3b82f6;
+            color: #ffffff;
+            border-color: #3b82f6;
+        }
+
+        .badge {
+            background: #e5e7eb;
+            color: #374151;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .status-badge.pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-badge.approved {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-badge.rejected {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .proposal-details {
+            max-width: 500px;
+        }
+
+        .proposal-details h4 {
+            margin: 0 0 10px 0;
+            color: #111827;
+        }
+
+        .proposal-details p {
+            margin: 0 0 10px 0;
+            color: #6b7280;
+        }
+
+        .proposal-examples {
+            background: #f9fafb;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .proposal-examples h5 {
+            margin: 0 0 5px 0;
+            color: #374151;
+            font-size: 0.9rem;
+        }
+
+        .proposal-examples ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* Dashboard Notification System */
+        .notification-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            max-width: 400px;
+        }
+
+        .notification {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-bottom: 10px;
+            padding: 16px;
+            animation: slideIn 0.3s ease-out;
+            position: relative;
+        }
+
+        /* Sidebar for detailed notifications */
+        .notification-sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 100vh;
+            background: #ffffff;
+            border-left: 1px solid #e5e7eb;
+            box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+            z-index: 10001;
+            display: flex;
+            flex-direction: column;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        .notification-sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9fafb;
+        }
+
+        .notification-sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #111827;
+            margin: 0;
+        }
+
+        .notification-sidebar-close {
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .notification-sidebar-close:hover {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        .notification-sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .notification-sidebar-actions {
+            padding: 20px;
+            border-top: 1px solid #e5e7eb;
+            background: #f9fafb;
+            display: flex;
+            gap: 10px;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .notification.success {
+            border-left: 4px solid #10b981;
+        }
+
+        .notification.error {
+            border-left: 4px solid #ef4444;
+        }
+
+        .notification.info {
+            border-left: 4px solid #3b82f6;
+        }
+
+        .notification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .notification-title {
+            font-weight: 600;
+            color: #111827;
+            margin: 0;
+        }
+
+        .notification-close {
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .notification-close:hover {
+            color: #111827;
+        }
+
+        .notification-content {
+            color: #6b7280;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .notification-actions {
+            margin-top: 12px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .notification-btn {
+            padding: 6px 12px;
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            color: #374151;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .notification-btn:hover {
+            background: #f9fafb;
+        }
+
+        .notification-btn.primary {
+            background: #3b82f6;
+            color: #ffffff;
+            border-color: #3b82f6;
+        }
+
+        .notification-btn.primary:hover {
+            background: #2563eb;
+        }
+
+        .notification-btn.danger {
+            background: #ef4444;
+            color: #ffffff;
+            border-color: #ef4444;
+        }
+
+        .notification-btn.danger:hover {
+            background: #dc2626;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Movie Matching Styles */
+        .matching-movies {
+            margin-top: 15px;
+        }
+
+        .matching-movies h5 {
+            margin: 0 0 10px 0;
+            color: #374151;
+            font-size: 0.9rem;
+        }
+
+        .movie-match {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+
+        .movie-match h6 {
+            margin: 0 0 4px 0;
+            color: #111827;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .movie-match-meta {
+            color: #6b7280;
+            font-size: 0.8rem;
+            margin-bottom: 6px;
+        }
+
+        .movie-match-explanation {
+            color: #059669;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            padding: 6px 8px;
+            background: #ecfdf5;
+            border-left: 3px solid #10b981;
+            border-radius: 3px;
+        }
+
+        .movie-match-plot {
+            color: #6b7280;
+            font-size: 0.8rem;
+            line-height: 1.3;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -688,6 +1147,7 @@
             <h2>Admin Panel</h2>
             <a href="#" class="nav-item active" data-page="dashboard">Dashboard</a>
             <a href="#" class="nav-item" data-page="movies">Movies</a>
+            <a href="#" class="nav-item" data-page="themeManagement">Theme Management</a>
             <a href="#" class="nav-item" data-page="themes">Theme Carousels</a>
             <a href="#" class="nav-item" data-page="scraping">Scraping</a>
             <a href="#" class="nav-item" data-page="enrichment">Enrichment</a>
@@ -849,6 +1309,97 @@
                 </div>
 
                 <div class="pagination" id="moviesPagination"></div>
+            </div>
+
+            <!-- Theme Management Page -->
+            <div id="themeManagement" class="page">
+                <div class="page-header">
+                    <h1>Theme Management</h1>
+                    <p>Propose new themes using LLM analysis and manage the theme proposal queue</p>
+                </div>
+
+                <!-- Propose New Theme Section -->
+                <div class="control-panel">
+                    <h3>Propose New Theme</h3>
+                    <div class="form-group">
+                        <label>Input Type</label>
+                        <div class="pill-group">
+                            <div class="pill-option">
+                                <input type="radio" id="inputTypeMovies" name="inputType" value="movies" checked>
+                                <label for="inputTypeMovies">From Movie Examples</label>
+                            </div>
+                            <div class="pill-option">
+                                <input type="radio" id="inputTypeDescription" name="inputType" value="description">
+                                <label for="inputTypeDescription">From Description</label>
+                            </div>
+                            <div class="pill-option">
+                                <input type="radio" id="inputTypeAuto" name="inputType" value="auto">
+                                <label for="inputTypeAuto">Auto-Discover</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="movieExamplesGroup">
+                        <label>Movie Examples (one per line)</label>
+                        <textarea id="movieExamples" rows="5" placeholder="Enter movie titles, one per line&#10;e.g.&#10;The Matrix&#10;Inception&#10;Blade Runner"></textarea>
+                    </div>
+
+                    <div class="form-group hidden" id="descriptionGroup">
+                        <label>Thematic Gap Description</label>
+                        <textarea id="themeDescription" rows="5" placeholder="Describe the thematic gap you want to fill&#10;e.g. Movies about characters who discover they're living in a simulation"></textarea>
+                    </div>
+
+                    <div class="form-group hidden" id="autoDiscoverGroup">
+                        <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 15px;">
+                            This will analyze your entire movie database to identify thematic patterns not covered by existing themes. 
+                            The LLM will sample movies and propose a new theme category.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="generateThemeProposal()" id="proposeThemeBtn">
+                        <span id="proposeThemeText">Generate Theme Proposal</span>
+                        <span id="proposeThemeLoading" class="hidden">Generating...</span>
+                    </button>
+                </div>
+
+                <!-- Proposal Queue Section -->
+                <div class="control-panel">
+                    <h3>Proposal Queue</h3>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" onclick="filterProposals('all')">All</button>
+                        <button class="filter-tab" onclick="filterProposals('pending')">Pending</button>
+                        <button class="filter-tab" onclick="filterProposals('approved')">Approved</button>
+                        <button class="filter-tab" onclick="filterProposals('rejected')">Rejected</button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Theme Name</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="proposalsTableBody">
+                                <!-- Proposals will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Current Themes Section -->
+                <div class="control-panel">
+                    <h3>Current Themes <span id="themeCount" class="badge">Loading...</span></h3>
+                    <div class="form-group">
+                        <input type="text" id="themeSearch" placeholder="Search themes..." onkeyup="filterCurrentThemes()">
+                    </div>
+                    <div id="currentThemesGrid" class="themes-grid">
+                        <!-- Themes will be loaded here -->
+                    </div>
+                </div>
             </div>
 
             <!-- Theme Carousels Page -->
@@ -1133,6 +1684,9 @@
             </div>
         </main>
     </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
 
     <script src="admin.js"></script>
 </body>

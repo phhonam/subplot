@@ -6,6 +6,7 @@ import json
 import os
 import shutil
 import glob
+import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -234,6 +235,24 @@ class MoviePreviewRequest(BaseModel):
     title: str
     tmdb_id: Optional[str] = None
 
+class ThemeProposalRequest(BaseModel):
+    input_type: str  # "movies", "description", or "auto"
+    input_data: str  # movie titles, description, or empty for auto
+
+class ThemeProposalResponse(BaseModel):
+    id: str
+    theme_name: str
+    description: str
+    examples: List[str]
+    reasoning: str
+    status: str
+    created_at: str
+    input_type: str
+    input_data: str
+
+class ThemeApprovalRequest(BaseModel):
+    proposal_id: str
+
 # Global state for admin operations
 admin_state = {
     'pipeline': [],
@@ -272,10 +291,14 @@ def save_hidden_movies():
     """Save list of hidden movies to file"""
     hidden_file = Path("hidden_movies.json")
     try:
+        print(f"SAVING {len(admin_state['hidden_movies'])} hidden movies to {hidden_file}")
+        print(f"Hidden movies list: {list(admin_state['hidden_movies'])}")
         with open(hidden_file, 'w') as f:
             json.dump({'hidden': list(admin_state['hidden_movies'])}, f, indent=2)
+        print(f"Successfully wrote to {hidden_file}")
         log_admin_operation("save_hidden", f"Saved {len(admin_state['hidden_movies'])} hidden movies")
     except Exception as e:
+        print(f"ERROR saving hidden movies: {e}")
         log_admin_operation("save_hidden", f"Failed to save hidden movies: {e}", "error")
 
 def get_movie_data() -> Dict[str, Any]:
@@ -332,6 +355,95 @@ def save_movie_data(data: Dict[str, Any], create_backup: bool = False):
         log_admin_operation("save_movies", f"Failed to save movie data: {e}", "error")
         raise HTTPException(status_code=500, detail=f"Failed to save movie data: {e}")
 
+# Theme Proposal Management Functions
+def load_theme_proposals() -> Dict[str, Any]:
+    """Load theme proposals from JSON file"""
+    try:
+        if os.path.exists("theme_proposals.json"):
+            with open("theme_proposals.json", 'r') as f:
+                return json.load(f)
+        else:
+            return {"proposals": []}
+    except Exception as e:
+        log_admin_operation("load_theme_proposals", f"Failed to load theme proposals: {e}", "error")
+        return {"proposals": []}
+
+def save_theme_proposals(data: Dict[str, Any]):
+    """Save theme proposals to JSON file"""
+    try:
+        with open("theme_proposals.json", 'w') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        log_admin_operation("save_theme_proposals", f"Saved {len(data.get('proposals', []))} theme proposals")
+    except Exception as e:
+        log_admin_operation("save_theme_proposals", f"Failed to save theme proposals: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to save theme proposals: {e}")
+
+def add_theme_proposal(proposal_data: Dict[str, Any]) -> str:
+    """Add a new theme proposal to the queue"""
+    try:
+        proposals_data = load_theme_proposals()
+        
+        # Check for duplicate themes (by name similarity)
+        new_theme_name = proposal_data.get("theme_name", "").lower()
+        for existing_proposal in proposals_data["proposals"]:
+            existing_name = existing_proposal.get("theme_name", "").lower()
+            # Check for exact match or very similar names
+            if (new_theme_name == existing_name or 
+                new_theme_name.replace("_", " ") == existing_name.replace("_", " ") or
+                new_theme_name.replace(" ", "_") == existing_name.replace(" ", "_")):
+                log_admin_operation("add_theme_proposal", f"Duplicate theme detected: {new_theme_name} similar to {existing_name}", "warning")
+                raise HTTPException(status_code=400, detail=f"A similar theme '{existing_proposal['theme_name']}' already exists in the proposals queue")
+        
+        # Generate unique ID
+        proposal_id = str(uuid.uuid4())
+        
+        # Create proposal object
+        proposal = {
+            "id": proposal_id,
+            "theme_name": proposal_data.get("theme_name", ""),
+            "description": proposal_data.get("description", ""),
+            "examples": proposal_data.get("examples", []),
+            "reasoning": proposal_data.get("reasoning", ""),
+            "status": "pending",
+            "created_at": datetime.now().isoformat(),
+            "input_type": proposal_data.get("input_type", ""),
+            "input_data": proposal_data.get("input_data", "")
+        }
+        
+        proposals_data["proposals"].append(proposal)
+        save_theme_proposals(proposals_data)
+        
+        log_admin_operation("add_theme_proposal", f"Added theme proposal: {proposal['theme_name']}")
+        return proposal_id
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_admin_operation("add_theme_proposal", f"Failed to add theme proposal: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to add theme proposal: {e}")
+
+def update_theme_proposal_status(proposal_id: str, status: str):
+    """Update the status of a theme proposal"""
+    try:
+        proposals_data = load_theme_proposals()
+        
+        for proposal in proposals_data["proposals"]:
+            if proposal["id"] == proposal_id:
+                proposal["status"] = status
+                proposal["updated_at"] = datetime.now().isoformat()
+                break
+        else:
+            raise HTTPException(status_code=404, detail="Theme proposal not found")
+        
+        save_theme_proposals(proposals_data)
+        log_admin_operation("update_theme_proposal_status", f"Updated proposal {proposal_id} to status: {status}")
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_admin_operation("update_theme_proposal_status", f"Failed to update proposal status: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to update proposal status: {e}")
+
 @admin_router.post("/auth/login")
 async def admin_login(request: LoginRequest):
     """Admin login endpoint"""
@@ -357,7 +469,7 @@ async def get_dashboard_stats(current_admin: dict = Depends(get_current_admin)):
     """Get dashboard statistics"""
     try:
         movies = get_movie_data()
-        load_hidden_movies()
+        # Don't reload hidden movies - trust the in-memory state
         
         total_movies = len(movies)
         hidden_movies = len(admin_state['hidden_movies'])
@@ -407,7 +519,7 @@ async def get_movies(current_admin: dict = Depends(get_current_admin)):
     """Get all movies with admin metadata"""
     try:
         movies = get_movie_data()
-        load_hidden_movies()
+        # Don't reload hidden movies - trust the in-memory state
         
         print(f"get_movies: Loaded {len(movies)} movies, {len(admin_state['hidden_movies'])} hidden")
         
@@ -435,10 +547,10 @@ async def hide_movies(request: MovieVisibilityRequest, current_admin: dict = Dep
     try:
         # Debug logging
         print(f"Hide request received: {request.titles}")
-        print(f"Admin state before load: {len(admin_state['hidden_movies'])} hidden movies")
+        print(f"Admin state before hiding: {len(admin_state['hidden_movies'])} hidden movies")
         
-        load_hidden_movies()
-        print(f"Admin state after load: {len(admin_state['hidden_movies'])} hidden movies")
+        # Don't reload - trust the in-memory state
+        # load_hidden_movies()
         
         for title in request.titles:
             print(f"Adding '{title}' to hidden movies")
@@ -461,10 +573,10 @@ async def show_movies(request: MovieVisibilityRequest, current_admin: dict = Dep
     try:
         # Debug logging
         print(f"Show request received: {request.titles}")
-        print(f"Admin state before load: {len(admin_state['hidden_movies'])} hidden movies")
+        print(f"Admin state before showing: {len(admin_state['hidden_movies'])} hidden movies")
         
-        load_hidden_movies()
-        print(f"Admin state after load: {len(admin_state['hidden_movies'])} hidden movies")
+        # Don't reload - trust the in-memory state
+        # load_hidden_movies()
         
         for title in request.titles:
             print(f"Removing '{title}' from hidden movies")
@@ -1357,6 +1469,440 @@ def get_person_movies(sess: requests.Session, person_id: int) -> List[Dict[str, 
         return []
     except Exception:
         return []
+
+# Theme Management API Endpoints
+
+@admin_router.post("/themes/propose")
+async def propose_theme(request: ThemeProposalRequest, current_admin: dict = Depends(get_current_admin)):
+    """Generate a theme proposal using LLM"""
+    try:
+        # Initialize the recommender to get access to the profile generator
+        recommender = MovieRecommender()
+        
+        # Get movie database for auto mode
+        movie_database = None
+        existing_proposals = None
+        if request.input_type == "auto":
+            movie_database = get_movie_data()
+            # Get existing proposals to avoid duplicates
+            proposals_data = load_theme_proposals()
+            existing_proposals = [p for p in proposals_data.get("proposals", []) if p.get("status") == "pending"]
+        
+        # Generate theme proposal using LLM
+        proposal_data = recommender.profile_generator.propose_theme(
+            input_type=request.input_type,
+            input_data=request.input_data,
+            movie_database=movie_database,
+            existing_proposals=existing_proposals
+        )
+        
+        # Get matching movies for the proposed theme
+        try:
+            matching_movies = await get_matching_movies_for_theme(
+                proposal_data.get("theme_name", ""),
+                proposal_data.get("description", ""),
+                proposal_data.get("examples", [])
+            )
+            proposal_data['matching_movies'] = matching_movies
+        except Exception as e:
+            log_admin_operation("get_matching_movies", f"Failed to get matching movies: {e}", "warning")
+            proposal_data['matching_movies'] = []
+        
+        # Add proposal to queue
+        proposal_id = add_theme_proposal(proposal_data)
+        proposal_data['id'] = proposal_id
+        proposal_data['status'] = 'pending'
+        proposal_data['created_at'] = datetime.now().isoformat()
+        
+        log_admin_operation("propose_theme", f"Generated theme proposal: {proposal_data['theme_name']}")
+        return proposal_data
+        
+    except Exception as e:
+        log_admin_operation("propose_theme", f"Failed to generate theme proposal: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to generate theme proposal: {e}")
+
+@admin_router.get("/themes/proposals")
+async def get_theme_proposals(current_admin: dict = Depends(get_current_admin)):
+    """Get all theme proposals"""
+    try:
+        proposals_data = load_theme_proposals()
+        return proposals_data
+        
+    except Exception as e:
+        log_admin_operation("get_theme_proposals", f"Failed to get theme proposals: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to get theme proposals: {e}")
+
+@admin_router.post("/themes/approve")
+async def approve_theme_proposal(request: ThemeApprovalRequest, current_admin: dict = Depends(get_current_admin)):
+    """Approve a theme proposal and add it to the system"""
+    try:
+        proposals_data = load_theme_proposals()
+        
+        # Find the proposal
+        proposal = None
+        for p in proposals_data["proposals"]:
+            if p["id"] == request.proposal_id:
+                proposal = p
+                break
+        
+        if not proposal:
+            raise HTTPException(status_code=404, detail="Theme proposal not found")
+        
+        if proposal["status"] != "pending":
+            raise HTTPException(status_code=400, detail="Proposal is not pending")
+        
+        # Add theme to main.py THEME_CATEGORIES
+        theme_name = proposal["theme_name"]
+        theme_description = proposal["description"]
+        
+        # Read main.py file
+        with open("main.py", 'r') as f:
+            content = f.read()
+        
+        # Find the THEME_CATEGORIES list and add the new theme
+        # Look for the closing bracket of THEME_CATEGORIES
+        import re
+        pattern = r'(THEME_CATEGORIES = \[.*?)(\s*\]\s*$)'
+        match = re.search(pattern, content, re.DOTALL)
+        
+        if match:
+            # Add the new theme before the closing bracket
+            new_theme_line = f'    "{theme_name}",        # {theme_description}\n'
+            new_content = content[:match.start(2)] + new_theme_line + match.group(2)
+            
+            # Write back to file
+            with open("main.py", 'w') as f:
+                f.write(new_content)
+            
+            log_admin_operation("approve_theme", f"Added theme '{theme_name}' to THEME_CATEGORIES")
+        else:
+            raise HTTPException(status_code=500, detail="Could not find THEME_CATEGORIES in main.py")
+        
+        # Update proposal status
+        update_theme_proposal_status(request.proposal_id, "approved")
+        
+        # Reload API data to pick up the new theme
+        reload_api_data()
+        
+        return {
+            "message": f"Theme '{theme_name}' approved and added to system",
+            "theme_name": theme_name,
+            "proposal_id": request.proposal_id
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_admin_operation("approve_theme", f"Failed to approve theme proposal: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to approve theme proposal: {e}")
+
+@admin_router.post("/themes/reject")
+async def reject_theme_proposal(request: ThemeApprovalRequest, current_admin: dict = Depends(get_current_admin)):
+    """Reject a theme proposal"""
+    try:
+        # Update proposal status
+        update_theme_proposal_status(request.proposal_id, "rejected")
+        
+        log_admin_operation("reject_theme", f"Rejected theme proposal: {request.proposal_id}")
+        
+        return {
+            "message": "Theme proposal rejected",
+            "proposal_id": request.proposal_id
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_admin_operation("reject_theme", f"Failed to reject theme proposal: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to reject theme proposal: {e}")
+
+@admin_router.get("/themes/current")
+async def get_current_themes(current_admin: dict = Depends(get_current_admin)):
+    """Get current theme list from main.py"""
+    try:
+        from main import THEME_CATEGORIES
+        
+        # Format themes for frontend
+        themes = []
+        for theme in THEME_CATEGORIES:
+            themes.append({
+                "name": theme,
+                "display_name": theme.replace("_", " ").title(),
+                "description": ""  # Could add descriptions if needed
+            })
+        
+        return {
+            "themes": themes,
+            "count": len(themes)
+        }
+        
+    except Exception as e:
+        log_admin_operation("get_current_themes", f"Failed to get current themes: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to get current themes: {e}")
+
+@admin_router.delete("/themes/current/{theme_name}")
+async def delete_current_theme(theme_name: str, current_admin: dict = Depends(get_current_admin)):
+    """Delete a theme from the current theme list"""
+    try:
+        # Read main.py file
+        with open("main.py", 'r') as f:
+            content = f.read()
+        
+        # Find the theme in THEME_CATEGORIES and remove it
+        import re
+        
+        # Look for the theme line (with proper indentation and comma)
+        # Format: "theme_name",        # description
+        pattern = rf'(\s*)"{re.escape(theme_name)}",\s*#.*\n'
+        match = re.search(pattern, content)
+        
+        if match:
+            # Remove the theme line
+            new_content = content[:match.start()] + content[match.end():]
+            
+            # Write back to file
+            with open("main.py", 'w') as f:
+                f.write(new_content)
+            
+            log_admin_operation("delete_current_theme", f"Deleted theme '{theme_name}' from THEME_CATEGORIES")
+            
+            # Reload API data to pick up the changes
+            reload_api_data()
+            
+            return {
+                "message": f"Theme '{theme_name}' has been deleted from the system",
+                "theme_name": theme_name
+            }
+        else:
+            raise HTTPException(status_code=404, detail=f"Theme '{theme_name}' not found in THEME_CATEGORIES")
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_admin_operation("delete_current_theme", f"Failed to delete theme '{theme_name}': {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to delete theme: {e}")
+
+async def get_matching_movies_for_theme(theme_name: str, theme_description: str, example_movies: list) -> list:
+    """Helper function to get matching movies for a theme"""
+    try:
+        # Get all movies
+        movies = get_movie_data()
+        
+        # Initialize recommender to use LLM for matching
+        recommender = MovieRecommender()
+        
+        # Create a prompt to find matching movies
+        matching_prompt = f"""
+You are an expert film analyst. I need you to identify movies from our database that would fit a proposed new theme.
+
+PROPOSED THEME:
+Name: {theme_name}
+Description: {theme_description}
+Example Movies: {', '.join(example_movies)}
+
+MOVIE DATABASE (sample of movies with their current themes):
+"""
+        
+        # Add sample movies with their current themes for context
+        movie_samples = []
+        for i, (title, movie) in enumerate(list(movies.items())[:200]):  # Sample 200 movies for better coverage
+            movie_samples.append(f"- {title}: {movie.get('primary_theme', 'none')}, {movie.get('secondary_theme', 'none')}")
+        
+        matching_prompt += "\n".join(movie_samples)
+        
+        matching_prompt += f"""
+
+TASK:
+Based on the proposed theme "{theme_name}" and its description, identify movies from the database that would fit this theme well. Consider:
+
+1. Movies that currently have "none" as secondary theme but could have this as primary or secondary
+2. Movies that might fit this theme better than their current themes
+3. Movies that have thematic elements matching the description
+4. Movies that share similar narrative structures, character arcs, or emotional journeys
+5. Movies that explore similar social, psychological, or cultural themes
+
+For each movie, provide a clear rationale explaining WHY it fits the proposed theme, focusing on:
+- Thematic elements that align with the proposed theme
+- Character development or story arcs that exemplify the theme
+- Social, cultural, or psychological aspects that match
+- Emotional or narrative patterns that connect to the theme
+
+RESPONSE FORMAT:
+MATCHING_MOVIES:
+- Movie Title 1: specific rationale for why this movie exemplifies the proposed theme
+- Movie Title 2: specific rationale for why this movie exemplifies the proposed theme
+- etc.
+
+Focus on movies that would genuinely benefit from this new theme category. The rationale should explain the thematic connection, not repeat the plot. Aim for 15-20 high-quality matches that clearly demonstrate the theme.
+"""
+        
+        # Get LLM response
+        if recommender.profile_generator.provider == "openai":
+            response = recommender.profile_generator._call_openai(matching_prompt)
+        elif recommender.profile_generator.provider == "anthropic":
+            response = recommender.profile_generator._call_anthropic(matching_prompt)
+        elif recommender.profile_generator.provider == "ollama":
+            response = recommender.profile_generator._call_ollama(matching_prompt)
+        
+        # Parse the response to extract matching movies
+        matching_movies = []
+        lines = response.strip().split('\n')
+        in_matching_section = False
+        
+        for line in lines:
+            line = line.strip()
+            if line.startswith('MATCHING_MOVIES:'):
+                in_matching_section = True
+                continue
+            elif in_matching_section and line.startswith('- '):
+                # Parse movie title and explanation
+                movie_text = line[2:].strip()
+                if ': ' in movie_text:
+                    movie_title, explanation = movie_text.split(': ', 1)
+                    # Find the actual movie in our database with more flexible matching
+                    found_match = False
+                    for title, movie in movies.items():
+                        # Try multiple matching strategies
+                        title_lower = title.lower()
+                        movie_title_lower = movie_title.lower()
+                        
+                        # Exact match
+                        if title_lower == movie_title_lower:
+                            found_match = True
+                        # Contains match (either direction)
+                        elif movie_title_lower in title_lower or title_lower in movie_title_lower:
+                            found_match = True
+                        # Word-based matching (handle titles with different punctuation)
+                        elif (set(movie_title_lower.replace(':', '').replace('-', ' ').split()) & 
+                              set(title_lower.replace(':', '').replace('-', ' ').split())):
+                            found_match = True
+                        
+                        if found_match:
+                            matching_movies.append({
+                                "title": title,
+                                "explanation": explanation,
+                                "current_primary_theme": movie.get('primary_theme', 'none'),
+                                "current_secondary_theme": movie.get('secondary_theme', 'none'),
+                                "plot_summary": movie.get('plot_summary', 'No plot available'),
+                                "year": movie.get('year', 'Unknown'),
+                                "director": movie.get('director', 'Unknown')
+                            })
+                            break
+        
+        # Limit to top 20 matches for better coverage
+        matching_movies = matching_movies[:20]
+        
+        log_admin_operation("get_matching_movies", f"Found {len(matching_movies)} matching movies for theme: {theme_name}")
+        return matching_movies
+        
+    except Exception as e:
+        log_admin_operation("get_matching_movies", f"Failed to get matching movies: {e}", "error")
+        return []
+
+@admin_router.post("/themes/match-movies")
+async def match_movies_to_theme(request: dict, current_admin: dict = Depends(get_current_admin)):
+    """Find movies that would match a proposed theme (legacy endpoint for backward compatibility)"""
+    try:
+        theme_name = request.get("theme_name", "")
+        theme_description = request.get("description", "")
+        example_movies = request.get("examples", [])
+        
+        if not theme_name:
+            raise HTTPException(status_code=400, detail="Theme name is required")
+        
+        matching_movies = await get_matching_movies_for_theme(theme_name, theme_description, example_movies)
+        
+        return {
+            "theme_name": theme_name,
+            "matching_movies": matching_movies,
+            "total_matches": len(matching_movies)
+        }
+        
+    except Exception as e:
+        log_admin_operation("match_movies_to_theme", f"Failed to match movies to theme: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to match movies to theme: {e}")
+
+@admin_router.post("/themes/regenerate-matching-movies/{proposal_id}")
+async def regenerate_matching_movies(proposal_id: str, current_admin: dict = Depends(get_current_admin)):
+    """Regenerate matching movies for an existing theme proposal"""
+    try:
+        proposals_data = load_theme_proposals()
+        proposal = None
+        
+        # Find the proposal
+        for p in proposals_data["proposals"]:
+            if p["id"] == proposal_id:
+                proposal = p
+                break
+        
+        if not proposal:
+            raise HTTPException(status_code=404, detail="Theme proposal not found")
+        
+        # Generate matching movies
+        matching_movies = await get_matching_movies_for_theme(
+            proposal["theme_name"],
+            proposal["description"],
+            proposal["examples"]
+        )
+        
+        # Update the proposal with matching movies
+        proposal["matching_movies"] = matching_movies
+        proposal["matching_movies_updated_at"] = datetime.now().isoformat()
+        
+        # Save updated proposals
+        save_theme_proposals(proposals_data)
+        
+        log_admin_operation("regenerate_matching_movies", f"Regenerated matching movies for proposal: {proposal['theme_name']}")
+        
+        return {
+            "proposal_id": proposal_id,
+            "theme_name": proposal["theme_name"],
+            "matching_movies": matching_movies,
+            "total_matches": len(matching_movies)
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_admin_operation("regenerate_matching_movies", f"Failed to regenerate matching movies: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to regenerate matching movies: {e}")
+
+@admin_router.delete("/themes/proposals/{proposal_id}")
+async def delete_theme_proposal(proposal_id: str, current_admin: dict = Depends(get_current_admin)):
+    """Delete a theme proposal permanently"""
+    try:
+        proposals_data = load_theme_proposals()
+        proposal = None
+        proposal_index = -1
+        
+        # Find the proposal
+        for i, p in enumerate(proposals_data["proposals"]):
+            if p["id"] == proposal_id:
+                proposal = p
+                proposal_index = i
+                break
+        
+        if not proposal:
+            raise HTTPException(status_code=404, detail="Theme proposal not found")
+        
+        # Remove the proposal
+        proposals_data["proposals"].pop(proposal_index)
+        
+        # Save updated proposals
+        save_theme_proposals(proposals_data)
+        
+        log_admin_operation("delete_theme_proposal", f"Deleted theme proposal: {proposal['theme_name']}")
+        
+        return {
+            "message": f"Theme proposal '{proposal['theme_name']}' has been deleted",
+            "deleted_proposal_id": proposal_id
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_admin_operation("delete_theme_proposal", f"Failed to delete theme proposal: {e}", "error")
+        raise HTTPException(status_code=500, detail=f"Failed to delete theme proposal: {e}")
 
 # Initialize hidden movies on startup
 load_hidden_movies()

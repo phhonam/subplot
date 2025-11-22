@@ -21,8 +21,7 @@ JWT_EXPIRATION_HOURS = 24
 
 # Admin credentials (use environment variables in production)
 ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "admin")
-ADMIN_PASSWORD_HASH = os.environ.get("ADMIN_PASSWORD_HASH", 
-    hashlib.sha256("admin123".encode()).hexdigest())
+ADMIN_PASSWORD_HASH = os.environ.get("ADMIN_PASSWORD_HASH") or hashlib.sha256("admin123".encode()).hexdigest()
 
 security = HTTPBearer()
 

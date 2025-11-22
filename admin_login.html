@@ -200,7 +200,7 @@
 
         <div class="api-config">
             <h3>API Configuration</h3>
-            <input type="text" id="apiBase" placeholder="API Base URL (e.g., http://127.0.0.1:8003)" value="http://127.0.0.1:8003">
+            <input type="text" id="apiBase" placeholder="API Base URL (e.g., https://www.subplotly.com/api)" value="https://www.subplotly.com/api">
         </div>
 
         <div class="back-link">
@@ -211,7 +211,7 @@
     <script>
         class AdminLogin {
             constructor() {
-                this.apiBase = 'http://127.0.0.1:8003';
+                this.apiBase = window.location.origin + '/api';
                 this.init();
             }
 
