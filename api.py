@@ -619,6 +619,45 @@ def vector_retrieve(q: str, k: int) -> List[Tuple[str, float]]:
     return semantic_index.search(q, k=k)
 
 
+def load_hidden_movies():
+    """Load list of hidden movies from file"""
+    try:
+        from admin_api import admin_state
+        admin_state['hidden_movies'] = set()
+        hidden_file = Path("hidden_movies.json")
+        if hidden_file.exists():
+            with open(hidden_file, 'r') as f:
+                data = json.load(f)
+                admin_state['hidden_movies'] = set(data.get('hidden', []))
+    except Exception as e:
+        print(f"Error loading hidden movies: {e}")
+
+
+@app.get("/movies")
+async def get_movies():
+    """Get all movies with hidden movies filtered out."""
+    try:
+        # Load movie data
+        with open("movie_profiles_merged.json", 'r') as f:
+            movies_data = json.load(f)
+        
+        # Load hidden movies
+        load_hidden_movies()
+        from admin_api import admin_state
+        hidden_titles = admin_state['hidden_movies']
+        
+        # Filter out hidden movies
+        filtered_movies = {}
+        for title, movie_data in movies_data.items():
+            if title not in hidden_titles:
+                filtered_movies[title] = movie_data
+        
+        return filtered_movies
+        
+    except Exception as e:
+        print(f"Error loading movies: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/search")
 async def search(q: str, limit: int = 20, mode: str = "hybrid", k: int = 60):
     """Stage 2 search over movie profiles.
@@ -1041,6 +1080,34 @@ async def taste_profile(payload: Dict[str, Any]):
         "profile": profile,
     }
 
+
+# -----------------
+# Movie data endpoints
+# -----------------
+@app.get("/movies")
+async def get_movies():
+    """Get all movies with hidden movies filtered out."""
+    try:
+        # Load movie data
+        with open("movie_profiles_merged.json", 'r') as f:
+            movies_data = json.load(f)
+        
+        # Load hidden movies
+        load_hidden_movies()
+        from admin_api import admin_state
+        hidden_titles = admin_state['hidden_movies']
+        
+        # Filter out hidden movies
+        filtered_movies = {}
+        for title, movie_data in movies_data.items():
+            if title not in hidden_titles:
+                filtered_movies[title] = movie_data
+        
+        return filtered_movies
+        
+    except Exception as e:
+        print(f"Error loading movies: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 # -----------------
 # Observability endpoints

@@ -84,7 +84,6 @@ THEME_CATEGORIES = [
     # War & Conflict
     "war_trauma",           # PTSD, survivor's guilt, war's lasting effects
     "civil_unrest",         # protests, revolutions, social upheaval
-    "cold_war_espionage",   # spies, double agents, political intrigue
 ]
 
 @dataclass
@@ -148,6 +147,187 @@ class LLMProfileGenerator:
             response = self._call_ollama(prompt)
 
         return self._parse_profile_response(response, movie_data['title'])
+
+    def propose_theme(self, input_type: str, input_data: str, movie_database: Dict = None, existing_proposals: List[Dict] = None) -> Dict[str, Any]:
+        """Generate a theme proposal using LLM"""
+        
+        if input_type == "auto":
+            prompt = self._create_auto_discovery_prompt(movie_database, existing_proposals)
+        elif input_type == "movies":
+            prompt = self._create_movie_analysis_prompt(input_data)
+        elif input_type == "description":
+            prompt = self._create_description_prompt(input_data)
+        else:
+            raise ValueError(f"Invalid input_type: {input_type}")
+
+        if self.provider == "openai":
+            response = self._call_openai(prompt)
+        elif self.provider == "anthropic":
+            response = self._call_anthropic(prompt)
+        elif self.provider == "ollama":
+            response = self._call_ollama(prompt)
+
+        return self._parse_theme_proposal_response(response, input_type, input_data)
+
+    def _create_auto_discovery_prompt(self, movie_database: Dict, existing_proposals: List[Dict] = None) -> str:
+        """Create prompt for auto-discovering themes from database"""
+        
+        # Sample movies from database (up to 100) with randomization
+        all_movies = list(movie_database.values()) if movie_database else []
+        import random
+        sample_movies = random.sample(all_movies, min(100, len(all_movies)))  # Random sample for diversity
+        
+        # Create movie summaries for analysis
+        movie_summaries = []
+        for movie in sample_movies:
+            summary = f"Title: {movie.get('title', 'Unknown')}\n"
+            summary += f"Plot: {movie.get('plot_summary', 'No plot available')}\n"
+            summary += f"Genres: {', '.join(movie.get('genre_tags', []))}\n"
+            summary += f"Current Themes: {movie.get('primary_theme', 'none')}, {movie.get('secondary_theme', 'none')}\n"
+            movie_summaries.append(summary)
+        
+        movies_text = "\n---\n".join(movie_summaries)
+        
+        # Get current themes
+        current_themes = "\n".join([f"- {theme}" for theme in THEME_CATEGORIES])
+        
+        # Add existing proposals to avoid duplicates
+        existing_proposals_text = ""
+        if existing_proposals:
+            existing_proposals_text = "\n\nEXISTING PENDING PROPOSALS (DO NOT DUPLICATE):\n"
+            for proposal in existing_proposals:
+                existing_proposals_text += f"- {proposal.get('theme_name', '')}: {proposal.get('description', '')}\n"
+        
+        return f"""
+You are an expert film analyst tasked with discovering new thematic categories that are missing from our current taxonomy.
+
+CURRENT THEME CATEGORIES:
+{current_themes}
+{existing_proposals_text}
+
+SAMPLE MOVIES FROM DATABASE (randomized for diversity):
+{movies_text}
+
+ANALYSIS TASK:
+Analyze the sample movies above and identify thematic patterns that are NOT well-covered by our existing 28 theme categories. Look for:
+
+1. Recurring themes that appear in multiple movies but don't fit existing categories
+2. Niche but meaningful thematic elements that could help users find similar films
+3. Cultural, social, or psychological themes that are underrepresented
+4. AVOID themes that are too similar to existing ones (like "existential_journey" when we have "identity_crisis")
+5. DO NOT propose themes similar to existing pending proposals listed above
+
+REQUIREMENTS:
+- Propose only ONE new theme that would be most valuable to add
+- The theme should be DISTINCT and DIFFERENT from existing categories AND pending proposals
+- It should apply to at least 8-12 movies in the sample
+- Focus on themes that would help users discover films they'd enjoy
+- Avoid themes that overlap significantly with existing ones
+- Consider themes from different categories: social, psychological, cultural, technological, etc.
+
+RESPONSE FORMAT:
+THEME_NAME: [snake_case_theme_name]
+DESCRIPTION: [brief description similar to existing themes]
+EXAMPLES: [8-12 movie titles from the sample that fit this theme, separated by commas]
+REASONING: [explanation of why this theme is needed and how it differs from existing categories]
+
+Focus on themes that would genuinely help users find movies they'd love and are clearly different from existing themes and pending proposals.
+"""
+
+    def _create_movie_analysis_prompt(self, movie_titles: str) -> str:
+        """Create prompt for analyzing specific movies to propose a theme"""
+        
+        current_themes = "\n".join([f"- {theme}" for theme in THEME_CATEGORIES])
+        
+        return f"""
+You are an expert film analyst. I'm going to give you a list of movies, and I want you to identify what thematic element they share that isn't well-covered by our existing theme categories.
+
+CURRENT THEME CATEGORIES:
+{current_themes}
+
+MOVIES TO ANALYZE:
+{movie_titles}
+
+TASK:
+Analyze these movies and identify a common thematic element that:
+1. Is NOT well-covered by our existing 28 theme categories
+2. Would help users discover similar films
+3. Is meaningful and specific enough to be useful
+
+RESPONSE FORMAT:
+THEME_NAME: [snake_case_theme_name]
+DESCRIPTION: [brief description similar to existing themes]
+EXAMPLES: [the movies provided plus 5-7 additional similar movies, separated by commas]
+REASONING: [explanation of the common theme and why it's not covered by existing categories]
+
+Focus on what makes these movies thematically similar and why that theme would be valuable for movie discovery.
+"""
+
+    def _create_description_prompt(self, description: str) -> str:
+        """Create prompt for generating theme from description"""
+        
+        current_themes = "\n".join([f"- {theme}" for theme in THEME_CATEGORIES])
+        
+        return f"""
+You are an expert film analyst. I'm describing a thematic gap in our movie categorization system, and I want you to propose a new theme category to fill it.
+
+CURRENT THEME CATEGORIES:
+{current_themes}
+
+THEMATIC GAP DESCRIPTION:
+{description}
+
+TASK:
+Based on this description, propose a new theme category that:
+1. Is NOT covered by our existing 28 theme categories
+2. Would be useful for helping users discover movies
+3. Is specific and meaningful
+4. Follows the naming and description style of existing themes
+
+RESPONSE FORMAT:
+THEME_NAME: [snake_case_theme_name]
+DESCRIPTION: [brief description similar to existing themes]
+EXAMPLES: [8-12 well-known movies that would fit this theme, separated by commas]
+REASONING: [explanation of why this theme is needed and how it differs from existing categories]
+
+Make sure the proposed theme is distinct and valuable for movie discovery.
+"""
+
+    def _parse_theme_proposal_response(self, response: str, input_type: str, input_data: str) -> Dict[str, Any]:
+        """Parse LLM response into structured theme proposal"""
+        
+        lines = response.strip().split('\n')
+        proposal_data = {
+            'theme_name': '',
+            'description': '',
+            'examples': [],
+            'reasoning': '',
+            'input_type': input_type,
+            'input_data': input_data
+        }
+        
+        current_section = None
+        
+        for line in lines:
+            line = line.strip()
+            if line.startswith('THEME_NAME:'):
+                proposal_data['theme_name'] = line.split(':', 1)[1].strip()
+            elif line.startswith('DESCRIPTION:'):
+                proposal_data['description'] = line.split(':', 1)[1].strip()
+            elif line.startswith('EXAMPLES:'):
+                examples_text = line.split(':', 1)[1].strip()
+                proposal_data['examples'] = [ex.strip() for ex in examples_text.split(',')]
+            elif line.startswith('REASONING:'):
+                current_section = 'reasoning'
+                proposal_data['reasoning'] = line.split(':', 1)[1].strip()
+            elif current_section == 'reasoning' and line:
+                proposal_data['reasoning'] += ' ' + line
+        
+        # Validate required fields
+        if not proposal_data['theme_name'] or not proposal_data['description']:
+            raise ValueError("Invalid theme proposal response: missing required fields")
+        
+        return proposal_data
 
     def _create_profile_prompt(self, movie_data: Dict) -> str:
         """Create the prompt for LLM profile generation with simplified taxonomy"""

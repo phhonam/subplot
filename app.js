@@ -1,11 +1,11 @@
 // Use the merged dataset which contains all movie profiles
 function getSources() {
-  // Always use the merged dataset which contains all profiles
-  // Use the current domain for the JSON file
+  // Always use the API endpoint which filters out hidden movies
+  // Use the current domain for the API
   const staticBase = window.location.origin;
   // Add cache-busting parameter to prevent browser caching
   const timestamp = Date.now();
-  return [`${staticBase}/movie_profiles_merged.json?v=${timestamp}`];
+  return [`${staticBase}/api/movies?v=${timestamp}`];
 }
 
 // No longer needed - image data is now merged into the main profile file
@@ -18,6 +18,7 @@ const state = {
   page: 1,
   pageSize: 24,
   apiBase: '',
+  featuredTheme: null, // featured theme configuration
 };
 
 const els = {
@@ -35,6 +36,8 @@ const els = {
   // Themed carousels
   themedCarousels: document.getElementById('themedCarousels'),
   allMoviesSection: document.getElementById('allMoviesSection'),
+  // Featured theme hero
+  featuredThemeHero: document.getElementById('featuredThemeHero'),
   // Logo
   siteLogo: document.querySelector('.site-logo'),
   siteTitle: document.querySelector('.site-header h1'),
@@ -199,17 +202,77 @@ function resetToHomepage() {
   // Re-render to show carousels and all movies
   render();
   
+  // Scroll to top of the page
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
   console.log('✅ Homepage state restored');
 }
 
 // Themed carousel configuration - will be loaded dynamically
 let THEMED_CAROUSELS = [];
 
+// Featured theme data - "Sad & Funny"
+const MOCK_FEATURED_THEME = {
+  is_enabled: true,
+  theme_id: "sad_and_funny",
+  theme_title: "Sad & Funny",
+  description: "Films that make you laugh and ache at the same time. Dysfunctional families, existential spirals, and bittersweet endings—life's contradictions captured on screen.",
+  featured_movies: [
+    {
+      title: "Little Miss Sunshine",
+      backdrop_url: "https://image.tmdb.org/t/p/w1280/vD15pg2cXynxeNIknyuvVH2sPx4.jpg",
+      year: "2006",
+      director: "Jonathan Dayton"
+    },
+    {
+      title: "Shoplifters",
+      backdrop_url: "https://image.tmdb.org/t/p/w1280/Z1JeznJExodyj0iUbL1wgkts88.jpg",
+      year: "2018",
+      director: "Hirokazu Kore-eda"
+    },
+    {
+      title: "Nashville",
+      backdrop_url: "https://image.tmdb.org/t/p/w1280/lHH8o3YWBjoteijAI8yTxG3qqpX.jpg",
+      year: "1975",
+      director: "Robert Altman"
+    },
+    {
+      title: "Eat Drink Man Woman",
+      backdrop_url: "https://image.tmdb.org/t/p/w1280/pdmWjfeeXB6MAgDOypmbx133DLk.jpg",
+      year: "1994",
+      director: "Ang Lee"
+    },
+    {
+      title: "All About My Mother",
+      backdrop_url: "https://image.tmdb.org/t/p/w1280/tilClWjFZeUTGJu0pxgF72fvUmN.jpg",
+      year: "1999",
+      director: "Pedro Almodóvar"
+    },
+    {
+      title: "Sunset Boulevard",
+      backdrop_url: "https://image.tmdb.org/t/p/w1280/p47ihFj4A7EpBjmPHdTj4ipyq1S.jpg",
+      year: "1950",
+      director: "Billy Wilder"
+    }
+  ],
+  primary_backdrop: "https://image.tmdb.org/t/p/w1280/lHH8o3YWBjoteijAI8yTxG3qqpX.jpg"
+};
+
+// Load featured theme data (mock for now)
+function loadFeaturedTheme() {
+  console.log('🎭 Loading featured theme data...');
+  // For now, use mock data. Later this will be an API call
+  state.featuredTheme = MOCK_FEATURED_THEME;
+  console.log('✅ Featured theme loaded:', state.featuredTheme.theme_title);
+}
+
 // Load themes from actual movie data
 async function loadThemesFromData() {
   try {
     console.log('🔄 Loading themes from movie data for main app...');
-    const response = await fetch('/movie_profiles_merged.json');
+    // Add cache-busting parameter to prevent browser caching
+    const timestamp = Date.now();
+    const response = await fetch(`/api/movies?v=${timestamp}`);
     const data = await response.json();
     
     // Handle object structure where keys are movie titles
@@ -236,7 +299,7 @@ async function loadThemesFromData() {
       }
       
       themes.forEach(theme => {
-        if (theme && typeof theme === 'string') {
+        if (theme && typeof theme === 'string' && theme !== 'none') {
           const readableTheme = theme.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
           const themeId = theme.toLowerCase().replace(/_/g, '-');
           
@@ -367,6 +430,83 @@ function renderThemedCarousels() {
   console.log('✅ Themed carousels rendered');
 }
 
+// Render featured theme hero section
+function renderFeaturedThemeHero() {
+  console.log('🎭 renderFeaturedThemeHero() called');
+  
+  if (!els.featuredThemeHero || !state.featuredTheme || !state.featuredTheme.is_enabled) {
+    console.log('🚫 Cannot render featured theme: element not found or disabled');
+    if (els.featuredThemeHero) {
+      els.featuredThemeHero.innerHTML = '';
+    }
+    return;
+  }
+  
+  // Don't render if there's an active search or filters
+  if (!shouldRenderCarousels()) {
+    console.log('🚫 Skipping featured theme render due to active search/filters');
+    if (els.featuredThemeHero) {
+      els.featuredThemeHero.innerHTML = '';
+    }
+    return;
+  }
+  
+  const theme = state.featuredTheme;
+  console.log('🎭 Rendering featured theme:', theme.theme_title);
+  
+  // Create movie shots HTML with visible info
+  const movieShots = theme.featured_movies.map(movie => `
+    <div class="featured-movie-shot" data-movie-title="${escapeHtml(movie.title)}">
+      <div class="featured-movie-image" style="background-image: url('${movie.backdrop_url}')"></div>
+      <div class="featured-movie-info">
+        <h4 class="featured-movie-title">${movie.title}</h4>
+        <div class="featured-movie-meta">${movie.director} • ${movie.year}</div>
+      </div>
+    </div>
+  `).join('');
+  
+  // Create the hero HTML with side-by-side layout
+  const heroHTML = `
+    <div class="featured-theme-container">
+      <div class="featured-theme-content">
+        <div class="featured-theme-badge">Our Picks</div>
+        <h1 class="featured-theme-title">${theme.theme_title}</h1>
+        <p class="featured-theme-description">${theme.description}</p>
+      </div>
+      <div class="featured-theme-movies">
+        <div class="featured-theme-shots">
+          ${movieShots}
+        </div>
+      </div>
+    </div>
+  `;
+  
+  els.featuredThemeHero.innerHTML = heroHTML;
+
+  // Add click event listeners to featured movie cards
+  const featuredMovieCards = els.featuredThemeHero.querySelectorAll('.featured-movie-shot');
+  featuredMovieCards.forEach(card => {
+    const movieTitle = card.getAttribute('data-movie-title');
+    if (movieTitle) {
+      // Find the movie in the data and show its details
+      const movie = state.data.find(m => escapeHtml(m.title) === movieTitle);
+      if (movie) {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          showMovieDetailsPanel(movie);
+        });
+        
+        // Add cursor pointer style
+        card.style.cursor = 'pointer';
+      }
+    }
+  });
+
+  console.log('✅ Featured theme hero rendered');
+}
+
+
 // Show "All Movies" section
 function showAllMoviesSection() {
   if (els.allMoviesSection) {
@@ -416,11 +556,36 @@ function randomizeCarouselMovies(theme) {
 
 // Get movies by theme
 function getMoviesByTheme(theme, limit) {
-  return state.data
-    .filter(movie => {
-      const themes = movie.themes || [];
-      return themes.some(t => t.toLowerCase() === theme.toLowerCase());
-    })
+  const matchingMovies = state.data.filter(movie => {
+    // Helper function to normalize theme for comparison
+    const normalizeTheme = (themeStr) => {
+      if (!themeStr) return '';
+      return themeStr.replace(/_/g, ' ').toLowerCase();
+    };
+    
+    // Check both primary and secondary themes (exclude "none" secondary themes)
+    const primaryMatch = movie.primary_theme && 
+      normalizeTheme(movie.primary_theme) === normalizeTheme(theme);
+    const secondaryMatch = movie.secondary_theme && 
+      movie.secondary_theme !== 'none' &&
+      normalizeTheme(movie.secondary_theme) === normalizeTheme(theme);
+    
+    return primaryMatch || secondaryMatch;
+  });
+  
+  console.log(`🎬 Theme matching debug for "${theme}":`, {
+    totalMovies: state.data.length,
+    matchingMovies: matchingMovies.length,
+    sampleMatches: matchingMovies.slice(0, 3).map(m => ({
+      title: m.title,
+      primary: m.primary_theme,
+      secondary: m.secondary_theme
+    }))
+  });
+  
+  // Randomize the order and return limited results
+  return [...matchingMovies]
+    .sort(() => Math.random() - 0.5)
     .slice(0, limit);
 }
 
@@ -504,6 +669,212 @@ window.forceStyleRefresh = function() {
       handleTagOverflow(card);
     });
   }, 100);
+};
+
+// Force refresh everything (CSS, JS, and page)
+window.forceFullRefresh = function() {
+  console.log('🔄 Force refreshing everything...');
+  // Reload CSS
+  const links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(link => {
+    const href = link.href.split('?')[0];
+    link.href = href + '?v=' + Date.now();
+  });
+  // Reload JS
+  const scripts = document.querySelectorAll('script[src]');
+  scripts.forEach(script => {
+    if (script.src.includes('app.js')) {
+      const src = script.src.split('?')[0];
+      script.src = src + '?v=' + Date.now();
+    }
+  });
+  console.log('✅ Cache-busting parameters updated. Please refresh the page manually.');
+};
+
+// Debug function to check featured theme scroll setup
+window.debugFeaturedThemeScroll = function() {
+  console.log('🔍 Debugging featured theme scroll setup...');
+  
+  const hero = document.querySelector('.featured-theme-hero');
+  const container = document.querySelector('.featured-theme-container');
+  const movies = document.querySelector('.featured-theme-movies');
+  const shots = document.querySelector('.featured-theme-shots');
+  
+  console.log('Elements found:', {
+    hero: !!hero,
+    container: !!container,
+    movies: !!movies,
+    shots: !!shots
+  });
+  
+  if (hero) {
+    console.log('Hero element HTML:', hero.innerHTML.substring(0, 200) + '...');
+    const heroStyle = window.getComputedStyle(hero);
+    console.log('Hero computed styles:', {
+      display: heroStyle.display,
+      visibility: heroStyle.visibility,
+      height: heroStyle.height,
+      overflow: heroStyle.overflow,
+      position: heroStyle.position
+    });
+  }
+  
+  if (shots) {
+    const computedStyle = window.getComputedStyle(shots);
+    console.log('Featured theme shots computed styles:', {
+      display: computedStyle.display,
+      overflowX: computedStyle.overflowX,
+      overflowY: computedStyle.overflowY,
+      flexWrap: computedStyle.flexWrap,
+      width: computedStyle.width,
+      maxWidth: computedStyle.maxWidth
+    });
+    
+    const movieShots = shots.querySelectorAll('.featured-movie-shot');
+    console.log('Movie shots found:', movieShots.length);
+    
+    movieShots.forEach((shot, index) => {
+      const shotStyle = window.getComputedStyle(shot);
+      console.log(`Movie shot ${index + 1}:`, {
+        width: shotStyle.width,
+        minWidth: shotStyle.minWidth,
+        flexShrink: shotStyle.flexShrink
+      });
+    });
+  }
+  
+  console.log('Screen width:', window.innerWidth);
+  console.log('Current breakpoint:', window.innerWidth <= 1199 ? 'Medium/Small' : 'Large');
+  console.log('State data length:', state.data.length);
+  console.log('Should render carousels:', shouldRenderCarousels());
+  console.log('Featured theme state:', state.featuredTheme);
+};
+
+// Force re-render featured theme
+window.forceRenderFeaturedTheme = function() {
+  console.log('🔄 Force re-rendering featured theme...');
+  if (state.featuredTheme && state.featuredTheme.is_enabled) {
+    renderFeaturedThemeHero();
+    console.log('✅ Featured theme re-rendered');
+  } else {
+    console.log('❌ No featured theme to render');
+  }
+};
+
+
+// Test different screen sizes for horizontal scroll
+window.testScreenSizes = function() {
+  console.log('🖥️ Testing screen sizes for horizontal scroll...');
+  
+  const sizes = [
+    { width: 480, name: 'Small Mobile' },
+    { width: 768, name: 'Mobile' },
+    { width: 1024, name: 'Tablet' },
+    { width: 1200, name: 'Desktop' },
+    { width: 1600, name: 'Large Desktop' }
+  ];
+  
+  sizes.forEach(size => {
+    console.log(`\n📱 ${size.name} (${size.width}px):`);
+    
+    // Temporarily set window width for testing
+    const originalWidth = window.innerWidth;
+    Object.defineProperty(window, 'innerWidth', {
+      writable: true,
+      configurable: true,
+      value: size.width,
+    });
+    
+    // Trigger resize event
+    window.dispatchEvent(new Event('resize'));
+    
+    // Check which breakpoint would apply
+    let breakpoint = 'Large (≥1200px)';
+    if (size.width < 480) breakpoint = 'Extra Small (<480px)';
+    else if (size.width < 768) breakpoint = 'Small Mobile (480px-767px)';
+    else if (size.width < 1200) breakpoint = 'Medium (768px-1199px)';
+    else if (size.width < 1600) breakpoint = 'Large (1200px-1599px)';
+    else breakpoint = 'Extra Large (≥1600px)';
+    
+    console.log(`  Breakpoint: ${breakpoint}`);
+    
+    // Restore original width
+    Object.defineProperty(window, 'innerWidth', {
+      writable: true,
+      configurable: true,
+      value: originalWidth,
+    });
+  });
+  
+  console.log('\n🔄 Restored original screen size');
+};
+
+// Debug function to check flex-wrap behavior
+window.debugFlexWrap = function() {
+  console.log('🔍 Debugging flex-wrap behavior...');
+  
+  const shots = document.querySelector('.featured-theme-shots');
+  if (shots) {
+    const computedStyle = window.getComputedStyle(shots);
+    console.log('Featured theme shots flex properties:', {
+      display: computedStyle.display,
+      flexWrap: computedStyle.flexWrap,
+      flexDirection: computedStyle.flexDirection,
+      overflowX: computedStyle.overflowX,
+      overflowY: computedStyle.overflowY,
+      width: computedStyle.width,
+      maxWidth: computedStyle.maxWidth
+    });
+    
+    const movieShots = shots.querySelectorAll('.featured-movie-shot');
+    console.log('Movie shots count:', movieShots.length);
+    
+    movieShots.forEach((shot, index) => {
+      const shotStyle = window.getComputedStyle(shot);
+      console.log(`Movie shot ${index + 1}:`, {
+        width: shotStyle.width,
+        minWidth: shotStyle.minWidth,
+        flexShrink: shotStyle.flexShrink,
+        flexWrap: shotStyle.flexWrap
+      });
+    });
+    
+    // Check if any shots are wrapping
+    const containerRect = shots.getBoundingClientRect();
+    let totalWidth = 0;
+    movieShots.forEach((shot, index) => {
+      const shotRect = shot.getBoundingClientRect();
+      totalWidth += shotRect.width + (index > 0 ? 20 : 0); // 20px gap
+    });
+    
+    console.log('Container width:', containerRect.width);
+    console.log('Total content width:', totalWidth);
+    console.log('Should scroll:', totalWidth > containerRect.width);
+  }
+};
+
+// Debug function to test horizontal scroll
+window.testHorizontalScroll = function() {
+  console.log('🔄 Testing horizontal scroll...');
+  
+  const shots = document.querySelector('.featured-theme-shots');
+  if (shots) {
+    console.log('Scroll properties:', {
+      scrollWidth: shots.scrollWidth,
+      clientWidth: shots.clientWidth,
+      scrollLeft: shots.scrollLeft,
+      canScroll: shots.scrollWidth > shots.clientWidth
+    });
+    
+    // Test scroll
+    const originalScrollLeft = shots.scrollLeft;
+    shots.scrollLeft = 100;
+    console.log('After setting scrollLeft to 100:', shots.scrollLeft);
+    shots.scrollLeft = originalScrollLeft;
+    
+    // Test touch scroll
+    console.log('Touch scroll test - try swiping on the container');
+  }
 };
 
 // Toggle between overflow hidden and horizontal scroll
@@ -816,6 +1187,10 @@ async function init() {
       }
     }
   });
+  
+  // Load featured theme data
+  loadFeaturedTheme();
+  
   await loadAllSources();
 }
 
@@ -1474,12 +1849,16 @@ function renderLocal() {
   // Stats
   els.stats.textContent = `${total} result${total === 1 ? '' : 's'} | page ${state.page}/${pages} | dataset: merged profiles`;
 
-  // Render themed carousels and "All Movies" section (only on first page and when no search/filters are active)
+  // Render featured theme hero, themed carousels and "All Movies" section (only on first page and when no search/filters are active)
   if (state.page === 1 && shouldRenderCarousels()) {
+    renderFeaturedThemeHero();
     renderThemedCarousels();
     showAllMoviesSection();
   } else {
-    // Hide carousels and "All Movies" section when searching or filtering
+    // Hide featured theme hero, carousels and "All Movies" section when searching or filtering
+    if (els.featuredThemeHero) {
+      els.featuredThemeHero.innerHTML = '';
+    }
     if (els.themedCarousels) {
       els.themedCarousels.innerHTML = '';
     }
@@ -1968,6 +2347,10 @@ function showFavoritesPanel() {
   if (els.favoritesPanel) {
     els.favoritesPanel.classList.remove('hidden');
     renderFavorites();
+    
+    // Reset scroll position to top when showing favorites panel
+    els.favoritesPanel.scrollTop = 0;
+    
     console.log('🎬 Favorites panel shown');
   } else {
     console.error('🎬 Favorites panel element not found!');
@@ -1999,6 +2382,12 @@ function showMovieDetailsPanel(movie) {
   
   // Show the panel
   els.movieDetailsPanel.classList.remove('hidden');
+  
+  // Reset scroll position to top when showing a new movie
+  if (els.movieDetailsPanel) {
+    els.movieDetailsPanel.scrollTop = 0;
+  }
+  
   console.log('🎬 Movie details panel shown');
 }
 
@@ -2511,4 +2900,47 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   
   console.log('✅ App initialization complete');
+  
+  // Add responsive navigation functionality
+  setupResponsiveNavigation();
 });
+
+// Responsive navigation functionality
+function setupResponsiveNavigation() {
+  const filters = document.querySelector('.filters');
+  
+  if (!filters) return;
+  
+  // Add click handler for theme toggle on mobile
+  const handleThemeToggle = (e) => {
+    // Check if we're on mobile and clicked on the theme toggle
+    if (window.innerWidth <= 480) {
+      const themeToggle = e.target.closest('.filters');
+      if (themeToggle && e.target === themeToggle) {
+        filters.classList.toggle('show-themes');
+        e.preventDefault();
+      }
+    }
+  };
+  
+  // Add click handler
+  filters.addEventListener('click', handleThemeToggle);
+  
+  // Handle window resize to reset theme visibility
+  const handleResize = () => {
+    if (window.innerWidth > 480) {
+      filters.classList.remove('show-themes');
+    }
+  };
+  
+  window.addEventListener('resize', handleResize);
+  
+  // Close theme dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 480 && 
+        filters.classList.contains('show-themes') && 
+        !filters.contains(e.target)) {
+      filters.classList.remove('show-themes');
+    }
+  });
+}
